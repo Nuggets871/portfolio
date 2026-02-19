@@ -1,0 +1,33 @@
+<section id="experience" class="section experience">
+    <div class="experience-inner">
+        <div class="section-header" appReveal>
+            <span class="section-number">{{ 'experience.sectionNumber' | translate }}</span>
+            <h2 class="section-title">{{ 'experience.sectionTitle' | translate }}</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="exp-timeline">
+            @for (item of ('experience.items' | translate); track item.company; let i = $index) {
+            <div class="exp-card" appReveal [style.transition-delay]="(i * 0.15) + 's'">
+                <div class="exp-left">
+                    <span class="exp-period">{{ item.period }}</span>
+                    <div class="exp-tech-list">
+                        @for (t of item.tech; track t) {
+                        <span class="exp-tech">{{ t }}</span>
+                        }
+                    </div>
+                </div>
+                <div class="exp-divider">
+                    <div class="exp-dot"></div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-right">
+                    <span class="exp-company">{{ item.company }}</span>
+                    <h3 class="exp-role">{{ item.role }}</h3>
+                    <p class="exp-desc">{{ item.description }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<section id="skills" class="section skills">
+    <div class="skills-inner">
+        <div class="section-header" appReveal>
+            <span class="section-number">{{ 'skills.sectionNumber' | translate }}</span>
+            <h2 class="section-title">{{ 'skills.sectionTitle' | translate }}</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+            @for (cat of categories; track cat.key; let i = $index) {
+            <div class="skill-card" appReveal [style.transition-delay]="(i * 0.08) + 's'">
+                <div class="card-header">
+                    <span class="card-icon">{{ cat.icon }}</span>
+                    <h3 class="card-title">{{ 'skills.categories.' + cat.key | translate }}</h3>
+                </div>
+                <div class="card-tags">
+                    @for (skill of ('skills.items.' + cat.key | translate); track skill) {
+                    <span class="tag">{{ skill }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

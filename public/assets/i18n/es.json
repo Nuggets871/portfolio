@@ -1,0 +1,212 @@
+{
+    "nav": {
+        "about": "Acerca de",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "education": "Formación",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "name": "Christopher Bondier",
+        "title": "Desarrollador Full-Stack",
+        "subtitle": "Alternante en desarrollo full-stack · Ingeniero en formación",
+        "description": "Angular · Node.js · MySQL",
+        "downloadCv": "Descargar mi CV",
+        "contactMe": "Contáctame"
+    },
+    "about": {
+        "sectionNumber": "01",
+        "sectionTitle": "Acerca de",
+        "bio": "Estudiante de ingeniería en CPE Lyon y alternante desarrollador full-stack en UBIKAP, me apasiona el desarrollo web y la creación de soluciones digitales eficientes. Con experiencia práctica en Angular y Node.js, me esfuerzo por diseñar aplicaciones eficientes, mantenibles y centradas en el usuario.",
+        "quote": "Transformar ideas en experiencias digitales elegantes.",
+        "location": "Villeurbanne / Lyon / Oyonnax",
+        "email": "christopherbondier@gmail.com",
+        "phone": "06 15 92 58 32",
+        "website": "christopher-bondier.fr"
+    },
+    "skills": {
+        "sectionNumber": "02",
+        "sectionTitle": "Habilidades",
+        "categories": {
+            "programming": "Programación",
+            "web": "Desarrollo Web",
+            "database": "Bases de datos",
+            "tools": "Herramientas y Entornos",
+            "os": "Sistemas Operativos",
+            "management": "Gestión de Proyectos",
+            "languages": "Idiomas"
+        },
+        "items": {
+            "programming": [
+                "Python",
+                "Java",
+                "C",
+                "Spring Boot"
+            ],
+            "web": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Angular",
+                "VueJS",
+                "ReactJS",
+                "PHP",
+                "Symfony"
+            ],
+            "database": [
+                "SQL",
+                "PL-SQL",
+                "MongoDB",
+                "MySQL"
+            ],
+            "tools": [
+                "Git",
+                "Power BI",
+                "VS Code",
+                "Android Studio",
+                "Code::Blocks",
+                "JetBrains",
+                "VMWare",
+                "PowerAMC",
+                "Suite Office"
+            ],
+            "os": [
+                "Windows",
+                "Linux",
+                "Mac"
+            ],
+            "management": [
+                "Métodos Ágiles",
+                "SCRUM"
+            ],
+            "languages": [
+                "Francés (nativo)",
+                "Inglés C1 (TOEIC 950)"
+            ]
+        }
+    },
+    "projects": {
+        "sectionNumber": "03",
+        "sectionTitle": "Proyectos",
+        "viewProject": "Ver proyecto",
+        "items": [
+            {
+                "title": "ERP Departamento Informático",
+                "description": "Sistema ERP completo para la gestión de un departamento informático: correos, horarios, formaciones, prácticas, alternancia, notas y asistencia. Proyecto colaborativo de 20 personas.",
+                "tech": [
+                    "React",
+                    "NextJS",
+                    "Express"
+                ],
+                "category": "Fullstack"
+            },
+            {
+                "title": "Eduquiz",
+                "description": "Clon de Quizlet — plataforma educativa con tarjetas interactivas para facilitar el aprendizaje.",
+                "tech": [
+                    "JavaScript",
+                    "PHP"
+                ],
+                "link": "https://eduquiz.fun",
+                "category": "Web"
+            },
+            {
+                "title": "Apoyo a la decisión de transporte",
+                "description": "Aplicación de cálculo de rutas óptimas utilizando la teoría de grafos para la toma de decisiones en transporte.",
+                "tech": [
+                    "Java"
+                ],
+                "category": "Algoritmos"
+            },
+            {
+                "title": "Gestión de directorio",
+                "description": "Sistema de gestión de directorio con almacenamiento de datos en CSV, permitiendo la búsqueda y manipulación de contactos.",
+                "tech": [
+                    "C"
+                ],
+                "category": "Sistema"
+            },
+            {
+                "title": "Algoritmos de ordenación",
+                "description": "Implementación y comparación de diferentes algoritmos de ordenación: burbuja, fusión, inserción y selección.",
+                "tech": [
+                    "Algoritmos"
+                ],
+                "category": "Algoritmos"
+            },
+            {
+                "title": "Blog",
+                "description": "Blog dinámico con sistema de gestión de contenido, autenticación y base de datos.",
+                "tech": [
+                    "PHP",
+                    "MySQL"
+                ],
+                "category": "Web"
+            },
+            {
+                "title": "Visualización Power BI",
+                "description": "Creación de paneles interactivos para apoyar la toma de decisiones y optimizar la generación de beneficios.",
+                "tech": [
+                    "Power BI"
+                ],
+                "category": "Data"
+            }
+        ]
+    },
+    "education": {
+        "sectionNumber": "04",
+        "sectionTitle": "Formación",
+        "items": [
+            {
+                "institution": "CPE Lyon",
+                "degree": "Ingeniero en informática y redes",
+                "detail": "Primer año",
+                "period": "Sept. 2025 — Ago. 2028"
+            },
+            {
+                "institution": "IUT Claude Bernard — Universidad Lyon 1",
+                "degree": "BUT Informática",
+                "detail": "",
+                "period": "Sept. 2022 — Jul. 2025"
+            }
+        ]
+    },
+    "experience": {
+        "sectionNumber": "05",
+        "sectionTitle": "Experiencia",
+        "items": [
+            {
+                "role": "Desarrollador Full-Stack — Alternancia",
+                "company": "UBIKAP",
+                "period": "Desde agosto 2024",
+                "description": "Mantenimiento y adición de funcionalidades en aplicaciones web con Angular / Node.js. Colaboración con el equipo para mejorar los productos existentes.",
+                "tech": [
+                    "Angular",
+                    "Node.js"
+                ]
+            },
+            {
+                "role": "Desarrollador Full-Stack — Prácticas",
+                "company": "UBIKAP",
+                "period": "Abril 2023 — Julio 2023",
+                "description": "Mantenimiento de aplicaciones y creación de una página de seguimiento de consumos de pago. Primeros pasos en un entorno profesional full-stack.",
+                "tech": [
+                    "Angular",
+                    "Node.js"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "sectionNumber": "06",
+        "sectionTitle": "Contacto",
+        "heading": "Trabajemos juntos",
+        "description": "No dude en contactarme para discutir sus proyectos u oportunidades de colaboración.",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "location": "Ubicación",
+        "website": "Sitio web"
+    }
+}

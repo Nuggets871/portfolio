@@ -1,0 +1,132 @@
+.experience {
+    background: var(--color-bg);
+}
+
+.experience-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.exp-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.exp-card {
+    display: grid;
+    grid-template-columns: 200px auto 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.exp-left {
+    text-align: right;
+    padding-top: 4px;
+}
+
+.exp-period {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.exp-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: flex-end;
+}
+
+.exp-tech {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.exp-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.exp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.exp-line {
+    width: 1px;
+    flex: 1;
+    background: var(--color-border);
+    min-height: 40px;
+    margin-top: var(--space-sm);
+}
+
+.exp-card:last-child .exp-line {
+    display: none;
+}
+
+.exp-company {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.exp-role {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.exp-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .exp-card {
+        grid-template-columns: auto 1fr;
+        gap: var(--space-md);
+    }
+
+    .exp-left {
+        display: none;
+    }
+
+    .exp-period {
+        display: none;
+    }
+
+    .exp-right::before {
+        content: attr(data-period);
+    }
+}
+
+@media (max-width: 768px) {
+    .exp-card {
+        grid-template-columns: auto 1fr;
+    }
+
+    .exp-left {
+        display: none;
+    }
+}

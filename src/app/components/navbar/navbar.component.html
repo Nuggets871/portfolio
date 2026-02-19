@@ -1,0 +1,33 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+    <div class="nav-inner">
+        <a class="nav-logo" (click)="scrollTo('hero')">
+            <span class="logo-text">CB</span>
+            <span class="logo-dot">.</span>
+        </a>
+
+        <div class="nav-links" [class.open]="isMenuOpen">
+            <a class="nav-link" (click)="scrollTo('about')">{{ 'nav.about' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('skills')">{{ 'nav.skills' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('projects')">{{ 'nav.projects' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('education')">{{ 'nav.education' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('experience')">{{ 'nav.experience' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('contact')">{{ 'nav.contact' | translate }}</a>
+        </div>
+
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                @for (lang of languages; track lang.code) {
+                <button class="lang-btn" [class.active]="currentLang === lang.code" (click)="switchLanguage(lang.code)">
+                    {{ lang.label }}
+                </button>
+                }
+            </div>
+
+            <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>

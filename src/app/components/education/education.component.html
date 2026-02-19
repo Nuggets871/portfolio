@@ -1,0 +1,28 @@
+<section id="education" class="section education">
+    <div class="education-inner">
+        <div class="section-header" appReveal>
+            <span class="section-number">{{ 'education.sectionNumber' | translate }}</span>
+            <h2 class="section-title">{{ 'education.sectionTitle' | translate }}</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+            @for (item of ('education.items' | translate); track item.institution; let i = $index) {
+            <div class="timeline-item" appReveal [style.transition-delay]="(i * 0.15) + 's'">
+                <div class="timeline-marker">
+                    <div class="marker-dot"></div>
+                    <div class="marker-line"></div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-period">{{ item.period }}</span>
+                    <h3 class="timeline-title">{{ item.institution }}</h3>
+                    <p class="timeline-degree">{{ item.degree }}</p>
+                    @if (item.detail) {
+                    <span class="timeline-detail">{{ item.detail }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
