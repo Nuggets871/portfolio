@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 160" fill="none">
+  <!-- Monstera leaf sticker — classic split tropical leaf -->
+
+  <!-- Main leaf body -->
+  <path d="M65 148
+    C65 148, 20 120, 14 80
+    C8 42, 32 12, 65 8
+    C98 12, 122 42, 116 80
+    C110 120, 65 148, 65 148Z"
+    fill="#219ebc" stroke="#023047" stroke-width="2.5"/>
+
+  <!-- Left split cut-out 1 -->
+  <path d="M65 90 C50 88, 28 82, 20 70 C28 75, 48 80, 65 90Z"
+    fill="#f0f8ff" stroke="none"/>
+  <path d="M65 90 C50 88, 28 82, 20 70"
+    stroke="#023047" stroke-width="1.5" fill="none"/>
+
+  <!-- Left split cut-out 2 -->
+  <path d="M65 65 C48 58, 26 48, 22 35 C30 43, 50 55, 65 65Z"
+    fill="#f0f8ff" stroke="none"/>
+  <path d="M65 65 C48 58, 26 48, 22 35"
+    stroke="#023047" stroke-width="1.5" fill="none"/>
+
+  <!-- Right split cut-out 1 -->
+  <path d="M65 90 C80 88, 102 82, 110 70 C102 75, 82 80, 65 90Z"
+    fill="#f0f8ff" stroke="none"/>
+  <path d="M65 90 C80 88, 102 82, 110 70"
+    stroke="#023047" stroke-width="1.5" fill="none"/>
+
+  <!-- Right split cut-out 2 -->
+  <path d="M65 65 C82 58, 104 48, 108 35 C100 43, 80 55, 65 65Z"
+    fill="#f0f8ff" stroke="none"/>
+  <path d="M65 65 C82 58, 104 48, 108 35"
+    stroke="#023047" stroke-width="1.5" fill="none"/>
+
+  <!-- Central rib / stem -->
+  <path d="M65 148 C64 120, 63 80, 64 8"
+    stroke="#023047" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Side veins left -->
+  <path d="M62 120 C48 115, 32 108, 22 98" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M60 100 C46 94, 30 86, 20 75" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M61 75 C47 68, 30 58, 22 46" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M62 50 C50 42, 36 32, 28 22" stroke="#023047" stroke-width="1" opacity="0.35"/>
+
+  <!-- Side veins right -->
+  <path d="M68 120 C82 115, 98 108, 108 98" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M70 100 C84 94, 100 86, 110 75" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M69 75 C83 68, 100 58, 108 46" stroke="#023047" stroke-width="1" opacity="0.35"/>
+  <path d="M68 50 C80 42, 94 32, 102 22" stroke="#023047" stroke-width="1" opacity="0.35"/>
+
+  <!-- Light overlay for depth -->
+  <ellipse cx="50" cy="55" rx="12" ry="22" fill="#8ecae6" opacity="0.18" transform="rotate(-20 50 55)"/>
+</svg>

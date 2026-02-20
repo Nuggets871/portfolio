@@ -1,10 +1,18 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, APP_INITIALIZER, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
-import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { provideHttpClient, HttpClient } from '@angular/common/http';
+import { provideTranslateService, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader, provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
+
+export function initTranslations(translate: TranslateService) {
+  return () => {
+    const savedLang = localStorage.getItem('lang') || 'fr';
+    translate.setDefaultLang('fr');
+    return translate.use(savedLang).toPromise();
+  };
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,5 +27,11 @@ export const appConfig: ApplicationConfig = {
       defaultLanguage: 'fr',
       loader: { provide: TranslateLoader, useClass: TranslateHttpLoader },
     }),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initTranslations,
+      deps: [TranslateService],
+      multi: true,
+    },
   ]
 };

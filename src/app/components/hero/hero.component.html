@@ -1,11 +1,19 @@
 <section id="hero" class="hero" [class.loaded]="showContent">
+
+    <!-- Scattered stickers (background decoration) -->
+    <div class="hero-stickers" aria-hidden="true">
+        <img src="assets/img/sticker-daisy.svg" class="sticker sticker-a" alt="" />
+        <img src="assets/img/sticker-leaf.svg" class="sticker sticker-b" alt="" />
+        <img src="assets/img/sticker-star.svg" class="sticker sticker-c" alt="" />
+        <img src="assets/img/sticker-drop.svg" class="sticker sticker-d" alt="" />
+        <img src="assets/img/sticker-hibiscus.svg" class="sticker sticker-e" alt="" />
+    </div>
+
     <!-- Decorative grid -->
-    <div class="hero-grid">
+    <div class="hero-grid" aria-hidden="true">
         <div class="grid-line vertical" style="left: 25%"></div>
-        <div class="grid-line vertical" style="left: 50%"></div>
         <div class="grid-line vertical" style="left: 75%"></div>
-        <div class="grid-line horizontal" style="top: 33%"></div>
-        <div class="grid-line horizontal" style="top: 66%"></div>
+        <div class="grid-line horizontal" style="top: 50%"></div>
     </div>
 
     <div class="hero-content">
@@ -39,32 +47,16 @@
         </div>
 
         <div class="hero-right">
-            <div class="hero-visual">
-                <div class="visual-frame">
-                    <div class="frame-corner top-left"></div>
-                    <div class="frame-corner top-right"></div>
-                    <div class="frame-corner bottom-left"></div>
-                    <div class="frame-corner bottom-right"></div>
-                    <div class="visual-inner">
-                        <div class="code-preview">
-                            <div class="code-line"><span class="code-keyword">const</span> <span
-                                    class="code-var">developer</span> = &#123;</div>
-                            <div class="code-line indent"><span class="code-prop">name</span>: <span
-                                    class="code-string">"Christopher"</span>,</div>
-                            <div class="code-line indent"><span class="code-prop">role</span>: <span
-                                    class="code-string">"Full-Stack"</span>,</div>
-                            <div class="code-line indent"><span class="code-prop">stack</span>: [<span
-                                    class="code-string">"Angular"</span>, <span class="code-string">"Node"</span>],
-                            </div>
-                            <div class="code-line indent"><span class="code-prop">passion</span>: <span
-                                    class="code-keyword">true</span></div>
-                            <div class="code-line">&#125;;</div>
-                        </div>
-                    </div>
+            <!-- Photo: tilted Polaroid-style card -->
+            <div class="photo-polaroid">
+                <div class="polaroid-inner">
+                    <img src="assets/img/me.JPEG" alt="Christopher Bondier" class="hero-photo" />
                 </div>
-                <div class="visual-badge">
-                    <span class="badge-number">2+</span>
-                    <span class="badge-label">ans d'XP</span>
+                <div class="polaroid-caption">Full-Stack · Lyon 🌊</div>
+                <!-- Badge on top corner -->
+                <div class="photo-badge">
+                    <span class="badge-number">{{ 'hero.xpBadgeNumber' | translate }}</span>
+                    <span class="badge-label">{{ 'hero.xpBadgeLabel' | translate }}</span>
                 </div>
             </div>
         </div>
@@ -74,4 +66,5 @@
         <div class="scroll-line"></div>
         <span class="scroll-text">scroll</span>
     </div>
+
 </section>

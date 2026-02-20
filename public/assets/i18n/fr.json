@@ -14,7 +14,9 @@
     "subtitle": "Alternant en développement full-stack · Ingénieur en formation",
     "description": "Angular · Node.js · MySQL",
     "downloadCv": "Télécharger mon CV",
-    "contactMe": "Me contacter"
+    "contactMe": "Me contacter",
+    "xpBadgeNumber": "2+",
+    "xpBadgeLabel": "ans XP"
   },
   "about": {
     "sectionNumber": "01",
@@ -39,13 +41,52 @@
       "languages": "Langues"
     },
     "items": {
-      "programming": ["Python", "Java", "C", "Spring Boot"],
-      "web": ["HTML", "CSS", "JavaScript", "Angular", "VueJS", "ReactJS", "PHP", "Symfony"],
-      "database": ["SQL", "PL-SQL", "MongoDB", "MySQL"],
-      "tools": ["Git", "Power BI", "VS Code", "Android Studio", "Code::Blocks", "JetBrains", "VMWare", "PowerAMC", "Suite Office"],
-      "os": ["Windows", "Linux", "Mac"],
-      "management": ["Méthodes AGILES", "SCRUM"],
-      "languages": ["Français (maternelle)", "Anglais C1 (TOEIC 950)"]
+      "programming": [
+        "Python",
+        "Java",
+        "C",
+        "Spring Boot"
+      ],
+      "web": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Angular",
+        "VueJS",
+        "ReactJS",
+        "PHP",
+        "Symfony"
+      ],
+      "database": [
+        "SQL",
+        "PL-SQL",
+        "MongoDB",
+        "MySQL"
+      ],
+      "tools": [
+        "Git",
+        "Power BI",
+        "VS Code",
+        "Android Studio",
+        "Code::Blocks",
+        "JetBrains",
+        "VMWare",
+        "PowerAMC",
+        "Suite Office"
+      ],
+      "os": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "management": [
+        "Méthodes AGILES",
+        "SCRUM"
+      ],
+      "languages": [
+        "Français (maternelle)",
+        "Anglais C1 (TOEIC 950)"
+      ]
     }
   },
   "projects": {
@@ -56,44 +97,62 @@
       {
         "title": "ERP Département Informatique",
         "description": "Système ERP complet pour la gestion d'un département informatique : mails, emploi du temps, formations, stages, alternances, notes et absences. Projet collaboratif de 20 personnes.",
-        "tech": ["React", "NextJS", "Express"],
+        "tech": [
+          "React",
+          "NextJS",
+          "Express"
+        ],
         "category": "Fullstack"
       },
       {
         "title": "Eduquiz",
         "description": "Clone de Quizlet — plateforme éducative avec flashcards interactives pour faciliter l'apprentissage.",
-        "tech": ["JavaScript", "PHP"],
+        "tech": [
+          "JavaScript",
+          "PHP"
+        ],
         "link": "https://eduquiz.fun",
         "category": "Web"
       },
       {
         "title": "Aide décisionnelle de transport",
         "description": "Application de calcul d'itinéraires optimaux utilisant la théorie des graphes pour l'aide à la décision en transport.",
-        "tech": ["Java"],
+        "tech": [
+          "Java"
+        ],
         "category": "Algorithmique"
       },
       {
         "title": "Gestion d'annuaire",
         "description": "Système de gestion d'annuaire avec stockage de données en CSV, permettant la recherche et la manipulation de contacts.",
-        "tech": ["C"],
+        "tech": [
+          "C"
+        ],
         "category": "Système"
       },
       {
         "title": "Algorithmes de tri",
         "description": "Implémentation et comparaison de différents algorithmes de tri : bulle, fusion, insertion et sélection.",
-        "tech": ["Algorithmique"],
+        "tech": [
+          "Algorithmique"
+        ],
         "category": "Algorithmique"
       },
       {
         "title": "Blog",
         "description": "Blog dynamique avec système de gestion de contenu, authentification et base de données.",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "category": "Web"
       },
       {
         "title": "Visualisation Power BI",
         "description": "Création de tableaux de bord interactifs pour assister la prise de décision et optimiser la génération de profit.",
-        "tech": ["Power BI"],
+        "tech": [
+          "Power BI"
+        ],
         "category": "Data"
       }
     ]
@@ -125,14 +184,20 @@
         "company": "UBIKAP",
         "period": "Depuis août 2024",
         "description": "Maintenance et ajout de fonctionnalités sur des applications web en Angular / Node.js. Collaboration avec l'équipe pour améliorer les produits existants.",
-        "tech": ["Angular", "Node.js"]
+        "tech": [
+          "Angular",
+          "Node.js"
+        ]
       },
       {
         "role": "Développeur Full-Stack — Stage",
         "company": "UBIKAP",
         "period": "Avril 2023 — Juillet 2023",
         "description": "Maintenance applicative et création d'une page de suivi des consommations payantes. Premiers pas en environnement professionnel full-stack.",
-        "tech": ["Angular", "Node.js"]
+        "tech": [
+          "Angular",
+          "Node.js"
+        ]
       }
     ]
   },

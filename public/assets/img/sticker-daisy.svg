@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Daisy with 8 petals evenly around center -->
+
+  <!-- Petals — alternating sky blue and white, 8 petals every 45° -->
+  <!-- Petal at 0° (top) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#8ecae6" stroke="#023047" stroke-width="2"/>
+  <!-- Petal at 45° (top-right) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#f0f8ff" stroke="#023047" stroke-width="2" transform="rotate(45 60 60)"/>
+  <!-- Petal at 90° (right) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#8ecae6" stroke="#023047" stroke-width="2" transform="rotate(90 60 60)"/>
+  <!-- Petal at 135° (bottom-right) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#f0f8ff" stroke="#023047" stroke-width="2" transform="rotate(135 60 60)"/>
+  <!-- Petal at 180° (bottom) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#8ecae6" stroke="#023047" stroke-width="2" transform="rotate(180 60 60)"/>
+  <!-- Petal at 225° (bottom-left) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#f0f8ff" stroke="#023047" stroke-width="2" transform="rotate(225 60 60)"/>
+  <!-- Petal at 270° (left) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#8ecae6" stroke="#023047" stroke-width="2" transform="rotate(270 60 60)"/>
+  <!-- Petal at 315° (top-left) -->
+  <ellipse cx="60" cy="28" rx="9" ry="18" fill="#f0f8ff" stroke="#023047" stroke-width="2" transform="rotate(315 60 60)"/>
+
+  <!-- Center -->
+  <circle cx="60" cy="60" r="16" fill="#ffb703" stroke="#023047" stroke-width="2.5"/>
+  <!-- Center texture dots -->
+  <circle cx="56" cy="56" r="2.5" fill="#fb8500" opacity="0.7"/>
+  <circle cx="64" cy="57" r="2" fill="#fb8500" opacity="0.6"/>
+  <circle cx="60" cy="64" r="2.5" fill="#fb8500" opacity="0.7"/>
+  <circle cx="55" cy="63" r="1.5" fill="#fb8500" opacity="0.5"/>
+  <circle cx="65" cy="63" r="1.5" fill="#fb8500" opacity="0.5"/>
+</svg>

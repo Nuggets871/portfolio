@@ -14,7 +14,9 @@
         "subtitle": "Alternante en desarrollo full-stack · Ingeniero en formación",
         "description": "Angular · Node.js · MySQL",
         "downloadCv": "Descargar mi CV",
-        "contactMe": "Contáctame"
+        "contactMe": "Contáctame",
+        "xpBadgeNumber": "2+",
+        "xpBadgeLabel": "años XP"
     },
     "about": {
         "sectionNumber": "01",

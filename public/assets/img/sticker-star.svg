@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Simple abstract star/sparkle sticker -->
+  <!-- 4-point star -->
+  <path d="M50 10 L54 44 L88 50 L54 56 L50 90 L46 56 L12 50 L46 44 Z" fill="#ffb703" stroke="#023047" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner glow -->
+  <path d="M50 30 L52 46 L68 50 L52 54 L50 70 L48 54 L32 50 L48 46 Z" fill="#fb8500" opacity="0.6"/>
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="6" fill="#023047"/>
+</svg>

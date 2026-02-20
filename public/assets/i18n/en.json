@@ -14,7 +14,9 @@
         "subtitle": "Full-stack development apprentice · Engineering student",
         "description": "Angular · Node.js · MySQL",
         "downloadCv": "Download my CV",
-        "contactMe": "Contact me"
+        "contactMe": "Contact me",
+        "xpBadgeNumber": "2+",
+        "xpBadgeLabel": "yrs XP"
     },
     "about": {
         "sectionNumber": "01",

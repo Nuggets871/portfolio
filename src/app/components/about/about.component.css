@@ -14,7 +14,7 @@
     align-items: start;
 }
 
-/* Quote */
+/* Quote with ocean left border */
 .about-quote {
     font-family: var(--font-serif);
     font-size: clamp(1.5rem, 3vw, 2.25rem);
@@ -22,18 +22,18 @@
     line-height: 1.4;
     color: var(--color-text);
     position: relative;
-    padding-left: var(--space-md);
-    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-lg);
+    border-left: 3px solid var(--color-accent-1);
 }
 
 .quote-mark {
     font-family: var(--font-serif);
     font-size: 4rem;
-    color: var(--color-accent);
+    color: var(--color-accent-1);
     position: absolute;
     top: -1.5rem;
     left: -0.5rem;
-    opacity: 0.3;
+    opacity: 0.25;
     line-height: 1;
 }
 
@@ -58,10 +58,19 @@
     gap: var(--space-md);
     font-size: 0.9375rem;
     color: var(--color-text-secondary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.detail-item:hover {
+    border-color: var(--color-accent-2);
+    background: var(--color-accent-bg-2);
 }
 
 .detail-item svg {
-    color: var(--color-accent);
+    color: var(--color-accent-1);
     flex-shrink: 0;
 }
 
@@ -71,7 +80,7 @@
 }
 
 .detail-item a:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-1);
 }
 
 @media (max-width: 768px) {

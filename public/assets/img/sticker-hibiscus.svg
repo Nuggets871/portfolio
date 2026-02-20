@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <!-- Hibiscus flower sticker -->
+  <!-- 5 petals -->
+  <path d="M60 60 C50 30, 30 20, 20 10 C35 15, 55 30, 60 60Z" fill="#fb8500" stroke="#023047" stroke-width="2"/>
+  <path d="M60 60 C80 42, 100 28, 112 20 C100 32, 78 46, 60 60Z" fill="#fb8500" stroke="#023047" stroke-width="2"/>
+  <path d="M60 60 C90 65, 110 80, 114 95 C100 85, 80 70, 60 60Z" fill="#ffb703" stroke="#023047" stroke-width="2"/>
+  <path d="M60 60 C68 90, 65 115, 60 130 C56 115, 53 90, 60 60Z" fill="#ffb703" stroke="#023047" stroke-width="2"/>
+  <path d="M60 60 C30 65, 10 80, 6 95 C20 85, 40 70, 60 60Z" fill="#fb8500" stroke="#023047" stroke-width="2"/>
+  <!-- Stamen column -->
+  <line x1="60" y1="60" x2="60" y2="35" stroke="#023047" stroke-width="3" stroke-linecap="round"/>
+  <!-- Stamen top dots -->
+  <circle cx="60" cy="32" r="4" fill="#219ebc" stroke="#023047" stroke-width="1.5"/>
+  <circle cx="53" cy="36" r="3" fill="#219ebc" stroke="#023047" stroke-width="1.5"/>
+  <circle cx="67" cy="36" r="3" fill="#219ebc" stroke="#023047" stroke-width="1.5"/>
+  <!-- Flower center -->
+  <circle cx="60" cy="60" r="10" fill="#ffb703" stroke="#023047" stroke-width="2"/>
+  <!-- Stem -->
+  <path d="M60 70 C58 100, 56 120, 55 145" stroke="#219ebc" stroke-width="3" stroke-linecap="round"/>
+  <!-- Small leaves on stem -->
+  <path d="M57 100 C45 90, 38 80, 40 70 C46 78, 52 88, 57 100Z" fill="#219ebc" stroke="#023047" stroke-width="1.5"/>
+  <path d="M56 120 C68 112, 76 102, 72 92 C67 100, 62 110, 56 120Z" fill="#219ebc" stroke="#023047" stroke-width="1.5"/>
+</svg>

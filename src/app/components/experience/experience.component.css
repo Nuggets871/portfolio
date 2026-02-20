@@ -28,11 +28,12 @@
 .exp-period {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--color-accent);
+    color: var(--color-accent-1);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     display: block;
     margin-bottom: var(--space-md);
+    font-weight: 600;
 }
 
 .exp-tech-list {
@@ -45,10 +46,12 @@
 .exp-tech {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
-    color: var(--color-text-muted);
-    border: 1px solid var(--color-border);
+    color: var(--color-accent-2);
+    border: 1px solid var(--color-accent-2);
     padding: 0.2rem 0.5rem;
     border-radius: var(--radius-sm);
+    background: var(--color-accent-bg-2);
+    font-weight: 500;
 }
 
 .exp-divider {
@@ -59,19 +62,22 @@
 }
 
 .exp-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: var(--color-accent);
+    background: var(--color-accent-1);
     flex-shrink: 0;
+    box-shadow: 0 0 0 4px var(--color-accent-bg-1);
+    animation: pulse 3s ease-in-out infinite;
 }
 
 .exp-line {
-    width: 1px;
+    width: 2px;
     flex: 1;
     background: var(--color-border);
     min-height: 40px;
     margin-top: var(--space-sm);
+    border-radius: 1px;
 }
 
 .exp-card:last-child .exp-line {
@@ -81,17 +87,18 @@
 .exp-company {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
-    color: var(--color-accent);
+    color: var(--color-accent-2);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     display: block;
     margin-bottom: var(--space-xs);
+    font-weight: 700;
 }
 
 .exp-role {
     font-family: var(--font-serif);
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text);
     margin-bottom: var(--space-sm);
 }
@@ -102,28 +109,22 @@
     line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-    .exp-card {
-        grid-template-columns: auto 1fr;
-        gap: var(--space-md);
-    }
+.exp-right {
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: border-color var(--transition-medium);
+}
 
-    .exp-left {
-        display: none;
-    }
-
-    .exp-period {
-        display: none;
-    }
-
-    .exp-right::before {
-        content: attr(data-period);
-    }
+.exp-right:hover {
+    border-color: var(--color-accent-2);
 }
 
 @media (max-width: 768px) {
     .exp-card {
         grid-template-columns: auto 1fr;
+        gap: var(--space-md);
     }
 
     .exp-left {

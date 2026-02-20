@@ -17,8 +17,10 @@
         <div class="nav-actions">
             <div class="lang-switcher">
                 @for (lang of languages; track lang.code) {
-                <button class="lang-btn" [class.active]="currentLang === lang.code" (click)="switchLanguage(lang.code)">
-                    {{ lang.label }}
+                <button class="lang-btn" [class.active]="currentLang === lang.code" (click)="switchLanguage(lang.code)"
+                    [title]="lang.label">
+                    <span class="lang-flag">{{ lang.flag }}</span>
+                    <span class="lang-code">{{ lang.label }}</span>
                 </button>
                 }
             </div>

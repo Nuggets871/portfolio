@@ -27,24 +27,34 @@
 }
 
 .marker-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    border: 2px solid var(--color-accent);
-    background: var(--color-bg-alt);
+    background: var(--color-accent-1);
     position: relative;
     z-index: 1;
+    box-shadow: 0 0 0 4px var(--color-accent-bg-1);
+    animation: pulse 3s ease-in-out infinite;
 }
 
-.timeline-item:first-child .marker-dot {
-    background: var(--color-accent);
+.timeline-item:nth-child(2) .marker-dot {
+    animation-delay: 0.5s;
+    background: var(--color-accent-2);
+    box-shadow: 0 0 0 4px var(--color-accent-bg-2);
+}
+
+.timeline-item:nth-child(3) .marker-dot {
+    animation-delay: 1s;
+    background: var(--color-accent-3);
+    box-shadow: 0 0 0 4px var(--color-accent-bg-3);
 }
 
 .marker-line {
-    width: 1px;
+    width: 2px;
     flex: 1;
     background: var(--color-border);
     min-height: 40px;
+    border-radius: 1px;
 }
 
 .timeline-item:last-child .marker-line {
@@ -52,23 +62,33 @@
 }
 
 .timeline-content {
-    padding-bottom: var(--space-2xl);
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: border-color var(--transition-medium);
+    margin-bottom: var(--space-md);
+}
+
+.timeline-content:hover {
+    border-color: var(--color-accent-2);
 }
 
 .timeline-period {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--color-accent);
+    color: var(--color-accent-1);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     display: block;
     margin-bottom: var(--space-sm);
+    font-weight: 600;
 }
 
 .timeline-title {
     font-family: var(--font-serif);
     font-size: 1.375rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text);
     margin-bottom: var(--space-xs);
     letter-spacing: -0.01em;
@@ -82,8 +102,8 @@
 
 .timeline-detail {
     font-size: 0.8125rem;
-    color: var(--color-text-muted);
-    font-style: italic;
+    color: var(--color-accent-2);
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {

@@ -9,11 +9,12 @@
 }
 
 .navbar.scrolled {
-    background: rgba(14, 14, 14, 0.92);
+    background: rgba(240, 247, 255, 0.92);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 20px rgba(0, 119, 182, 0.06);
 }
 
 .nav-inner {
@@ -44,7 +45,7 @@
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: var(--color-accent-1);
     line-height: 0;
 }
 
@@ -70,13 +71,14 @@
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 1px;
-    background: var(--color-accent);
+    height: 2px;
+    background: var(--color-accent-1);
     transition: width var(--transition-medium);
+    border-radius: 1px;
 }
 
 .nav-link:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-1);
 }
 
 .nav-link:hover::after {
@@ -92,7 +94,7 @@
 .lang-switcher {
     display: flex;
     gap: 2px;
-    background: var(--color-bg-card);
+    background: var(--color-surface);
     border-radius: var(--radius-md);
     padding: 3px;
     border: 1px solid var(--color-border);
@@ -102,23 +104,37 @@
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
-    padding: 0.35rem 0.65rem;
+    letter-spacing: 0.03em;
+    padding: 0.35rem 0.6rem;
     background: none;
     border: none;
     color: var(--color-text-muted);
     cursor: pointer;
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-flag {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.lang-code {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
 }
 
 .lang-btn.active {
-    background: var(--color-accent);
-    color: var(--color-bg);
+    background: var(--color-accent-1);
+    color: var(--color-white);
 }
 
 .lang-btn:hover:not(.active) {
-    color: var(--color-text);
+    color: var(--color-accent-1);
 }
 
 .menu-toggle {
@@ -163,7 +179,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(14, 14, 14, 0.98);
+        background: rgba(240, 247, 255, 0.98);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -179,5 +195,6 @@
 
     .nav-link {
         font-size: 1.125rem;
+        color: var(--color-text);
     }
 }

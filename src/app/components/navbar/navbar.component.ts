@@ -14,13 +14,13 @@ export class NavbarComponent {
     isScrolled = false;
     currentLang: string;
     languages = [
-        { code: 'fr', label: 'FR' },
-        { code: 'en', label: 'EN' },
-        { code: 'es', label: 'ES' }
+        { code: 'fr', label: 'FR', flag: '🇫🇷' },
+        { code: 'en', label: 'EN', flag: '🇬🇧' },
+        { code: 'es', label: 'ES', flag: '🇪🇸' }
     ];
 
     constructor(private translate: TranslateService) {
-        this.currentLang = this.translate.currentLang || 'fr';
+        this.currentLang = localStorage.getItem('lang') || this.translate.currentLang || 'fr';
     }
 
     ngOnInit() {
@@ -33,6 +33,7 @@ export class NavbarComponent {
 
     switchLanguage(lang: string) {
         this.currentLang = lang;
+        localStorage.setItem('lang', lang);
         this.translate.use(lang);
     }
 
