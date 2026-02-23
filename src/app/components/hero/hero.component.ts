@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,11 +9,17 @@ import { TranslateModule } from '@ngx-translate/core';
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.css'
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent implements AfterViewInit {
     showContent = false;
 
-    ngOnInit() {
-        setTimeout(() => { this.showContent = true; }, 100);
+    constructor(private cdr: ChangeDetectorRef) { }
+
+    ngAfterViewInit() {
+        // Use a slightly longer delay to ensure the browser has painted the initial state
+        setTimeout(() => {
+            this.showContent = true;
+            this.cdr.detectChanges();
+        }, 300);
     }
 
     scrollTo(id: string) {

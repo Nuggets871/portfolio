@@ -5,7 +5,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 0 clamp(1.5rem, 5vw, 6rem);
+    padding: 0 clamp(2.5rem, 8vw, 10rem);
     background: var(--color-bg);
 }
 
@@ -50,26 +50,6 @@
     animation: pulse 4s ease-in-out infinite;
 }
 
-.sticker-d {
-    /* drop — middle left */
-    width: 50px;
-    top: 55%;
-    left: 2%;
-    transform: rotate(-8deg);
-    animation: float 7s ease-in-out infinite;
-    animation-delay: 2s;
-}
-
-.sticker-e {
-    /* hibiscus — bottom left area */
-    width: 75px;
-    bottom: 8%;
-    left: 20%;
-    transform: rotate(12deg);
-    animation: float 13s ease-in-out infinite reverse;
-    animation-delay: 1s;
-}
-
 /* Decorative grid */
 .hero-grid {
     position: absolute;
@@ -99,7 +79,7 @@
 
 /* Content layout */
 .hero-content {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
     display: grid;
@@ -120,55 +100,55 @@
 .hero-right,
 .scroll-indicator {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translate3d(0, 25px, 0);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .hero.loaded .hero-greeting {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.1s;
 }
 
 .hero.loaded .hero-name {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.2s;
 }
 
 .hero.loaded .hero-title-wrapper {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.3s;
 }
 
 .hero.loaded .hero-subtitle {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.4s;
 }
 
 .hero.loaded .hero-stack {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.5s;
 }
 
 .hero.loaded .hero-actions {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.6s;
 }
 
 .hero.loaded .hero-right {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.35s;
 }
 
 .hero.loaded .scroll-indicator {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition-delay: 0.8s;
 }
 
@@ -294,6 +274,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .photo-polaroid {
@@ -305,13 +286,18 @@
     box-shadow:
         0 10px 40px rgba(2, 48, 71, 0.16),
         0 2px 8px rgba(2, 48, 71, 0.10);
-    transform: rotate(-4deg);
+    transform: rotate(-4deg) translateZ(0);
+    -webkit-transform: rotate(-4deg) translateZ(0);
     transition: transform var(--transition-medium), box-shadow var(--transition-medium);
-    border: 1px solid var(--color-border-light);
+    border: 1px solid rgba(184, 216, 234, 0.5);
+    /* Softened border */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .photo-polaroid:hover {
-    transform: rotate(-1deg) scale(1.02);
+    transform: rotate(-1deg) scale(1.02) translateZ(0);
+    -webkit-transform: rotate(-1deg) scale(1.02) translateZ(0);
     box-shadow:
         0 18px 55px rgba(2, 48, 71, 0.2),
         0 4px 12px rgba(2, 48, 71, 0.12);
@@ -323,19 +309,29 @@
     overflow: hidden;
     border-radius: 2px;
     background: var(--color-surface);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Safari Fix for overflow: hidden with border-radius and transforms */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
 }
 
 .hero-photo {
-    width: 100%;
-    height: 100%;
+    width: 100.5%;
+    /* Slight overshoot to avoid 1px gaps */
+    height: 100.5%;
     object-fit: cover;
     object-position: center top;
     display: block;
-    transition: transform var(--transition-slow);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .photo-polaroid:hover .hero-photo {
-    transform: scale(1.03);
+    transform: scale(1.04) translateZ(0);
+    -webkit-transform: scale(1.04) translateZ(0);
 }
 
 .polaroid-caption {
@@ -351,7 +347,6 @@
     letter-spacing: 0.04em;
 }
 
-/* Photo badge (amber sticker on top corner) */
 .photo-badge {
     position: absolute;
     top: -14px;
@@ -365,10 +360,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 10;
     box-shadow: 0 4px 14px rgba(255, 183, 3, 0.38);
     border: 2px solid #fff;
-    animation: float 6s ease-in-out infinite;
+    animation: floatBadge 6s ease-in-out infinite;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+
+    66% {
+        transform: translateY(5px) rotate(-2deg);
+    }
 }
 
 .badge-number {
