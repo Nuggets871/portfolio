@@ -235,6 +235,14 @@ ol {
   animation-delay: 0.8s;
 }
 
+.sticker-skills-3 {
+  width: 70px;
+  bottom: 12%;
+  left: 3%;
+  transform: rotate(15deg);
+  animation: float 12s ease-in-out infinite;
+}
+
 /* Contact stickers */
 .sticker-contact-1 {
   width: 80px;
@@ -356,5 +364,20 @@ ol {
 
   .section-line {
     display: none;
+  }
+
+  /* Mobile Stickers Adjustments */
+  .sticker-about-2 {
+    left: auto;
+    right: 2%;
+    bottom: 15%;
+  }
+
+  .sticker-skills-3 {
+    left: auto;
+    right: 4%;
+    bottom: 50%;
+    /* Position it higher to be on the right of the title/grid */
+    width: 60px;
   }
 }

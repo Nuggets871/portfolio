@@ -50,6 +50,12 @@
     animation: pulse 4s ease-in-out infinite;
 }
 
+.sticker-e {
+    /* hibiscus — bottom left area */
+    display: none;
+    /* Mobile only */
+}
+
 /* Decorative grid */
 .hero-grid {
     position: absolute;
@@ -404,13 +410,14 @@
     position: absolute;
     bottom: 2rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-sm);
     cursor: pointer;
-    z-index: 2;
+    z-index: 10;
+    /* Above stickers */
 }
 
 .scroll-line {
@@ -447,7 +454,7 @@
 @media (max-width: 900px) {
     .hero-content {
         grid-template-columns: 1fr;
-        padding-top: 5rem;
+        padding: 5rem 0 5rem 0;
         gap: var(--space-2xl);
     }
 
@@ -471,11 +478,13 @@
 
     .sticker-a {
         width: 60px;
+        left: auto;
+        right: 4%;
+        top: 8%;
     }
 
     .sticker-b {
-        width: 55px;
-        right: 2%;
+        display: none;
     }
 
     .sticker-c {
@@ -484,5 +493,14 @@
 
     .sticker-d {
         display: none;
+    }
+
+    .sticker-e {
+        display: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+        /* Hide on small mobile to avoid layout clutter */
     }
 }
