@@ -7,7 +7,9 @@
         </div>
 
         <div class="exp-timeline">
-            @for (item of ('experience.items' | translate); track item.company; let i = $index) {
+            @if (('experience.items' | translate); as items) {
+            @if (items && items.length > 0 && items !== 'experience.items') {
+            @for (item of items; track item.company + item.period; let i = $index) {
             <div class="exp-card" appReveal [style.transition-delay]="(i * 0.15) + 's'">
                 <div class="exp-left">
                     <span class="exp-period">{{ item.period }}</span>
@@ -22,11 +24,31 @@
                     <div class="exp-line"></div>
                 </div>
                 <div class="exp-right">
+                    @if (item.link) {
+                    <a [href]="item.link" target="_blank" class="exp-company-link">
+                        {{ item.company }}
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                    } @else {
                     <span class="exp-company">{{ item.company }}</span>
+                    }
                     <h3 class="exp-role">{{ item.role }}</h3>
-                    <p class="exp-desc">{{ item.description }}</p>
+                    <div class="exp-desc">
+                        <ul class="exp-points">
+                            @for (point of item.description; track point) {
+                            <li>{{ point }}</li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
+            }
+            }
             }
         </div>
     </div>

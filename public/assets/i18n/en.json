@@ -27,7 +27,7 @@
         "location": "Villeurbanne / Lyon / Oyonnax",
         "email": "christopherbondier@gmail.com",
         "phone": "06 15 92 58 32",
-        "website": "christopher-bondier.fr"
+        "website": "christopher-bondier.com"
     },
     "skills": {
         "sectionNumber": "02",
@@ -94,7 +94,26 @@
         "sectionNumber": "03",
         "sectionTitle": "Projects",
         "viewProject": "View project",
+        "viewGithub": "View on GitHub",
+        "showMore": "Show more projects",
+        "showLess": "Show less",
+        "featuredTitle": "Featured Projects",
+        "allProjectsTitle": "All My Projects",
         "items": [
+            {
+                "title": "Ubikap SaaS Platform",
+                "description": "Complex business SaaS platform that I have been proactively maintaining and evolving for 2 years within the Ubikap team. Development of major features autonomously, resolution of critical bugs, and continuous code optimization (clean code and best practices).",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "MySQL",
+                    "Express"
+                ],
+                "category": "Professional / SaaS",
+                "featured": true,
+                "link": "https://www.ubikap.com",
+                "image": "/assets/img/project/ubikap.png"
+            },
             {
                 "title": "IT Department ERP",
                 "description": "Complete ERP system for IT department management: emails, schedules, training, internships, apprenticeships, grades and attendance. Collaborative project with 20 people.",
@@ -103,7 +122,9 @@
                     "NextJS",
                     "Express"
                 ],
-                "category": "Fullstack"
+                "category": "Fullstack",
+                "featured": true,
+                "image": "/assets/img/project/erp.png"
             },
             {
                 "title": "Eduquiz",
@@ -112,8 +133,73 @@
                     "JavaScript",
                     "PHP"
                 ],
-                "link": "https://eduquiz.fun",
-                "category": "Web"
+                "link": "https://eduquiz.christopher-bondier.com",
+                "category": "Web",
+                "featured": true,
+                "image": [
+                    "/assets/img/project/eduquiz_1.png",
+                    "/assets/img/project/eduquiz_2.png",
+                    "/assets/img/project/eduquiz_3.png",
+                    "/assets/img/project/eduquiz_4.png",
+                    "/assets/img/project/eduquiz_5.png",
+                    "/assets/img/project/eduquiz_6.png"
+                ]
+            },
+            {
+                "title": "Wizard Toolbox",
+                "description": "A comprehensive digital toolbox I designed with the help of AI for my personal projects. This free solution offers a file converter, image and PDF compressor, text utilities, encoder, and code formatter.",
+                "tech": [
+                    "Angular",
+                    "NestJS",
+                    "Tailwind CSS",
+                    "DaisyUI",
+                    "Prisma",
+                    "Sharp"
+                ],
+                "link": "https://wizard-toolbox.fun",
+                "github": "https://github.com/Nuggets871/wizard-toolbox",
+                "category": "Fullstack",
+                "featured": false,
+                "image": "/assets/img/project/wizard-toolbox.png"
+            },
+            {
+                "title": "Portfolio 2026",
+                "description": "My current portfolio, designed for my international internship search as part of my engineering school. Modern, responsive, and multilingual design.",
+                "tech": [
+                    "Angular",
+                    "GSAP",
+                    "i18n"
+                ],
+                "link": "https://christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2026.png"
+            },
+            {
+                "title": "Portfolio 2025",
+                "description": "Portfolio created for a school course, including a detailed section on skills acquired during my BUT in Computer Science.",
+                "tech": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "link": "https://archive-portfolio-2025.christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2025.png"
+            },
+            {
+                "title": "Portfolio 2024",
+                "description": "First professional portfolio created in my second year of BUT for my first internship search.",
+                "tech": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "link": "https://archive-portfolio-2024.christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2024.png"
             },
             {
                 "title": "Transport Decision Support",
@@ -141,7 +227,7 @@
             },
             {
                 "title": "Blog",
-                "description": "Dynamic blog with content management system, authentication and database.",
+                "description": "Blog dynamic with content management system, authentication and database.",
                 "tech": [
                     "PHP",
                     "MySQL"
@@ -165,7 +251,7 @@
             {
                 "institution": "CPE Lyon",
                 "degree": "Computer Science & Networks Engineering",
-                "detail": "First year",
+                "detail": "First year (ongoing)",
                 "period": "Sept. 2025 — Aug. 2028"
             },
             {
@@ -183,18 +269,31 @@
             {
                 "role": "Full-Stack Developer — Apprenticeship",
                 "company": "UBIKAP",
-                "period": "Since August 2024",
-                "description": "Maintenance and feature development on web applications using Angular / Node.js. Collaborating with the team to improve existing products.",
+                "period": "Since Aug. 2024",
+                "description": [
+                    "Proactive and evolutionary maintenance of a complex business SaaS",
+                    "Full autonomy: from requirement analysis to technical implementation",
+                    "Development of major features (Full-stack Angular/Node.js)",
+                    "Strict application of Clean Code and development best practices",
+                    "Agile Workflow: Daily meetings and ticket management (Analysis & Dev)",
+                    "Varied missions: Bug fixing, refactoring, and optimization"
+                ],
+                "link": "https://www.ubikap.com",
                 "tech": [
                     "Angular",
-                    "Node.js"
+                    "Node.js",
+                    "SaaS",
+                    "Clean Code"
                 ]
             },
             {
                 "role": "Full-Stack Developer — Internship",
                 "company": "UBIKAP",
                 "period": "April 2023 — July 2023",
-                "description": "Application maintenance and creation of a paid consumption tracking page. First steps in a professional full-stack environment.",
+                "description": [
+                    "Application maintenance and creation of a paid consumption tracking page",
+                    "First steps in a professional full-stack environment"
+                ],
                 "tech": [
                     "Angular",
                     "Node.js"

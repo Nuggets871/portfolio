@@ -84,15 +84,27 @@
     display: none;
 }
 
-.exp-company {
+.exp-company,
+.exp-company-link {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
     color: var(--color-accent-2);
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-bottom: var(--space-xs);
     font-weight: 700;
+    transition: color var(--transition-fast);
+}
+
+.exp-company-link:hover {
+    color: var(--color-accent-1);
+}
+
+.exp-company-link svg {
+    opacity: 0.7;
 }
 
 .exp-role {
@@ -106,7 +118,29 @@
 .exp-desc {
     font-size: 0.9375rem;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
+}
+
+.exp-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.exp-points li {
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.exp-points li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-1);
+    font-weight: bold;
 }
 
 .exp-right {

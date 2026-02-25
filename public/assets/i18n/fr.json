@@ -27,7 +27,7 @@
     "location": "Villeurbanne / Lyon / Oyonnax",
     "email": "christopherbondier@gmail.com",
     "phone": "06 15 92 58 32",
-    "website": "christopher-bondier.fr"
+    "website": "christopher-bondier.com"
   },
   "skills": {
     "sectionNumber": "02",
@@ -94,7 +94,26 @@
     "sectionNumber": "03",
     "sectionTitle": "Projets",
     "viewProject": "Voir le projet",
+    "viewGithub": "Voir sur GitHub",
+    "showMore": "Voir plus de projets",
+    "showLess": "Voir moins",
+    "featuredTitle": "Projets à la une",
+    "allProjectsTitle": "Tous mes projets",
     "items": [
+      {
+        "title": "Plateforme SaaS Ubikap",
+        "description": "Plateforme SaaS métier complexe dont j'assure la maintenance proactive et l'évolution depuis 2 ans au sein de l'équipe Ubikap. Développement de fonctionnalités majeures en autonomie, résolution de bugs critiques et optimisation continue du code (code propre et bonnes pratiques).",
+        "tech": [
+          "Angular",
+          "Node.js",
+          "MySQL",
+          "Express"
+        ],
+        "category": "Professionnel / SaaS",
+        "featured": true,
+        "link": "https://www.ubikap.com",
+        "image": "/assets/img/project/ubikap.png"
+      },
       {
         "title": "ERP Département Informatique",
         "description": "Système ERP complet pour la gestion d'un département informatique : mails, emploi du temps, formations, stages, alternances, notes et absences. Projet collaboratif de 20 personnes.",
@@ -103,7 +122,9 @@
           "NextJS",
           "Express"
         ],
-        "category": "Fullstack"
+        "category": "Fullstack",
+        "featured": true,
+        "image": "/assets/img/project/erp.png"
       },
       {
         "title": "Eduquiz",
@@ -112,8 +133,73 @@
           "JavaScript",
           "PHP"
         ],
-        "link": "https://eduquiz.fun",
-        "category": "Web"
+        "link": "https://eduquiz.christopher-bondier.com",
+        "category": "Web",
+        "featured": true,
+        "image": [
+          "/assets/img/project/eduquiz_1.png",
+          "/assets/img/project/eduquiz_2.png",
+          "/assets/img/project/eduquiz_3.png",
+          "/assets/img/project/eduquiz_4.png",
+          "/assets/img/project/eduquiz_5.png",
+          "/assets/img/project/eduquiz_6.png"
+        ]
+      },
+      {
+        "title": "Wizard Toolbox",
+        "description": "Une boîte à outils numérique complète que j'ai conçue avec l'aide de l'IA pour mes projets personnels. Cette solution gratuite propose un convertisseur de fichiers, un compresseur d'images et PDF, des utilitaires de texte, un encodeur et un formateur de code.",
+        "tech": [
+          "Angular",
+          "NestJS",
+          "Tailwind CSS",
+          "DaisyUI",
+          "Prisma",
+          "Sharp"
+        ],
+        "link": "https://wizard-toolbox.fun",
+        "github": "https://github.com/Nuggets871/wizard-toolbox",
+        "category": "Fullstack",
+        "featured": false,
+        "image": "/assets/img/project/wizard-toolbox.png"
+      },
+      {
+        "title": "Portfolio 2026",
+        "description": "Mon portfolio actuel, conçu pour ma recherche de stage à l'étranger dans le cadre de mon école d'ingénieur. Design moderne, réactif et multilingue.",
+        "tech": [
+          "Angular",
+          "GSAP",
+          "i18n"
+        ],
+        "link": "https://christopher-bondier.com",
+        "category": "Portfolio",
+        "group": "portfolios",
+        "image": "/assets/img/project/portfolio-2026.png"
+      },
+      {
+        "title": "Portfolio 2025",
+        "description": "Portefolio réalisé pour un cours à l'IUT, incluant une section détaillée sur les compétences acquises durant mon BUT Informatique.",
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "link": "https://archive-portfolio-2025.christopher-bondier.com",
+        "category": "Portfolio",
+        "group": "portfolios",
+        "image": "/assets/img/project/portfolio-2025.png"
+      },
+      {
+        "title": "Portfolio 2024",
+        "description": "Premier portfolio professionnel réalisé en deuxième année de BUT pour ma première recherche de stage.",
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "link": "https://archive-portfolio-2024.christopher-bondier.com",
+        "category": "Portfolio",
+        "group": "portfolios",
+        "image": "/assets/img/project/portfolio-2024.png"
       },
       {
         "title": "Aide décisionnelle de transport",
@@ -165,7 +251,7 @@
       {
         "institution": "CPE Lyon",
         "degree": "Ingénieur en informatique et réseaux",
-        "detail": "Première année",
+        "detail": "Première année (en cours)",
         "period": "Sept. 2025 — Août 2028"
       },
       {
@@ -184,17 +270,30 @@
         "role": "Développeur Full-Stack — Alternance",
         "company": "UBIKAP",
         "period": "Depuis août 2024",
-        "description": "Maintenance et ajout de fonctionnalités sur des applications web en Angular / Node.js. Collaboration avec l'équipe pour améliorer les produits existants.",
+        "description": [
+          "Maintenance proactive et évolutive d'un SaaS métier complexe",
+          "Autonomie complète : de l'analyse du besoin à l'implémentation technique",
+          "Développement de fonctionnalités majeures (Full-stack Angular/Node.js)",
+          "Application rigoureuse du Clean Code et des bonnes pratiques de développement",
+          "Workflow Agile : Daily meetings et gestion de tickets (Analyse & Dev)",
+          "Missions variées : Résolution de bugs, refactoring et optimisation"
+        ],
+        "link": "https://www.ubikap.com",
         "tech": [
           "Angular",
-          "Node.js"
+          "Node.js",
+          "SaaS",
+          "Clean Code"
         ]
       },
       {
         "role": "Développeur Full-Stack — Stage",
         "company": "UBIKAP",
         "period": "Avril 2023 — Juillet 2023",
-        "description": "Maintenance applicative et création d'une page de suivi des consommations payantes. Premiers pas en environnement professionnel full-stack.",
+        "description": [
+          "Maintenance applicative et création d'une page de suivi des consommations payantes",
+          "Premiers pas en environnement professionnel full-stack"
+        ],
         "tech": [
           "Angular",
           "Node.js"
@@ -205,7 +304,7 @@
   "contact": {
     "sectionNumber": "06",
     "sectionTitle": "Contact",
-    "heading": "Travaillons ensemble",
+    "heading": "Travaillons ensemble!",
     "description": "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration.",
     "email": "Email",
     "phone": "Téléphone",

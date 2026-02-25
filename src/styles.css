@@ -217,6 +217,15 @@ ol {
   animation-delay: 1.5s;
 }
 
+.sticker-about-bee {
+  width: 55px;
+  top: 15%;
+  left: 5%;
+  transform: rotate(-15deg);
+  animation: floatSlow 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
 /* Skills stickers */
 .sticker-skills-1 {
   width: 75px;
@@ -380,4 +389,192 @@ ol {
     /* Position it higher to be on the right of the title/grid */
     width: 60px;
   }
+}
+
+/* ===== GLOBAL TECH TAGS ===== */
+.tech-tag,
+.tag,
+.mini-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+/* Specific Technology Colors - High Contrast */
+.javascript {
+  background-color: #f7df1e !important;
+  color: #000 !important;
+  border-color: #dabf00 !important;
+}
+
+.typescript {
+  background-color: #3178c6 !important;
+  color: #fff !important;
+  border-color: #235a97 !important;
+}
+
+.angular {
+  background-color: #dd0031 !important;
+  color: #fff !important;
+  border-color: #b50028 !important;
+}
+
+.react {
+  background-color: #61dafb !important;
+  color: #000 !important;
+  border-color: #4fa8c7 !important;
+}
+
+.nextjs {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+.nestjs {
+  background-color: #e0234e !important;
+  color: #fff !important;
+  border-color: #ac1b3c !important;
+}
+
+.php {
+  background-color: #777bb4 !important;
+  color: #fff !important;
+  border-color: #5a5e8a !important;
+}
+
+.java {
+  background-color: #007396 !important;
+  color: #fff !important;
+  border-color: #005a75 !important;
+}
+
+.c {
+  background-color: #a8b9cc !important;
+  color: #000 !important;
+  border-color: #8a99a8 !important;
+}
+
+.tailwind-css {
+  background-color: #38bdf8 !important;
+  color: #fff !important;
+  border-color: #2da1d4 !important;
+}
+
+.daisyui {
+  background-color: #5a0ef8 !important;
+  color: #fff !important;
+  border-color: #450bc1 !important;
+}
+
+.mysql {
+  background-color: #4479a1 !important;
+  color: #fff !important;
+  border-color: #345c7a !important;
+}
+
+.prisma {
+  background-color: #2d3748 !important;
+  color: #fff !important;
+  border-color: #1a202c !important;
+}
+
+.gsap {
+  background-color: #88ce02 !important;
+  color: #000 !important;
+  border-color: #6ca401 !important;
+}
+
+.html {
+  background-color: #e34f26 !important;
+  color: #fff !important;
+  border-color: #c13a17 !important;
+}
+
+.css {
+  background-color: #1572b6 !important;
+  color: #fff !important;
+  border-color: #105a91 !important;
+}
+
+.power-bi {
+  background-color: #f2c811 !important;
+  color: #000 !important;
+  border-color: #d1ad0e !important;
+}
+
+.python {
+  background-color: #3776ab !important;
+  color: #fff !important;
+  border-color: #2b5b87 !important;
+}
+
+.node\.js {
+  background-color: #339933 !important;
+  color: #fff !important;
+  border-color: #287a28 !important;
+}
+
+.express {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+.docker {
+  background-color: #2496ed !important;
+  color: #fff !important;
+  border-color: #1d79be !important;
+}
+
+.algorithmique,
+.algorithms {
+  background-color: #6c5ce7 !important;
+  color: #fff !important;
+  border-color: #4834d4 !important;
+}
+
+.système,
+.system {
+  background-color: #2f3640 !important;
+  color: #fff !important;
+  border-color: #191d21 !important;
+}
+
+.data {
+  background-color: #009432 !important;
+  color: #fff !important;
+  border-color: #006322 !important;
+}
+
+.web {
+  background-color: #ff9f43 !important;
+  color: #fff !important;
+  border-color: #ee5253 !important;
+}
+
+.fullstack {
+  background-color: #5758bb !important;
+  color: #fff !important;
+  border-color: #3d3d91 !important;
+}
+
+.nosql {
+  background-color: #4db33d !important;
+  color: #fff !important;
+  border-color: #3e8e31 !important;
+}
+
+.api {
+  background-color: #ff6b6b !important;
+  color: #fff !important;
+  border-color: #ee5253 !important;
 }

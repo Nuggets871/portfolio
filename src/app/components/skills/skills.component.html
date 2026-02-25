@@ -19,7 +19,8 @@
                 </div>
                 <div class="card-tags">
                     @for (skill of ('skills.items.' + cat.key | translate); track skill) {
-                    <span class="tag">{{ skill }}</span>
+                    <span class="tag tech-tag" [class]="skill.toLowerCase().replace(' ', '-').replace('.', '-')">{{
+                        skill }}</span>
                     }
                 </div>
             </div>
