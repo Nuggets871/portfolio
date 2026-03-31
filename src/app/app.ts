@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -8,10 +8,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     TranslateModule,
     NavbarComponent,
@@ -24,6 +24,13 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class App { }
+export class App {
+  private readonly seoService = inject(SeoService);
+
+  constructor() {
+    this.seoService.init();
+  }
+}

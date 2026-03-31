@@ -297,6 +297,14 @@
             }
         ]
     },
+    "seo": {
+        "title": "Christopher Bondier | Portfolio oficial | Desarrollador full-stack Angular Node.js",
+        "description": "Portfolio oficial de Christopher Bondier, desarrollador full-stack Angular / Node.js, alternante en UBIKAP y estudiante de ingeniería en CPE Lyon.",
+        "keywords": "Christopher Bondier, portfolio, desarrollador full-stack, Angular, Node.js, TypeScript, CPE Lyon, UBIKAP, desarrollador web Lyon",
+        "siteName": "Portfolio de Christopher Bondier",
+        "jobTitle": "Desarrollador full-stack",
+        "ogLocale": "es_ES"
+    },
     "contact": {
         "sectionNumber": "06",
         "sectionTitle": "Contacto",

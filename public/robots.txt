@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christopher-bondier.com/sitemap.xml
