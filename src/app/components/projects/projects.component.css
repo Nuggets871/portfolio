@@ -43,11 +43,11 @@
 
 .project-image-container {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 10;
     border-bottom: 2px solid var(--color-border);
     overflow: hidden;
     position: relative;
-    background: var(--color-bg-alt);
+    background: linear-gradient(135deg, var(--color-accent-bg-1) 0%, var(--color-accent-bg-2) 100%);
 }
 
 app-project-gallery {
@@ -413,7 +413,7 @@ app-project-gallery {
 
 .modal-gallery-hero {
     width: 100%;
-    background: #121212;
+    background: linear-gradient(135deg, #0b2a3a 0%, #123e52 50%, #0b2a3a 100%);
     aspect-ratio: 16 / 10;
     max-height: 75vh;
     /* Slightly larger for better visibility */

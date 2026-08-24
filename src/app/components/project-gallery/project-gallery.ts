@@ -10,10 +10,16 @@ import { CommonModule } from '@angular/common';
         <!-- Main Image -->
         <div class="main-image-wrapper">
             @if (images && images.length > 0) {
-                <img [src]="images[currentIndex]" 
-                     [alt]="alt" 
-                     class="gallery-image"
-                     (error)="handleError($event)">
+                <div class="image-frame" [class.has-backdrop]="isModal">
+                    @if (isModal) {
+                        <img [src]="images[currentIndex]" alt="" class="backdrop-image" aria-hidden="true"
+                             (error)="handleError($event)">
+                    }
+                    <img [src]="images[currentIndex]" 
+                         [alt]="alt" 
+                         class="gallery-image"
+                         (error)="handleError($event)">
+                </div>
             } @else {
                 <div class="placeholder-fallback">No image available</div>
             }
@@ -66,6 +72,16 @@ import { CommonModule } from '@angular/common';
         justify-content: center;
     }
 
+    .image-frame {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
     .gallery-image {
         width: 100%;
         height: 100%;
@@ -78,6 +94,36 @@ import { CommonModule } from '@angular/common';
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    /* Blurred backdrop for modal: fills the whole area with the same image
+       blurred & darkened, so any aspect-ratio mismatch never shows black bars */
+    .backdrop-image {
+        position: absolute;
+        inset: -30px;
+        width: calc(100% + 60px);
+        height: calc(100% + 60px);
+        object-fit: cover;
+        filter: blur(28px) saturate(1.1) brightness(0.65);
+        transform: scale(1.05);
+        z-index: 0;
+        pointer-events: none;
+        opacity: 1;
+    }
+
+    .image-frame .gallery-image {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Subtle gradient veil over the backdrop for depth */
+    .image-frame.has-backdrop::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.38) 100%);
     }
 
     /* Navigation Buttons */
