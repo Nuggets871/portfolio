@@ -45,6 +45,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
                     // Filter featured projects: check flag OR specific key titles
                     const featuredTitles = [
                         'Plateforme SaaS Ubikap', 'Ubikap SaaS Platform', 'Plataforma SaaS Ubikap',
+                        'CPE Notes',
                         'ERP Département Informatique', 'IT Department ERP', 'ERP Departamento Informático',
                         'Eduquiz'
                     ];
