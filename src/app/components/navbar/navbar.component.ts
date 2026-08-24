@@ -13,7 +13,7 @@ export class NavbarComponent {
     isMenuOpen = false;
     isScrolled = false;
 
-    @HostListener('window:scroll', ['$event'])
+    @HostListener('window:scroll')
     onWindowScroll() {
         this.isScrolled = window.scrollY > 50;
     }
