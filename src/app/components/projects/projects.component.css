@@ -394,16 +394,21 @@ app-project-gallery {
 }
 
 /* Custom Scrollbar for Modal */
+.modal-scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-light) transparent;
+}
+
 .modal-scroll-area::-webkit-scrollbar {
     width: 6px;
 }
 
 .modal-scroll-area::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--color-bg);
 }
 
 .modal-scroll-area::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--color-border-light);
     border-radius: 10px;
 }
 
