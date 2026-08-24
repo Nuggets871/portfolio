@@ -101,7 +101,7 @@
         "items": [
             {
                 "title": "Ubikap SaaS Platform",
-                "description": "Complex business SaaS platform that I have been proactively maintaining and evolving for 2 years within the Ubikap team. Development of major features autonomously, resolution of critical bugs, and continuous code optimization (clean code and best practices).",
+                "description": "A business platform I maintain and keep improving at Ubikap. I handle the day-to-day maintenance, fix blocking bugs, and build new features on my own. I've come to know the product inside out, and I make sure the code stays clean and readable so the whole team can step in easily.",
                 "tech": [
                     "Angular",
                     "Node.js",
@@ -136,7 +136,7 @@
             },
             {
                 "title": "IT Department ERP",
-                "description": "Complete ERP system for IT department management: emails, schedules, training, internships, apprenticeships, grades and attendance. Collaborative project with 20 people.",
+                "description": "An ERP built in a team of twenty to handle the day-to-day of an IT department. It covers emails, class schedules, training, internships, apprenticeships, grades, and attendance. Everything is kept in one tool instead of being spread across several spreadsheets and apps.",
                 "tech": [
                     "React",
                     "NextJS",
@@ -148,7 +148,7 @@
             },
             {
                 "title": "Eduquiz",
-                "description": "Quizlet clone — educational platform with interactive flashcards to facilitate learning.",
+                "description": "A flashcard revision site inspired by Quizlet. You build a deck of cards on a topic, then drill yourself by flipping them one by one. It was my first project in PHP and JavaScript, and it mainly taught me how a website with a database and user accounts actually works.",
                 "tech": [
                     "JavaScript",
                     "PHP"
@@ -167,7 +167,7 @@
             },
             {
                 "title": "Wizard Toolbox",
-                "description": "A comprehensive digital toolbox I designed with the help of AI for my personal projects. This free solution offers a file converter, image and PDF compressor, text utilities, encoder, and code formatter.",
+                "description": "An online toolbox I built for my own needs, leaning on AI to move faster. It brings together a file converter, an image and PDF compressor, text utilities, an encoder, and a code formatter. Everything is free and runs straight in the browser, nothing to install.",
                 "tech": [
                     "Angular",
                     "NestJS",
@@ -184,7 +184,7 @@
             },
             {
                 "title": "Portfolio 2026",
-                "description": "My current portfolio, designed for my international internship search as part of my engineering school. Modern, responsive, and multilingual design.",
+                "description": "This portfolio, which I keep updating for my internship search abroad while studying engineering. I spent time on the design and the animations, and it's available in three languages. It's also a playground for trying out things I use in class or at work.",
                 "tech": [
                     "Angular",
                     "GSAP",
@@ -197,7 +197,7 @@
             },
             {
                 "title": "Portfolio 2025",
-                "description": "Portfolio created for a school course, including a detailed section on skills acquired during my BUT in Computer Science.",
+                "description": "A portfolio I made for a course at the IUT. It covers the skills I picked up throughout my Computer Science BUT, with a more academic layout and a simpler design. It got me comfortable with HTML, CSS, and JavaScript before moving on to bigger projects.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -210,7 +210,7 @@
             },
             {
                 "title": "Portfolio 2024",
-                "description": "First professional portfolio created in my second year of BUT for my first internship search.",
+                "description": "My very first portfolio, made in my second year of BUT to land a first internship. It's simple, but it taught me the basics of web layout and design. I keep it online to show where I started from.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -223,7 +223,7 @@
             },
             {
                 "title": "Transport Decision Support",
-                "description": "Optimal route calculation application using graph theory for transport decision-making.",
+                "description": "A small Java tool to compute routes between cities using graph theory. You enter a start point and a destination, and the program compares the possible paths to find the shortest one. A class project that made me look at graph algorithms more closely.",
                 "tech": [
                     "Java"
                 ],
@@ -231,7 +231,7 @@
             },
             {
                 "title": "Directory Management",
-                "description": "Directory management system with CSV data storage, enabling contact search and manipulation.",
+                "description": "A C program that manages a contacts directory stored in a CSV file. You can look someone up by name, add a record, edit it, or delete it. A short but useful project that got me working with data structures and file handling in C.",
                 "tech": [
                     "C"
                 ],
@@ -239,7 +239,7 @@
             },
             {
                 "title": "Sorting Algorithms",
-                "description": "Implementation and comparison of various sorting algorithms: bubble, merge, insertion and selection sort.",
+                "description": "A Java implementation of several sorting algorithms: bubble sort, merge sort, insertion sort, and selection sort. I compared how fast they run on lists of different sizes to see which ones still hold up as the data grows. A good exercise for understanding algorithm complexity.",
                 "tech": [
                     "Algorithms"
                 ],
@@ -247,7 +247,7 @@
             },
             {
                 "title": "Blog",
-                "description": "Blog dynamic with content management system, authentication and database.",
+                "description": "A full blog built with PHP and MySQL where each post has an author and can be published or taken down depending on permissions. There's an admin area with accounts to manage the content, all backed by a MySQL database. It's the project that taught me the most about user accounts and sessions.",
                 "tech": [
                     "PHP",
                     "MySQL"
@@ -256,7 +256,7 @@
             },
             {
                 "title": "Power BI Dashboards",
-                "description": "Creation of interactive dashboards to support decision-making and optimize profit generation.",
+                "description": "Power BI dashboards built for a business project: tracking sales, margins, and costs, with charts that filter based on what you select. The goal was to move past raw data and give a readable overview so decisions could be made faster.",
                 "tech": [
                     "Power BI"
                 ],

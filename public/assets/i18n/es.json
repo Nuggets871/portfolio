@@ -101,7 +101,7 @@
         "items": [
             {
                 "title": "Plataforma SaaS Ubikap",
-                "description": "Plataforma SaaS de negocio compleja que he estado manteniendo y evolucionando de forma proactiva durante 2 años dentro del equipo de Ubikap. Desarrollo de funciones principales de forma autónoma, resolución de errores críticos y optimización continua del código (código limpio y buenas prácticas).",
+                "description": "Plataforma de negocio que mantengo y hago evolucionar en Ubikap desde hace dos años. Me encargo del mantenimiento diario, corrijo errores bloqueantes y desarrollo funcionalidades nuevas de forma autónoma. He llegado a conocer el producto de arriba abajo, y procuro que el código quede limpio y comprensible para que todo el equipo pueda intervenir con facilidad.",
                 "tech": [
                     "Angular",
                     "Node.js",
@@ -136,7 +136,7 @@
             },
             {
                 "title": "ERP Departamento Informático",
-                "description": "Sistema ERP completo para la gestión de un departamento informático: correos, horarios, formaciones, prácticas, alternancia, notas y asistencia. Proyecto colaborativo de 20 personas.",
+                "description": "Un ERP construido en un grupo de veinte personas para gestionar el día a día de un departamento de informática. Incluye correos, horarios, formaciones, prácticas, alternancia, notas y asistencia. Todo queda centralizado en una sola herramienta en lugar de repartido entre varias hojas de cálculo y aplicaciones.",
                 "tech": [
                     "React",
                     "NextJS",
@@ -148,7 +148,7 @@
             },
             {
                 "title": "Eduquiz",
-                "description": "Clon de Quizlet — plataforma educativa con tarjetas interactivas para facilitar el aprendizaje.",
+                "description": "Un sitio de repaso con tarjetas inspirado en Quizlet. Creas una baraja sobre un tema y luego practicas dándoles la vuelta una a una. Fue mi primer proyecto en PHP y JavaScript, y me sirvió sobre todo para entender cómo funciona un sitio con base de datos y cuentas de usuario.",
                 "tech": [
                     "JavaScript",
                     "PHP"
@@ -164,7 +164,7 @@
             },
             {
                 "title": "Wizard Toolbox",
-                "description": "Una caja de herramientas digital completa que diseñé con la ayuda de la IA para mis proyectos personales. Esta solución gratuita ofrece un convertidor de archivos, compresor de imágenes y PDF, utilidades de texto, codificador y formateador de código.",
+                "description": "Una caja de herramientas en línea que hice para mis propias necesidades, apoyándome en la IA para avanzar más rápido. Reúne un conversor de archivos, un compresor de imágenes y PDF, utilidades de texto, un codificador y un formateador de código. Todo es gratuito y funciona directamente en el navegador, sin instalar nada.",
                 "tech": [
                     "Angular",
                     "NestJS",
@@ -181,7 +181,7 @@
             },
             {
                 "title": "Portfolio 2026",
-                "description": "Mi portafolio actual, diseñado para mi búsqueda de prácticas internacionales como parte de mi escuela de ingeniería. Diseño moderno, receptivo y bilingüe.",
+                "description": "Este portafolio, que actualizo para mi búsqueda de prácticas en el extranjero durante mis estudios de ingeniería. Le he dedicado tiempo al diseño y a las animaciones, y está disponible en tres idiomas. También es un terreno de juego para probar cosas que uso en clase o en el trabajo.",
                 "tech": [
                     "Angular",
                     "GSAP",
@@ -194,7 +194,7 @@
             },
             {
                 "title": "Portfolio 2025",
-                "description": "Portafolio creado para un curso escolar, que incluye una sección detallada sobre las competencias adquiridas durante mi BUT en Informática.",
+                "description": "Un portafolio que hice para un curso en el IUT. Recoge las competencias que fui adquiriendo durante el BUT de Informática, con una presentación más académica y un diseño más sencillo. Me sirvió para soltarme con HTML, CSS y JavaScript antes de pasar a proyectos más grandes.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -207,7 +207,7 @@
             },
             {
                 "title": "Portfolio 2024",
-                "description": "Primer portafolio profesional creado en mi segundo año de BUT para mi primera búsqueda de prácticas.",
+                "description": "Mi primer portafolio, hecho en mi segundo año de BUT para conseguir mis primeras prácticas. Es sencillo, pero me enseñó las bases de la maquetación y del diseño web. Lo mantengo en línea para mostrar de dónde vengo.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -220,7 +220,7 @@
             },
             {
                 "title": "Apoyo a la decisión de transporte",
-                "description": "Aplicación de cálculo de rutas óptimas utilizando la teoría de grafos para la toma de decisiones en transporte.",
+                "description": "Una pequeña herramienta en Java para calcular rutas entre ciudades usando la teoría de grafos. Pones un punto de partida y un destino, y el programa compara las rutas posibles para encontrar la más corta. Un proyecto de clase que me hizo repasar los algoritmos de grafos más de cerca.",
                 "tech": [
                     "Java"
                 ],
@@ -228,7 +228,7 @@
             },
             {
                 "title": "Gestión de directorio",
-                "description": "Sistema de gestión de directorio con almacenamiento de datos en CSV, permitiendo la búsqueda y manipulación de contactos.",
+                "description": "Un programa en C que gestiona un directorio de contactos guardado en un archivo CSV. Puedes buscar a alguien por nombre, añadir una ficha, modificarla o borrarla. Un proyecto corto pero útil que me hizo trabajar con estructuras de datos y archivos en C.",
                 "tech": [
                     "C"
                 ],
@@ -236,7 +236,7 @@
             },
             {
                 "title": "Algoritmos de ordenación",
-                "description": "Implementación y comparación de diferentes algoritmos de ordenación: burbuja, fusión, inserción y selección.",
+                "description": "Una implementación en Java de varios algoritmos de ordenación: burbuja, fusión, inserción y selección. Comparé su velocidad en listas de distintos tamaños para ver cuáles aguantan cuando los datos crecen. Un buen ejercicio para entender la complejidad de un algoritmo.",
                 "tech": [
                     "Algoritmos"
                 ],
@@ -244,7 +244,7 @@
             },
             {
                 "title": "Blog",
-                "description": "Blog dinámico con sistema de gestión de contenido, autenticación y base de datos.",
+                "description": "Un blog completo en PHP y MySQL donde cada artículo tiene un autor y se puede publicar o retirar según los permisos. Hay una zona de administración con cuentas para gestionar el contenido, todo apoyado en una base de datos MySQL. Es el proyecto en el que más aprendí sobre cuentas de usuario y sesiones.",
                 "tech": [
                     "PHP",
                     "MySQL"
@@ -253,7 +253,7 @@
             },
             {
                 "title": "Visualisation Power BI",
-                "description": "Creación de paneles interactivos para apoyar la toma de decisiones et optimizar la generación de beneficios.",
+                "description": "Paneles de Power BI construidos para un proyecto de empresa: seguimiento de ventas, márgenes y costes, con gráficos que se filtran según lo que seleccionas. El objetivo era salir de los datos en bruto y dar una visión clara para poder decidir más rápido.",
                 "tech": [
                     "Power BI"
                 ],

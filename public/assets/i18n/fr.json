@@ -101,7 +101,7 @@
         "items": [
             {
                 "title": "Plateforme SaaS Ubikap",
-                "description": "Plateforme SaaS métier complexe dont j'assure la maintenance proactive et l'évolution depuis 2 ans au sein de l'équipe Ubikap. Développement de fonctionnalités majeures en autonomie, résolution de bugs critiques et optimisation continue du code (code propre et bonnes pratiques).",
+                "description": "Plateforme métier que je maintiens et fais évoluer chez Ubikap depuis deux ans. Je m'occupe de la maintenance courante, je corrige les bugs bloquants et je développe de nouvelles fonctionnalités en autonomie. J'ai appris à connaître le produit de fond en comble, et je veille à ce que le code reste propre et compréhensible pour que toute l'équipe puisse intervenir facilement.",
                 "tech": [
                     "Angular",
                     "Node.js",
@@ -136,7 +136,7 @@
             },
             {
                 "title": "ERP Département Informatique",
-                "description": "Système ERP complet pour la gestion d'un département informatique : mails, emploi du temps, formations, stages, alternances, notes et absences. Projet collaboratif de 20 personnes.",
+                "description": "ERP construit en groupe de vingt pour gérer le quotidien d'un département informatique. On y retrouve la gestion des mails, l'emploi du temps, les formations, les stages, l'alternance, les notes et les absences. Tout est centralisé dans un seul outil au lieu d'être éparpillé entre plusieurs tableurs et applications.",
                 "tech": [
                     "React",
                     "NextJS",
@@ -148,7 +148,7 @@
             },
             {
                 "title": "Eduquiz",
-                "description": "Clone de Quizlet — plateforme éducative avec flashcards interactives pour faciliter l'apprentissage.",
+                "description": "Plateforme de révision inspirée de Quizlet. On crée des jeux de cartes sur un sujet, puis on s'entraîne en les retournant une par une. C'était mon premier projet en PHP et JavaScript, et il m'a surtout servi à comprendre comment marche un site avec une base de données et des comptes utilisateurs.",
                 "tech": [
                     "JavaScript",
                     "PHP"
@@ -167,7 +167,7 @@
             },
             {
                 "title": "Wizard Toolbox",
-                "description": "Une boîte à outils numérique complète que j'ai conçue avec l'aide de l'IA pour mes projets personnels. Cette solution gratuite propose un convertisseur de fichiers, un compresseur d'images et PDF, des utilitaires de texte, un encodeur et un formateur de code.",
+                "description": "Boîte à outils en ligne que j'ai faite pour mes propres besoins, en m'aidant de l'IA pour avancer plus vite. Elle regroupe un convertisseur de fichiers, un compresseur d'images et de PDF, des utilitaires de texte, un encodeur et un formateur de code. Tout est gratuit et accessible depuis le navigateur, sans rien installer.",
                 "tech": [
                     "Angular",
                     "NestJS",
@@ -184,7 +184,7 @@
             },
             {
                 "title": "Portfolio 2026",
-                "description": "Mon portfolio actuel, conçu pour ma recherche de stage à l'étranger dans le cadre de mon école d'ingénieur. Design moderne, réactif et multilingue.",
+                "description": "Ce portfolio, que je mets à jour pour ma recherche de stage à l'étranger pendant mes études d'ingénieur. J'y ai passé du temps sur le design et les animations, et il est disponible en trois langues. C'est aussi un terrain de jeu pour tester des choses que j'utilise en cours ou en entreprise.",
                 "tech": [
                     "Angular",
                     "GSAP",
@@ -197,7 +197,7 @@
             },
             {
                 "title": "Portfolio 2025",
-                "description": "Portefolio réalisé pour un cours à l'IUT, incluant une section détaillée sur les compétences acquises durant mon BUT Informatique.",
+                "description": "Portfolio réalisé pendant un cours à l'IUT. Il reprend les compétences acquises au fil du BUT Informatique, avec une présentation plus scolaire et un design plus simple. Il m'a permis de me faire la main sur l'HTML, le CSS et le JavaScript avant de passer à des projets plus ambitieux.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -210,7 +210,7 @@
             },
             {
                 "title": "Portfolio 2024",
-                "description": "Premier portfolio professionnel réalisé en deuxième année de BUT pour ma première recherche de stage.",
+                "description": "Mon tout premier portfolio, réalisé en deuxième année de BUT pour trouver un premier stage. Il est simple, mais il m'a appris les bases de la mise en page et du design web. Je le garde en ligne pour montrer d'où je pars.",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -223,7 +223,7 @@
             },
             {
                 "title": "Aide décisionnelle de transport",
-                "description": "Application de calcul d'itinéraires optimaux utilisant la théorie des graphes pour l'aide à la décision en transport.",
+                "description": "Petit outil en Java pour calculer des itinéraires entre des villes en utilisant la théorie des graphes. On entre un point de départ et une destination, et le programme compare les chemins possibles pour trouver le plus court. Un projet de cours qui m'a fait revoir les algorithmes de plus près.",
                 "tech": [
                     "Java"
                 ],
@@ -231,7 +231,7 @@
             },
             {
                 "title": "Gestion d'annuaire",
-                "description": "Système de gestion d'annuaire avec stockage de données en CSV, permettant la recherche et la manipulation de contacts.",
+                "description": "Programme en C qui gère un annuaire de contacts stocké dans un fichier CSV. On peut chercher quelqu'un par nom, ajouter une fiche, la modifier ou la supprimer. Un projet court mais formateur, qui m'a fait travailler les structures de données et la manipulation de fichiers en C.",
                 "tech": [
                     "C"
                 ],
@@ -239,7 +239,7 @@
             },
             {
                 "title": "Algorithmes de tri",
-                "description": "Implémentation et comparaison de différents algorithmes de tri : bulle, fusion, insertion et sélection.",
+                "description": "Implémentation en Java de plusieurs algorithmes de tri : tri à bulles, tri fusion, tri par insertion et tri par sélection. J'ai comparé leur vitesse sur des listes de tailles différentes pour voir lesquels tiennent la route quand les données grossissent. Un bon exercice pour comprendre la complexité d'un algorithme.",
                 "tech": [
                     "Algorithmique"
                 ],
@@ -247,7 +247,7 @@
             },
             {
                 "title": "Blog",
-                "description": "Blog dynamique avec système de gestion de contenu, authentification et base de données.",
+                "description": "Blog complet en PHP et MySQL où chaque article a un auteur et peut être publié ou retiré selon les droits. Il y a une partie administration avec des comptes pour gérer le contenu, le tout reposant sur une base de données MySQL. C'est le projet qui m'a le plus appris sur les comptes utilisateurs et les sessions.",
                 "tech": [
                     "PHP",
                     "MySQL"
@@ -256,7 +256,7 @@
             },
             {
                 "title": "Visualisation Power BI",
-                "description": "Création de tableaux de bord interactifs pour assister la prise de décision et optimiser la génération de profit.",
+                "description": "Tableaux de bord Power BI construits pour un projet d'entreprise : suivi des ventes, des marges et des coûts, avec des graphiques qui se filtrent selon ce qu'on sélectionne. L'objectif était de sortir des données brutes et de donner une vue d'ensemble lisible pour prendre des décisions plus vite.",
                 "tech": [
                     "Power BI"
                 ],
