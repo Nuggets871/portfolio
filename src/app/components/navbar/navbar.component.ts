@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,16 +9,28 @@ import { TranslateModule } from '@ngx-translate/core';
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnDestroy {
     isMenuOpen = false;
     isScrolled = false;
+    private scrollTimer: any;
 
     @HostListener('window:scroll')
     onWindowScroll() {
-        this.isScrolled = window.scrollY > 50;
+        this.updateScrolled();
     }
 
     ngOnInit() {
+        this.updateScrolled();
+        this.scrollTimer = setInterval(() => this.updateScrolled(), 150);
+    }
+
+    ngOnDestroy() {
+        if (this.scrollTimer) {
+            clearInterval(this.scrollTimer);
+        }
+    }
+
+    private updateScrolled() {
         this.isScrolled = window.scrollY > 50;
     }
 
