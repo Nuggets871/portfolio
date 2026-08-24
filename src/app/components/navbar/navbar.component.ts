@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -12,24 +12,13 @@ import { TranslateModule } from '@ngx-translate/core';
 export class NavbarComponent {
     isMenuOpen = false;
     isScrolled = false;
-    private onScrollHandler: (() => void) | null = null;
+
+    @HostListener('window:scroll', ['$event'])
+    onWindowScroll() {
+        this.isScrolled = window.scrollY > 50;
+    }
 
     ngOnInit() {
-        this.onScrollHandler = this.onScroll.bind(this);
-        window.addEventListener('scroll', this.onScrollHandler, { passive: true });
-        document.addEventListener('scroll', this.onScrollHandler, { passive: true });
-        this.onScroll();
-    }
-
-    ngOnDestroy() {
-        if (this.onScrollHandler) {
-            window.removeEventListener('scroll', this.onScrollHandler);
-            document.removeEventListener('scroll', this.onScrollHandler);
-            this.onScrollHandler = null;
-        }
-    }
-
-    onScroll() {
         this.isScrolled = window.scrollY > 50;
     }
 
