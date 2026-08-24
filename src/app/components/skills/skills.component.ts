@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { RevealDirective } from '../../directives/reveal.directive';
+import { techLogo } from '../../shared/tech-logos';
 
 interface SkillCategory {
     key: string;
-    icon: string;
 }
 
 @Component({
@@ -17,12 +17,16 @@ interface SkillCategory {
 })
 export class SkillsComponent {
     categories: SkillCategory[] = [
-        { key: 'programming', icon: '⟨/⟩' },
-        { key: 'web', icon: '◈' },
-        { key: 'database', icon: '⊞' },
-        { key: 'tools', icon: '⚙' },
-        { key: 'os', icon: '▣' },
-        { key: 'management', icon: '◉' },
-        { key: 'languages', icon: '◆' }
+        { key: 'programming' },
+        { key: 'web' },
+        { key: 'database' },
+        { key: 'tools' },
+        { key: 'os' },
+        { key: 'management' },
+        { key: 'languages' }
     ];
+
+    getLogo(skill: string): string | null {
+        return techLogo(skill);
+    }
 }

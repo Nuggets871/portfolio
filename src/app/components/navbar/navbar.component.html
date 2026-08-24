@@ -9,22 +9,12 @@
             <a class="nav-link" (click)="scrollTo('about')">{{ 'nav.about' | translate }}</a>
             <a class="nav-link" (click)="scrollTo('skills')">{{ 'nav.skills' | translate }}</a>
             <a class="nav-link" (click)="scrollTo('projects')">{{ 'nav.projects' | translate }}</a>
-            <a class="nav-link" (click)="scrollTo('education')">{{ 'nav.education' | translate }}</a>
             <a class="nav-link" (click)="scrollTo('experience')">{{ 'nav.experience' | translate }}</a>
+            <a class="nav-link" (click)="scrollTo('education')">{{ 'nav.education' | translate }}</a>
             <a class="nav-link" (click)="scrollTo('contact')">{{ 'nav.contact' | translate }}</a>
         </div>
 
         <div class="nav-actions">
-            <div class="lang-switcher">
-                @for (lang of languages; track lang.code) {
-                <button class="lang-btn" [class.active]="currentLang === lang.code" (click)="switchLanguage(lang.code)"
-                    [title]="lang.label">
-                    <span class="lang-flag">{{ lang.flag }}</span>
-                    <span class="lang-code">{{ lang.label }}</span>
-                </button>
-                }
-            </div>
-
             <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen">
                 <span></span>
                 <span></span>

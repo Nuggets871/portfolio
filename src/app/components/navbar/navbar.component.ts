@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-navbar',
@@ -12,16 +12,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class NavbarComponent {
     isMenuOpen = false;
     isScrolled = false;
-    currentLang: string;
-    languages = [
-        { code: 'fr', label: 'FR', flag: '🇫🇷' },
-        { code: 'en', label: 'EN', flag: '🇬🇧' },
-        { code: 'es', label: 'ES', flag: '🇪🇸' }
-    ];
-
-    constructor(private translate: TranslateService) {
-        this.currentLang = localStorage.getItem('lang') || this.translate.currentLang || 'fr';
-    }
 
     ngOnInit() {
         window.addEventListener('scroll', this.onScroll.bind(this));
@@ -29,12 +19,6 @@ export class NavbarComponent {
 
     onScroll() {
         this.isScrolled = window.scrollY > 50;
-    }
-
-    switchLanguage(lang: string) {
-        this.currentLang = lang;
-        localStorage.setItem('lang', lang);
-        this.translate.use(lang);
     }
 
     toggleMenu() {

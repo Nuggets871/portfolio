@@ -9,32 +9,9 @@
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: var(--space-4xl);
     align-items: start;
-}
-
-/* Quote with ocean left border */
-.about-quote {
-    font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
-    font-style: italic;
-    line-height: 1.4;
-    color: var(--color-text);
-    position: relative;
-    padding-left: var(--space-lg);
-    border-left: 3px solid var(--color-accent-1);
-}
-
-.quote-mark {
-    font-family: var(--font-serif);
-    font-size: 4rem;
-    color: var(--color-accent-1);
-    position: absolute;
-    top: -1.5rem;
-    left: -0.5rem;
-    opacity: 0.25;
-    line-height: 1;
 }
 
 /* Bio */

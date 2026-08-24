@@ -1,322 +1,341 @@
 {
-  "nav": {
-    "about": "À propos",
-    "skills": "Compétences",
-    "projects": "Projets",
-    "education": "Formation",
-    "experience": "Expérience",
-    "contact": "Contact"
-  },
-  "hero": {
-    "greeting": "Bonjour, je suis",
-    "name": "Christopher Bondier",
-    "title": "Développeur Full-Stack",
-    "subtitle": "Alternant en développement full-stack · Ingénieur en formation",
-    "description": "Angular · Node.js · MySQL",
-    "downloadCv": "Télécharger mon CV",
-    "contactMe": "Me contacter",
-    "xpBadgeNumber": "2+",
-    "xpBadgeLabel": "ans XP",
-    "polaroidCaption": "Christopher · Lyon · 2026"
-  },
-  "about": {
-    "sectionNumber": "01",
-    "sectionTitle": "À propos",
-    "bio": "Ingénieur en formation à CPE Lyon et alternant développeur full-stack chez UBIKAP, je suis passionné par le développement web et la création de solutions numériques efficaces. Fort d'une expérience concrète en Angular et Node.js, je m'efforce de concevoir des applications performantes, maintenables et centrées sur l'utilisateur.",
-    "quote": "Transformer des idées en expériences numériques élégantes.",
-    "location": "Villeurbanne / Lyon / Oyonnax",
-    "email": "christopherbondier@gmail.com",
-    "phone": "06 15 92 58 32",
-    "website": "christopher-bondier.com"
-  },
-  "skills": {
-    "sectionNumber": "02",
-    "sectionTitle": "Compétences",
-    "categories": {
-      "programming": "Informatique & Programmation",
-      "web": "Développement Web",
-      "database": "Bases de données",
-      "tools": "Outils & Environnements",
-      "os": "Systèmes d'exploitation",
-      "management": "Gestion de projet",
-      "languages": "Langues"
+    "nav": {
+        "about": "À propos",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "education": "Formation",
+        "experience": "Expérience",
+        "contact": "Contact"
     },
-    "items": {
-      "programming": [
-        "Python",
-        "Java",
-        "C",
-        "Spring Boot"
-      ],
-      "web": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Angular",
-        "VueJS",
-        "ReactJS",
-        "PHP",
-        "Symfony"
-      ],
-      "database": [
-        "SQL",
-        "PL-SQL",
-        "MongoDB",
-        "MySQL"
-      ],
-      "tools": [
-        "Git",
-        "Power BI",
-        "VS Code",
-        "Android Studio",
-        "Code::Blocks",
-        "JetBrains",
-        "VMWare",
-        "PowerAMC",
-        "Suite Office"
-      ],
-      "os": [
-        "Windows",
-        "Linux",
-        "Mac"
-      ],
-      "management": [
-        "Méthodes AGILES",
-        "SCRUM"
-      ],
-      "languages": [
-        "Français (maternelle)",
-        "Anglais C1 (TOEIC 950)"
-      ]
+    "hero": {
+        "greeting": "Bonjour, je suis",
+        "name": "Christopher Bondier",
+        "title": "Développeur Full-Stack",
+        "subtitle": "Alternant en développement full-stack · Ingénieur en formation",
+        "description": "Angular · Node.js · MySQL",
+        "downloadCv": "Télécharger mon CV",
+        "contactMe": "Me contacter",
+        "xpBadgeNumber": "2+",
+        "xpBadgeLabel": "ans XP"
+    },
+    "about": {
+        "sectionNumber": "01",
+        "sectionTitle": "À propos",
+        "bio": "Ingénieur en formation à CPE Lyon et alternant développeur full-stack chez UBIKAP, je suis passionné par le développement web et la création de solutions numériques efficaces. Fort d'une expérience concrète en Angular et Node.js, je m'efforce de concevoir des applications performantes, maintenables et centrées sur l'utilisateur.",
+        "location": "Lyon, France",
+        "email": "christopher.bondier@gmail.com",
+        "phone": "+33 6 15 92 58 32",
+        "website": "christopher-bondier.com"
+    },
+    "skills": {
+        "sectionNumber": "02",
+        "sectionTitle": "Compétences",
+        "categories": {
+            "programming": "Informatique & Programmation",
+            "web": "Développement Web",
+            "database": "Bases de données",
+            "tools": "Outils & Environnements",
+            "os": "Systèmes d'exploitation",
+            "management": "Gestion de projet",
+            "languages": "Langues"
+        },
+        "items": {
+            "programming": [
+                "Python",
+                "Java",
+                "C",
+                "Spring Boot"
+            ],
+            "web": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Angular",
+                "VueJS",
+                "ReactJS",
+                "PHP",
+                "Symfony"
+            ],
+            "database": [
+                "SQL",
+                "PL-SQL",
+                "MongoDB",
+                "MySQL"
+            ],
+            "tools": [
+                "Git",
+                "Power BI",
+                "VS Code",
+                "Android Studio",
+                "Code::Blocks",
+                "JetBrains",
+                "VMWare",
+                "PowerAMC",
+                "Suite Office"
+            ],
+            "os": [
+                "Windows",
+                "Linux",
+                "Mac"
+            ],
+            "management": [
+                "Méthodes AGILES",
+                "SCRUM"
+            ],
+            "languages": [
+                "Français (maternelle)",
+                "Anglais C1 (TOEIC 950)"
+            ]
+        }
+    },
+    "projects": {
+        "sectionNumber": "03",
+        "sectionTitle": "Projets",
+        "viewProject": "Voir le projet",
+        "viewGithub": "Voir sur GitHub",
+        "showMore": "Voir plus de projets",
+        "showLess": "Voir moins",
+        "featuredTitle": "Projets à la une",
+        "allProjectsTitle": "Tous mes projets",
+        "items": [
+            {
+                "title": "Plateforme SaaS Ubikap",
+                "description": "Plateforme SaaS métier complexe dont j'assure la maintenance proactive et l'évolution depuis 2 ans au sein de l'équipe Ubikap. Développement de fonctionnalités majeures en autonomie, résolution de bugs critiques et optimisation continue du code (code propre et bonnes pratiques).",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "MySQL",
+                    "Express"
+                ],
+                "category": "Professionnel / SaaS",
+                "featured": true,
+                "link": "https://www.ubikap.com",
+                "image": "/assets/img/project/ubikap.png"
+            },
+            {
+                "title": "CPE Notes",
+                "description": "Application de suivi de notes que j'ai montée pour ne plus avoir à me connecter à MyCPE tous les jours. Un script récupère automatiquement mes relevés et les affiche dans un tableau de bord avec les moyennes par UE et par année. Il y a aussi un calendrier synchronisé avec mon emploi du temps, un simulateur pour tester des notes avant les partiels, l'édition manuelle quand le scraper n'a pas tout reconnu, et des notifications Discord dès qu'une nouvelle note tombe. Le backend est en Node.js avec Express et Prisma, le front en Angular, et l'ensemble tourne dans Docker sur mon VPS avec PostgreSQL.",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Playwright"
+                ],
+                "link": "https://notes.christopher-bondier.com",
+                "github": "https://github.com/Nuggets871/script_cpe_notes",
+                "category": "Fullstack",
+                "featured": true,
+                "image": [
+                    "/assets/img/project/cpe-notes-1.jpg",
+                    "/assets/img/project/cpe-notes-2.jpg",
+                    "/assets/img/project/cpe-notes-3.jpg"
+                ]
+            },
+            {
+                "title": "ERP Département Informatique",
+                "description": "Système ERP complet pour la gestion d'un département informatique : mails, emploi du temps, formations, stages, alternances, notes et absences. Projet collaboratif de 20 personnes.",
+                "tech": [
+                    "React",
+                    "NextJS",
+                    "Express"
+                ],
+                "category": "Fullstack",
+                "featured": true,
+                "image": "/assets/img/project/erp.png"
+            },
+            {
+                "title": "Eduquiz",
+                "description": "Clone de Quizlet — plateforme éducative avec flashcards interactives pour faciliter l'apprentissage.",
+                "tech": [
+                    "JavaScript",
+                    "PHP"
+                ],
+                "link": "https://eduquiz.christopher-bondier.com",
+                "category": "Web",
+                "featured": true,
+                "image": [
+                    "/assets/img/project/eduquiz_1.png",
+                    "/assets/img/project/eduquiz_2.png",
+                    "/assets/img/project/eduquiz_3.png",
+                    "/assets/img/project/eduquiz_4.png",
+                    "/assets/img/project/eduquiz_5.png",
+                    "/assets/img/project/eduquiz_6.png"
+                ]
+            },
+            {
+                "title": "Wizard Toolbox",
+                "description": "Une boîte à outils numérique complète que j'ai conçue avec l'aide de l'IA pour mes projets personnels. Cette solution gratuite propose un convertisseur de fichiers, un compresseur d'images et PDF, des utilitaires de texte, un encodeur et un formateur de code.",
+                "tech": [
+                    "Angular",
+                    "NestJS",
+                    "Tailwind CSS",
+                    "DaisyUI",
+                    "Prisma",
+                    "Sharp"
+                ],
+                "link": "https://wizard-toolbox.fun",
+                "github": "https://github.com/Nuggets871/wizard-toolbox",
+                "category": "Fullstack",
+                "featured": true,
+                "image": "/assets/img/project/wizard-toolbox.png"
+            },
+            {
+                "title": "Portfolio 2026",
+                "description": "Mon portfolio actuel, conçu pour ma recherche de stage à l'étranger dans le cadre de mon école d'ingénieur. Design moderne, réactif et multilingue.",
+                "tech": [
+                    "Angular",
+                    "GSAP",
+                    "i18n"
+                ],
+                "link": "https://christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2026.png"
+            },
+            {
+                "title": "Portfolio 2025",
+                "description": "Portefolio réalisé pour un cours à l'IUT, incluant une section détaillée sur les compétences acquises durant mon BUT Informatique.",
+                "tech": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "link": "https://archive-portfolio-2025.christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2025.png"
+            },
+            {
+                "title": "Portfolio 2024",
+                "description": "Premier portfolio professionnel réalisé en deuxième année de BUT pour ma première recherche de stage.",
+                "tech": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "link": "https://archive-portfolio-2024.christopher-bondier.com",
+                "category": "Portfolio",
+                "group": "portfolios",
+                "image": "/assets/img/project/portfolio-2024.png"
+            },
+            {
+                "title": "Aide décisionnelle de transport",
+                "description": "Application de calcul d'itinéraires optimaux utilisant la théorie des graphes pour l'aide à la décision en transport.",
+                "tech": [
+                    "Java"
+                ],
+                "category": "Algorithmique"
+            },
+            {
+                "title": "Gestion d'annuaire",
+                "description": "Système de gestion d'annuaire avec stockage de données en CSV, permettant la recherche et la manipulation de contacts.",
+                "tech": [
+                    "C"
+                ],
+                "category": "Système"
+            },
+            {
+                "title": "Algorithmes de tri",
+                "description": "Implémentation et comparaison de différents algorithmes de tri : bulle, fusion, insertion et sélection.",
+                "tech": [
+                    "Algorithmique"
+                ],
+                "category": "Algorithmique"
+            },
+            {
+                "title": "Blog",
+                "description": "Blog dynamique avec système de gestion de contenu, authentification et base de données.",
+                "tech": [
+                    "PHP",
+                    "MySQL"
+                ],
+                "category": "Web"
+            },
+            {
+                "title": "Visualisation Power BI",
+                "description": "Création de tableaux de bord interactifs pour assister la prise de décision et optimiser la génération de profit.",
+                "tech": [
+                    "Power BI"
+                ],
+                "category": "Data"
+            }
+        ]
+    },
+    "education": {
+        "sectionNumber": "05",
+        "sectionTitle": "Formation",
+        "items": [
+            {
+                "institution": "CPE Lyon",
+                "degree": "Ingénieur en informatique et réseaux",
+                "detail": "",
+                "period": "Sept. 2025 — Août 2028"
+            },
+            {
+                "institution": "IUT Claude Bernard — Université Lyon 1",
+                "degree": "BUT Informatique",
+                "detail": "",
+                "period": "Sept. 2022 — Juil. 2025"
+            }
+        ]
+    },
+    "experience": {
+        "sectionNumber": "04",
+        "sectionTitle": "Expérience",
+        "items": [
+            {
+                "role": "Développeur Full-Stack — Alternance",
+                "company": "UBIKAP",
+                "period": "Depuis août 2024",
+                "description": [
+                    "Maintenance proactive et évolutive d'un SaaS métier complexe",
+                    "Autonomie complète : de l'analyse du besoin à l'implémentation technique",
+                    "Développement de fonctionnalités majeures (Full-stack Angular/Node.js)",
+                    "Application rigoureuse du Clean Code et des bonnes pratiques de développement",
+                    "Workflow Agile : Daily meetings et gestion de tickets (Analyse & Dev)",
+                    "Missions variées : Résolution de bugs, refactoring et optimisation"
+                ],
+                "link": "https://www.ubikap.com",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "SaaS",
+                    "Clean Code"
+                ]
+            },
+            {
+                "role": "Développeur Full-Stack — Stage",
+                "company": "UBIKAP",
+                "period": "Avril 2023 — Juillet 2023",
+                "description": [
+                    "Maintenance applicative et création d'une page de suivi des consommations payantes",
+                    "Premiers pas en environnement professionnel full-stack"
+                ],
+                "tech": [
+                    "Angular",
+                    "Node.js"
+                ]
+            }
+        ]
+    },
+    "seo": {
+        "title": "Christopher Bondier | Portfolio officiel | Développeur full-stack Angular Node.js",
+        "description": "Portfolio officiel de Christopher Bondier, développeur full-stack Angular / Node.js en alternance chez UBIKAP et étudiant ingénieur à CPE Lyon.",
+        "keywords": "Christopher Bondier, portfolio, développeur full-stack, Angular, Node.js, TypeScript, CPE Lyon, UBIKAP, développeur web Lyon",
+        "siteName": "Portfolio de Christopher Bondier",
+        "jobTitle": "Développeur full-stack",
+        "ogLocale": "fr_FR"
+    },
+    "contact": {
+        "sectionNumber": "06",
+        "sectionTitle": "Contact",
+        "heading": "Travaillons ensemble!",
+        "description": "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration.",
+        "email": "Email",
+        "phone": "Téléphone",
+        "location": "Localisation",
+        "website": "Site web"
     }
-  },
-  "projects": {
-    "sectionNumber": "03",
-    "sectionTitle": "Projets",
-    "viewProject": "Voir le projet",
-    "viewGithub": "Voir sur GitHub",
-    "showMore": "Voir plus de projets",
-    "showLess": "Voir moins",
-    "featuredTitle": "Projets à la une",
-    "allProjectsTitle": "Tous mes projets",
-    "items": [
-      {
-        "title": "Plateforme SaaS Ubikap",
-        "description": "Plateforme SaaS métier complexe dont j'assure la maintenance proactive et l'évolution depuis 2 ans au sein de l'équipe Ubikap. Développement de fonctionnalités majeures en autonomie, résolution de bugs critiques et optimisation continue du code (code propre et bonnes pratiques).",
-        "tech": [
-          "Angular",
-          "Node.js",
-          "MySQL",
-          "Express"
-        ],
-        "category": "Professionnel / SaaS",
-        "featured": true,
-        "link": "https://www.ubikap.com",
-        "image": "/assets/img/project/ubikap.png"
-      },
-      {
-        "title": "ERP Département Informatique",
-        "description": "Système ERP complet pour la gestion d'un département informatique : mails, emploi du temps, formations, stages, alternances, notes et absences. Projet collaboratif de 20 personnes.",
-        "tech": [
-          "React",
-          "NextJS",
-          "Express"
-        ],
-        "category": "Fullstack",
-        "featured": true,
-        "image": "/assets/img/project/erp.png"
-      },
-      {
-        "title": "Eduquiz",
-        "description": "Clone de Quizlet — plateforme éducative avec flashcards interactives pour faciliter l'apprentissage.",
-        "tech": [
-          "JavaScript",
-          "PHP"
-        ],
-        "link": "https://eduquiz.christopher-bondier.com",
-        "category": "Web",
-        "featured": true,
-        "image": [
-          "/assets/img/project/eduquiz_1.png",
-          "/assets/img/project/eduquiz_2.png",
-          "/assets/img/project/eduquiz_3.png",
-          "/assets/img/project/eduquiz_4.png",
-          "/assets/img/project/eduquiz_5.png",
-          "/assets/img/project/eduquiz_6.png"
-        ]
-      },
-      {
-        "title": "Wizard Toolbox",
-        "description": "Une boîte à outils numérique complète que j'ai conçue avec l'aide de l'IA pour mes projets personnels. Cette solution gratuite propose un convertisseur de fichiers, un compresseur d'images et PDF, des utilitaires de texte, un encodeur et un formateur de code.",
-        "tech": [
-          "Angular",
-          "NestJS",
-          "Tailwind CSS",
-          "DaisyUI",
-          "Prisma",
-          "Sharp"
-        ],
-        "link": "https://wizard-toolbox.fun",
-        "github": "https://github.com/Nuggets871/wizard-toolbox",
-        "category": "Fullstack",
-        "featured": false,
-        "image": "/assets/img/project/wizard-toolbox.png"
-      },
-      {
-        "title": "Portfolio 2026",
-        "description": "Mon portfolio actuel, conçu pour ma recherche de stage à l'étranger dans le cadre de mon école d'ingénieur. Design moderne, réactif et multilingue.",
-        "tech": [
-          "Angular",
-          "GSAP",
-          "i18n"
-        ],
-        "link": "https://christopher-bondier.com",
-        "category": "Portfolio",
-        "group": "portfolios",
-        "image": "/assets/img/project/portfolio-2026.png"
-      },
-      {
-        "title": "Portfolio 2025",
-        "description": "Portefolio réalisé pour un cours à l'IUT, incluant une section détaillée sur les compétences acquises durant mon BUT Informatique.",
-        "tech": [
-          "HTML",
-          "CSS",
-          "JavaScript"
-        ],
-        "link": "https://archive-portfolio-2025.christopher-bondier.com",
-        "category": "Portfolio",
-        "group": "portfolios",
-        "image": "/assets/img/project/portfolio-2025.png"
-      },
-      {
-        "title": "Portfolio 2024",
-        "description": "Premier portfolio professionnel réalisé en deuxième année de BUT pour ma première recherche de stage.",
-        "tech": [
-          "HTML",
-          "CSS",
-          "JavaScript"
-        ],
-        "link": "https://archive-portfolio-2024.christopher-bondier.com",
-        "category": "Portfolio",
-        "group": "portfolios",
-        "image": "/assets/img/project/portfolio-2024.png"
-      },
-      {
-        "title": "Aide décisionnelle de transport",
-        "description": "Application de calcul d'itinéraires optimaux utilisant la théorie des graphes pour l'aide à la décision en transport.",
-        "tech": [
-          "Java"
-        ],
-        "category": "Algorithmique"
-      },
-      {
-        "title": "Gestion d'annuaire",
-        "description": "Système de gestion d'annuaire avec stockage de données en CSV, permettant la recherche et la manipulation de contacts.",
-        "tech": [
-          "C"
-        ],
-        "category": "Système"
-      },
-      {
-        "title": "Algorithmes de tri",
-        "description": "Implémentation et comparaison de différents algorithmes de tri : bulle, fusion, insertion et sélection.",
-        "tech": [
-          "Algorithmique"
-        ],
-        "category": "Algorithmique"
-      },
-      {
-        "title": "Blog",
-        "description": "Blog dynamique avec système de gestion de contenu, authentification et base de données.",
-        "tech": [
-          "PHP",
-          "MySQL"
-        ],
-        "category": "Web"
-      },
-      {
-        "title": "Visualisation Power BI",
-        "description": "Création de tableaux de bord interactifs pour assister la prise de décision et optimiser la génération de profit.",
-        "tech": [
-          "Power BI"
-        ],
-        "category": "Data"
-      }
-    ]
-  },
-  "education": {
-    "sectionNumber": "04",
-    "sectionTitle": "Formation",
-    "items": [
-      {
-        "institution": "CPE Lyon",
-        "degree": "Ingénieur en informatique et réseaux",
-        "detail": "Première année (en cours)",
-        "period": "Sept. 2025 — Août 2028"
-      },
-      {
-        "institution": "IUT Claude Bernard — Université Lyon 1",
-        "degree": "BUT Informatique",
-        "detail": "",
-        "period": "Sept. 2022 — Juil. 2025"
-      }
-    ]
-  },
-  "experience": {
-    "sectionNumber": "05",
-    "sectionTitle": "Expérience",
-    "items": [
-      {
-        "role": "Développeur Full-Stack — Alternance",
-        "company": "UBIKAP",
-        "period": "Depuis août 2024",
-        "description": [
-          "Maintenance proactive et évolutive d'un SaaS métier complexe",
-          "Autonomie complète : de l'analyse du besoin à l'implémentation technique",
-          "Développement de fonctionnalités majeures (Full-stack Angular/Node.js)",
-          "Application rigoureuse du Clean Code et des bonnes pratiques de développement",
-          "Workflow Agile : Daily meetings et gestion de tickets (Analyse & Dev)",
-          "Missions variées : Résolution de bugs, refactoring et optimisation"
-        ],
-        "link": "https://www.ubikap.com",
-        "tech": [
-          "Angular",
-          "Node.js",
-          "SaaS",
-          "Clean Code"
-        ]
-      },
-      {
-        "role": "Développeur Full-Stack — Stage",
-        "company": "UBIKAP",
-        "period": "Avril 2023 — Juillet 2023",
-        "description": [
-          "Maintenance applicative et création d'une page de suivi des consommations payantes",
-          "Premiers pas en environnement professionnel full-stack"
-        ],
-        "tech": [
-          "Angular",
-          "Node.js"
-        ]
-      }
-    ]
-  },
-  "seo": {
-    "title": "Christopher Bondier | Portfolio officiel | Développeur full-stack Angular Node.js",
-    "description": "Portfolio officiel de Christopher Bondier, développeur full-stack Angular / Node.js en alternance chez UBIKAP et étudiant ingénieur à CPE Lyon.",
-    "keywords": "Christopher Bondier, portfolio, développeur full-stack, Angular, Node.js, TypeScript, CPE Lyon, UBIKAP, développeur web Lyon",
-    "siteName": "Portfolio de Christopher Bondier",
-    "jobTitle": "Développeur full-stack",
-    "ogLocale": "fr_FR"
-  },
-  "contact": {
-    "sectionNumber": "06",
-    "sectionTitle": "Contact",
-    "heading": "Travaillons ensemble!",
-    "description": "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration.",
-    "email": "Email",
-    "phone": "Téléphone",
-    "location": "Localisation",
-    "website": "Site web"
-  }
 }

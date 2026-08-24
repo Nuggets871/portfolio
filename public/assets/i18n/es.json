@@ -22,10 +22,9 @@
         "sectionNumber": "01",
         "sectionTitle": "Acerca de",
         "bio": "Estudiante de ingeniería en CPE Lyon y alternante desarrollador full-stack en UBIKAP, me apasiona el desarrollo web y la creación de soluciones digitales eficientes. Con experiencia práctica en Angular y Node.js, me esfuerzo por diseñar aplicaciones eficientes, mantenibles y centradas en el usuario.",
-        "quote": "Transformar ideas en experiencias digitales elegantes.",
-        "location": "Villeurbanne / Lyon / Oyonnax",
-        "email": "christopherbondier@gmail.com",
-        "phone": "06 15 92 58 32",
+        "location": "Lyon, France",
+        "email": "christopher.bondier@gmail.com",
+        "phone": "+33 6 15 92 58 32",
         "website": "christopher-bondier.com"
     },
     "skills": {
@@ -114,6 +113,27 @@
                 "image": "/assets/img/project/ubikap.png"
             },
             {
+                "title": "CPE Notes",
+                "description": "Aplicación de seguimiento de notas que monté para no tener que entrar a MyCPE todos los días. Un script recupera automáticamente mis boletines y los muestra en un panel con promedios por unidad y por año. También tiene un calendario sincronizado con mi horario, un simulador para probar notas antes de los exámenes, edición manual cuando el scraper no lo detecta todo, y notificaciones de Discord en cuanto llega una nota nueva. El backend está en Node.js con Express y Prisma, el frontend en Angular, y todo corre en Docker en mi VPS con PostgreSQL.",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Playwright"
+                ],
+                "link": "https://notes.christopher-bondier.com",
+                "github": "https://github.com/Nuggets871/script_cpe_notes",
+                "category": "Fullstack",
+                "featured": true,
+                "image": [
+                    "/assets/img/project/cpe-notes-1.jpg",
+                    "/assets/img/project/cpe-notes-2.jpg",
+                    "/assets/img/project/cpe-notes-3.jpg"
+                ]
+            },
+            {
                 "title": "ERP Departamento Informático",
                 "description": "Sistema ERP completo para la gestión de un departamento informático: correos, horarios, formaciones, prácticas, alternancia, notas y asistencia. Proyecto colaborativo de 20 personas.",
                 "tech": [
@@ -155,7 +175,7 @@
                 "link": "https://wizard-toolbox.fun",
                 "github": "https://github.com/Nuggets871/wizard-toolbox",
                 "category": "Fullstack",
-                "featured": false,
+                "featured": true,
                 "image": "/assets/img/project/wizard-toolbox.png"
             },
             {
@@ -241,13 +261,13 @@
         ]
     },
     "education": {
-        "sectionNumber": "04",
+        "sectionNumber": "05",
         "sectionTitle": "Formación",
         "items": [
             {
                 "institution": "CPE Lyon",
                 "degree": "Ingeniero en informática y redes",
-                "detail": "Primer año (en curso)",
+                "detail": "",
                 "period": "Sept. 2025 — Ago. 2028"
             },
             {
@@ -259,7 +279,7 @@
         ]
     },
     "experience": {
-        "sectionNumber": "05",
+        "sectionNumber": "04",
         "sectionTitle": "Experiencia",
         "items": [
             {

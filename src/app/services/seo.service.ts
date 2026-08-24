@@ -32,7 +32,7 @@ export class SeoService {
     }
 
     this.isInitialized = true;
-    this.applySeo(this.resolveLanguage(this.translate.currentLang || this.translate.getDefaultLang() || 'fr'));
+    this.applySeo(this.resolveLanguage(this.translate.currentLang || this.translate.getDefaultLang() || 'en'));
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.applySeo(this.resolveLanguage(event.lang));
     });
@@ -106,7 +106,7 @@ export class SeoService {
           image: IMAGE_URL,
           jobTitle: seo.jobTitle,
           description: seo.description,
-          email: 'mailto:christopherbondier@gmail.com',
+          email: 'mailto:christopher.bondier@gmail.com',
           telephone: '+33615925832',
           knowsAbout: ['Angular', 'Node.js', 'TypeScript', 'MySQL', 'Web development'],
           worksFor: {
@@ -149,11 +149,11 @@ export class SeoService {
   }
 
   private resolveLanguage(language: string): SupportedLanguage {
-    if (language === 'en' || language === 'es') {
+    if (language === 'fr' || language === 'en' || language === 'es') {
       return language;
     }
 
-    return 'fr';
+    return 'en';
   }
 
   private toLocale(language: SupportedLanguage): string {

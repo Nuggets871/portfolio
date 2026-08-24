@@ -24,7 +24,12 @@
                     <p class="project-desc">{{ project.description }}</p>
                     <div class="project-tech">
                         @for (t of project.tech; track t) {
-                        <span class="tech-tag" [class]="t.toLowerCase().replace(' ', '-')">{{ t }}</span>
+                        <span class="tech-tag">
+                            @if (getTechLogo(t); as logo) {
+                            <img [src]="logo" class="tech-logo" alt="" loading="lazy" />
+                            }
+                            {{ t }}
+                        </span>
                         }
                     </div>
                     @if (project.link) {
@@ -67,7 +72,12 @@
                     <p class="mini-desc">{{ project.description }}</p>
                     <div class="mini-tech">
                         @for (t of project.tech.slice(0, 3); track t) {
-                        <span class="mini-tag" [class]="t.toLowerCase().replace(' ', '-')">{{ t }}</span>
+                        <span class="mini-tag">
+                            @if (getTechLogo(t); as logo) {
+                            <img [src]="logo" class="tech-logo" alt="" loading="lazy" />
+                            }
+                            {{ t }}
+                        </span>
                         }
                     </div>
                 </div>
@@ -145,7 +155,10 @@
                             <h4 class="modal-subtitle">Technologies</h4>
                             <div class="modal-tech">
                                 @for (t of selectedProject.tech; track t + $index) {
-                                <span class="tech-tag" [class]="t.toLowerCase().replace(' ', '-').replace('.', '-')">
+                                <span class="tech-tag">
+                                    @if (getTechLogo(t); as logo) {
+                                    <img [src]="logo" class="tech-logo" alt="" loading="lazy" />
+                                    }
                                     {{ t }}
                                 </span>
                                 }

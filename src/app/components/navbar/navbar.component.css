@@ -16,7 +16,7 @@
     backdrop-filter: blur(12px);
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--color-border);
-    box-shadow: 0 2px 20px rgba(0, 119, 182, 0.06);
+    box-shadow: 0 2px 20px rgba(2, 48, 71, 0.06);
 }
 
 .nav-inner {
@@ -92,52 +92,6 @@
     display: flex;
     align-items: center;
     gap: var(--space-lg);
-}
-
-.lang-switcher {
-    display: flex;
-    gap: 2px;
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
-    padding: 3px;
-    border: 1px solid var(--color-border);
-}
-
-.lang-btn {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    padding: 0.35rem 0.6rem;
-    background: none;
-    border: none;
-    color: var(--color-text-muted);
-    cursor: pointer;
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.lang-flag {
-    font-size: 0.9rem;
-    line-height: 1;
-}
-
-.lang-code {
-    font-size: 0.625rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-}
-
-.lang-btn.active {
-    background: var(--color-accent-1);
-    color: var(--color-white);
-}
-
-.lang-btn:hover:not(.active) {
-    color: var(--color-accent-1);
 }
 
 .menu-toggle {

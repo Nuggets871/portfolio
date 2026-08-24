@@ -29,16 +29,6 @@
     top: 10%;
     left: 4%;
     transform: rotate(-18deg);
-    animation: float 9s ease-in-out infinite;
-}
-
-.sticker-b {
-    /* leaf — bottom right */
-    width: 80px;
-    bottom: 12%;
-    right: 5%;
-    transform: rotate(22deg);
-    animation: float 11s ease-in-out infinite reverse;
 }
 
 .sticker-c {
@@ -47,13 +37,6 @@
     top: 18%;
     right: 28%;
     transform: rotate(15deg);
-    animation: pulse 4s ease-in-out infinite;
-}
-
-.sticker-e {
-    /* hibiscus — bottom left area */
-    display: none;
-    /* Mobile only */
 }
 
 /* Decorative grid */
@@ -287,7 +270,7 @@
     position: relative;
     width: 280px;
     background: #ffffff;
-    padding: 14px 14px 56px 14px;
+    padding: 14px 14px 14px 14px;
     border-radius: 4px;
     box-shadow:
         0 10px 40px rgba(2, 48, 71, 0.16),
@@ -340,19 +323,6 @@
     -webkit-transform: scale(1.04) translateZ(0);
 }
 
-.polaroid-caption {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-family: 'Caveat', var(--font-serif), cursive;
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    font-style: italic;
-    letter-spacing: 0.04em;
-}
-
 .photo-badge {
     position: absolute;
     top: -14px;
@@ -369,25 +339,8 @@
     z-index: 10;
     box-shadow: 0 4px 14px rgba(255, 183, 3, 0.38);
     border: 2px solid #fff;
-    animation: floatBadge 6s ease-in-out infinite;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-}
-
-@keyframes floatBadge {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    33% {
-        transform: translateY(-10px) rotate(3deg);
-    }
-
-    66% {
-        transform: translateY(5px) rotate(-2deg);
-    }
 }
 
 .badge-number {
@@ -483,19 +436,7 @@
         top: 8%;
     }
 
-    .sticker-b {
-        display: none;
-    }
-
     .sticker-c {
-        display: none;
-    }
-
-    .sticker-d {
-        display: none;
-    }
-
-    .sticker-e {
         display: none;
     }
 

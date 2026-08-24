@@ -16,17 +16,15 @@
         "downloadCv": "Download my CV",
         "contactMe": "Contact me",
         "xpBadgeNumber": "2+",
-        "xpBadgeLabel": "yrs XP",
-        "polaroidCaption": "Christopher · Lyon · 2026"
+        "xpBadgeLabel": "yrs XP"
     },
     "about": {
         "sectionNumber": "01",
         "sectionTitle": "About",
         "bio": "Engineering student at CPE Lyon and full-stack developer apprentice at UBIKAP, I am passionate about web development and building efficient digital solutions. With hands-on experience in Angular and Node.js, I strive to design performant, maintainable, and user-centered applications.",
-        "quote": "Turning ideas into elegant digital experiences.",
-        "location": "Villeurbanne / Lyon / Oyonnax",
-        "email": "christopherbondier@gmail.com",
-        "phone": "06 15 92 58 32",
+        "location": "Lyon, France",
+        "email": "christopher.bondier@gmail.com",
+        "phone": "+33 6 15 92 58 32",
         "website": "christopher-bondier.com"
     },
     "skills": {
@@ -115,6 +113,27 @@
                 "image": "/assets/img/project/ubikap.png"
             },
             {
+                "title": "CPE Notes",
+                "description": "Grade tracking app I built so I don't have to log into MyCPE every day. A script automatically fetches my grade reports and shows them in a dashboard with per-unit and per-year averages. It also has a calendar synced with my schedule, a simulator to test grades before exams, manual editing when the scraper misses something, and Discord notifications as soon as a new grade comes in. The backend is Node.js with Express and Prisma, the frontend is Angular, and everything runs in Docker on my VPS with PostgreSQL.",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Playwright"
+                ],
+                "link": "https://notes.christopher-bondier.com",
+                "github": "https://github.com/Nuggets871/script_cpe_notes",
+                "category": "Fullstack",
+                "featured": true,
+                "image": [
+                    "/assets/img/project/cpe-notes-1.jpg",
+                    "/assets/img/project/cpe-notes-2.jpg",
+                    "/assets/img/project/cpe-notes-3.jpg"
+                ]
+            },
+            {
                 "title": "IT Department ERP",
                 "description": "Complete ERP system for IT department management: emails, schedules, training, internships, apprenticeships, grades and attendance. Collaborative project with 20 people.",
                 "tech": [
@@ -159,7 +178,7 @@
                 "link": "https://wizard-toolbox.fun",
                 "github": "https://github.com/Nuggets871/wizard-toolbox",
                 "category": "Fullstack",
-                "featured": false,
+                "featured": true,
                 "image": "/assets/img/project/wizard-toolbox.png"
             },
             {
@@ -245,13 +264,13 @@
         ]
     },
     "education": {
-        "sectionNumber": "04",
+        "sectionNumber": "05",
         "sectionTitle": "Education",
         "items": [
             {
                 "institution": "CPE Lyon",
                 "degree": "Computer Science & Networks Engineering",
-                "detail": "First year (ongoing)",
+                "detail": "",
                 "period": "Sept. 2025 — Aug. 2028"
             },
             {
@@ -263,7 +282,7 @@
         ]
     },
     "experience": {
-        "sectionNumber": "05",
+        "sectionNumber": "04",
         "sectionTitle": "Experience",
         "items": [
             {

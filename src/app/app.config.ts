@@ -8,9 +8,8 @@ import { routes } from './app.routes';
 
 export function initTranslations(translate: TranslateService) {
   return () => {
-    const savedLang = localStorage.getItem('lang') || 'fr';
-    translate.setDefaultLang('fr');
-    return translate.use(savedLang).toPromise();
+    translate.setDefaultLang('en');
+    return translate.use('en').toPromise();
   };
 }
 
@@ -24,7 +23,7 @@ export const appConfig: ApplicationConfig = {
       suffix: '.json'
     }),
     provideTranslateService({
-      defaultLanguage: 'fr',
+      defaultLanguage: 'en',
       loader: { provide: TranslateLoader, useClass: TranslateHttpLoader },
     }),
     {

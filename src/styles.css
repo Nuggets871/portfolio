@@ -205,16 +205,6 @@ ol {
   top: 5%;
   right: 3%;
   transform: rotate(20deg);
-  animation: float 11s ease-in-out infinite;
-}
-
-.sticker-about-2 {
-  width: 45px;
-  bottom: 8%;
-  left: 2%;
-  transform: rotate(-12deg);
-  animation: float 8s ease-in-out infinite reverse;
-  animation-delay: 1.5s;
 }
 
 .sticker-about-bee {
@@ -222,8 +212,6 @@ ol {
   top: 15%;
   left: 5%;
   transform: rotate(-15deg);
-  animation: floatSlow 14s ease-in-out infinite;
-  animation-delay: 2s;
 }
 
 /* Skills stickers */
@@ -232,7 +220,6 @@ ol {
   top: 4%;
   left: 1.5%;
   transform: rotate(-15deg);
-  animation: float 10s ease-in-out infinite;
 }
 
 .sticker-skills-2 {
@@ -240,8 +227,6 @@ ol {
   bottom: 6%;
   right: 4%;
   transform: rotate(10deg);
-  animation: pulse 5s ease-in-out infinite;
-  animation-delay: 0.8s;
 }
 
 .sticker-skills-3 {
@@ -249,25 +234,14 @@ ol {
   bottom: 12%;
   left: 3%;
   transform: rotate(15deg);
-  animation: float 12s ease-in-out infinite;
 }
 
 /* Contact stickers */
-.sticker-contact-1 {
-  width: 80px;
-  top: 8%;
-  right: 2%;
-  transform: rotate(-18deg);
-  animation: float 12s ease-in-out infinite reverse;
-}
-
 .sticker-contact-2 {
   width: 48px;
   bottom: 15%;
   left: 3%;
   transform: rotate(8deg);
-  animation: pulse 4s ease-in-out infinite;
-  animation-delay: 2s;
 }
 
 
@@ -376,12 +350,6 @@ ol {
   }
 
   /* Mobile Stickers Adjustments */
-  .sticker-about-2 {
-    left: auto;
-    right: 2%;
-    bottom: 15%;
-  }
-
   .sticker-skills-3 {
     left: auto;
     right: 4%;
@@ -397,6 +365,7 @@ ol {
 .mini-tag {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
@@ -406,6 +375,18 @@ ol {
   background: var(--color-bg-alt);
   color: var(--color-text-secondary);
   transition: all var(--transition-fast);
+}
+
+.tech-logo {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mini-tag .tech-logo {
+  width: 12px;
+  height: 12px;
 }
 
 /* Specific Technology Colors - High Contrast */

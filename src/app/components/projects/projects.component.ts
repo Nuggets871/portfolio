@@ -5,6 +5,7 @@ import { RevealDirective } from '../../directives/reveal.directive';
 import { Subscription } from 'rxjs';
 
 import { ProjectGalleryComponent } from '../project-gallery/project-gallery';
+import { techLogo } from '../../shared/tech-logos';
 
 @Component({
     selector: 'app-projects',
@@ -89,6 +90,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         if (Array.isArray(project.image)) return project.image;
         if (project.image) return [project.image];
         return [this.getFallbackImage(project)];
+    }
+
+    getTechLogo(tech: string): string | null {
+        return techLogo(tech);
     }
 
     private getFallbackImage(project: any): string {

@@ -1,8 +1,8 @@
 <section id="skills" class="section skills">
     <!-- Stickers -->
-    <img src="assets/img/sticker-daisy.svg" class="section-sticker sticker-skills-1" aria-hidden="true" alt="" />
+    <img src="assets/img/sticker-sun.svg" class="section-sticker sticker-skills-1" aria-hidden="true" alt="" />
     <img src="assets/img/sticker-star.svg" class="section-sticker sticker-skills-2" aria-hidden="true" alt="" />
-    <img src="assets/img/sticker-hibiscus.svg" class="section-sticker sticker-skills-3" aria-hidden="true" alt="" />
+    <img src="assets/img/sticker-bee.svg" class="section-sticker sticker-skills-3" aria-hidden="true" alt="" />
     <div class="skills-inner">
         <div class="section-header" appReveal>
             <span class="section-number">{{ 'skills.sectionNumber' | translate }}</span>
@@ -12,15 +12,66 @@
 
         <div class="skills-grid">
             @for (cat of categories; track cat.key; let i = $index) {
-            <div class="skill-card" appReveal [style.transition-delay]="(i * 0.08) + 's'">
-                <div class="card-header">
-                    <span class="card-icon">{{ cat.icon }}</span>
-                    <h3 class="card-title">{{ 'skills.categories.' + cat.key | translate }}</h3>
+            <div class="skill-card" appReveal [style.transition-delay]="(i * 0.06) + 's'">
+                <div class="skill-card-header">
+                    <span class="skill-icon">
+                        @switch (cat.key) {
+                            @case ('programming') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                            }
+                            @case ('web') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            }
+                            @case ('database') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                            }
+                            @case ('tools') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                            }
+                            @case ('os') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                            }
+                            @case ('management') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                <path d="m9 14 2 2 4-4" />
+                            </svg>
+                            }
+                            @case ('languages') {
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                            </svg>
+                            }
+                        }
+                    </span>
+                    <h3 class="skill-title">{{ 'skills.categories.' + cat.key | translate }}</h3>
                 </div>
-                <div class="card-tags">
+                <div class="skill-tags">
                     @for (skill of ('skills.items.' + cat.key | translate); track skill) {
-                    <span class="tag tech-tag" [class]="skill.toLowerCase().replace(' ', '-').replace('.', '-')">{{
-                        skill }}</span>
+                    <span class="skill-chip">
+                        @if (getLogo(skill); as logo) {
+                        <img [src]="logo" class="skill-logo" alt="" loading="lazy" />
+                        }
+                        {{ skill }}
+                    </span>
                     }
                 </div>
             </div>
