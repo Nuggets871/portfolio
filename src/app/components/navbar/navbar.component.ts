@@ -12,9 +12,21 @@ import { TranslateModule } from '@ngx-translate/core';
 export class NavbarComponent {
     isMenuOpen = false;
     isScrolled = false;
+    private onScrollHandler: (() => void) | null = null;
 
     ngOnInit() {
-        window.addEventListener('scroll', this.onScroll.bind(this));
+        this.onScrollHandler = this.onScroll.bind(this);
+        window.addEventListener('scroll', this.onScrollHandler, { passive: true });
+        document.addEventListener('scroll', this.onScrollHandler, { passive: true });
+        this.onScroll();
+    }
+
+    ngOnDestroy() {
+        if (this.onScrollHandler) {
+            window.removeEventListener('scroll', this.onScrollHandler);
+            document.removeEventListener('scroll', this.onScrollHandler);
+            this.onScrollHandler = null;
+        }
     }
 
     onScroll() {
