@@ -97,6 +97,7 @@
         "showLess": "Show less",
         "featuredTitle": "Featured Projects",
         "allProjectsTitle": "All My Projects",
+        "demoBadge": "Demo account available",
         "items": [
             {
                 "title": "Ubikap SaaS Platform",
@@ -126,6 +127,7 @@
                 "link": "https://notes.christopher-bondier.com",
                 "category": "Fullstack",
                 "featured": true,
+                "demo": true,
                 "image": [
                     "/assets/img/project/cpe-notes-1.jpg",
                     "/assets/img/project/cpe-notes-2.jpg",
