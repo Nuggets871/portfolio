@@ -101,7 +101,7 @@
         "items": [
             {
                 "title": "Ubikap SaaS Platform",
-                "description": "A business platform I maintain and keep improving at Ubikap. I handle the day-to-day maintenance, fix blocking bugs, and build new features on my own. I've come to know the product inside out, and I make sure the code stays clean and readable so the whole team can step in easily.",
+                "description": "Professional SaaS platform I work on as part of my apprenticeship at Ubikap, within the development team. My role is mostly about adding new features, refactoring the existing code to keep it simple to maintain, and fixing bugs reported by clients or spotted in-house. When I get stuck, I lean on the rest of the team, and I try to keep my code readable for whoever comes after me.",
                 "tech": [
                     "Angular",
                     "Node.js",

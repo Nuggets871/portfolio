@@ -101,7 +101,7 @@
         "items": [
             {
                 "title": "Plateforme SaaS Ubikap",
-                "description": "Plateforme métier que je maintiens et fais évoluer chez Ubikap depuis deux ans. Je m'occupe de la maintenance courante, je corrige les bugs bloquants et je développe de nouvelles fonctionnalités en autonomie. J'ai appris à connaître le produit de fond en comble, et je veille à ce que le code reste propre et compréhensible pour que toute l'équipe puisse intervenir facilement.",
+                "description": "Plateforme SaaS professionnelle sur laquelle je travaille dans le cadre de mon alternance chez Ubikap, au sein de l'équipe de développement. Mon rôle consiste surtout à ajouter de nouvelles fonctionnalités, à refactorer le code existant pour le garder simple à maintenir, et à corriger les bugs remontés par les clients ou repérés en interne. Quand je bloque, je m'appuie sur le reste de l'équipe, et je veille à ce que mon code reste lisible pour ceux qui passeront après moi.",
                 "tech": [
                     "Angular",
                     "Node.js",
