@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
@@ -13,7 +12,6 @@ import { SeoService } from './services/seo.service';
 @Component({
   selector: 'app-root',
   imports: [
-    TranslateModule,
     NavbarComponent,
     HeroComponent,
     AboutComponent,

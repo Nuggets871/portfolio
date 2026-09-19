@@ -1,27 +1,32 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
-import { RevealDirective } from '../../directives/reveal.directive';
+import { Component, OnInit, OnDestroy, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RevealDirective } from '../../directives/reveal.directive';
 import { ProjectGalleryComponent } from '../project-gallery/project-gallery';
 import { techLogo } from '../../shared/tech-logos';
+import { scrollToSection } from '../../shared/scroll';
+import { Project } from '../../shared/models';
 
 @Component({
     selector: 'app-projects',
     standalone: true,
-    imports: [CommonModule, TranslateModule, RevealDirective, ProjectGalleryComponent],
+    imports: [TranslateModule, RevealDirective, ProjectGalleryComponent],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
-    showAll = false;
-    selectedProject: any = null;
+    @ViewChild('modalContent') modalContent?: ElementRef<HTMLElement>;
 
-    featuredProjects: any[] = [];
-    portfolios: any[] = [];
-    otherProjects: any[] = [];
+    showAll = false;
+    selectedProject: Project | null = null;
+
+    featuredProjects: Project[] = [];
+    portfolios: Project[] = [];
+    otherProjects: Project[] = [];
+
     private langSub?: Subscription;
+    private lastFocused: HTMLElement | null = null;
 
     constructor(public translate: TranslateService) { }
 
@@ -33,38 +38,32 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         if (this.langSub) {
             this.langSub.unsubscribe();
         }
+        document.body.style.overflow = '';
+    }
+
+    @HostListener('document:keydown.escape')
+    onEscape() {
+        if (this.selectedProject) {
+            this.closeModal();
+        }
     }
 
     loadProjects() {
         // Use stream to get updates when translation files are loaded
         if (this.langSub) this.langSub.unsubscribe();
-        this.langSub = this.translate.stream('projects').subscribe((res: any) => {
-            if (res && typeof res === 'object' && res.items) {
+        this.langSub = this.translate.stream('projects').subscribe((res: { items?: Project[] }) => {
+            if (res && typeof res === 'object' && Array.isArray(res.items)) {
                 const items = res.items;
-                if (Array.isArray(items)) {
-                    // Filter featured projects: check flag OR specific key titles
-                    const featuredTitles = [
-                        'Plateforme SaaS Ubikap', 'Ubikap SaaS Platform', 'Plataforma SaaS Ubikap',
-                        'CPE Notes',
-                        'ERP Département Informatique', 'IT Department ERP', 'ERP Departamento Informático',
-                        'Eduquiz'
-                    ];
+                const isFeatured = (p: Project) =>
+                    p.featured === true || String(p.featured).toLowerCase() === 'true';
 
-                    this.featuredProjects = items.filter((p: any) =>
-                        p.featured == true ||
-                        String(p.featured).toLowerCase() === 'true' ||
-                        featuredTitles.includes(p.title)
-                    );
-
-                    // Group portfolios
-                    this.portfolios = items.filter((p: any) => p.group === 'portfolios');
-
-                    // Remaining projects
-                    this.otherProjects = items.filter((p: any) =>
-                        !this.featuredProjects.some(fp => fp.title === p.title) &&
-                        !this.portfolios.some(pp => pp.title === p.title)
-                    );
-                }
+                this.featuredProjects = items.filter(isFeatured);
+                this.portfolios = items.filter((p) => p.group === 'portfolios');
+                this.otherProjects = items.filter(
+                    (p) =>
+                        !this.featuredProjects.some((fp) => fp.title === p.title) &&
+                        !this.portfolios.some((pp) => pp.title === p.title)
+                );
             }
         });
     }
@@ -72,21 +71,25 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     toggleShowAll() {
         this.showAll = !this.showAll;
         if (!this.showAll) {
-            this.scrollTo('projects');
+            scrollToSection('projects');
         }
     }
 
-    openModal(project: any) {
+    openModal(project: Project) {
+        this.lastFocused = document.activeElement as HTMLElement | null;
         this.selectedProject = project;
         document.body.style.overflow = 'hidden';
+        setTimeout(() => this.modalContent?.nativeElement.focus());
     }
 
     closeModal() {
         this.selectedProject = null;
         document.body.style.overflow = '';
+        this.lastFocused?.focus();
+        this.lastFocused = null;
     }
 
-    getProjectImages(project: any): string[] {
+    getProjectImages(project: Project | null): string[] {
         if (!project) return [];
         if (Array.isArray(project.image)) return project.image;
         if (project.image) return [project.image];
@@ -97,7 +100,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         return techLogo(tech);
     }
 
-    private getFallbackImage(project: any): string {
+    private getFallbackImage(project: Project | null): string {
         const category = project?.category?.toLowerCase() || '';
         if (category.includes('fullstack')) {
             return 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800';
@@ -109,12 +112,5 @@ export class ProjectsComponent implements OnInit, OnDestroy {
             return 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800';
         }
         return 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800';
-    }
-
-    scrollTo(id: string) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
     }
 }

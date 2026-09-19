@@ -1,17 +1,11 @@
-import { ApplicationConfig, APP_INITIALIZER, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, inject, provideAppInitializer, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideHttpClient, HttpClient } from '@angular/common/http';
-import { provideTranslateService, TranslateLoader, TranslateService } from '@ngx-translate/core';
-import { TranslateHttpLoader, provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideHttpClient } from '@angular/common/http';
+import { provideTranslateService, TranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { firstValueFrom, catchError, of } from 'rxjs';
 
 import { routes } from './app.routes';
-
-export function initTranslations(translate: TranslateService) {
-  return () => {
-    translate.setDefaultLang('en');
-    return translate.use('en').toPromise();
-  };
-}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -23,14 +17,13 @@ export const appConfig: ApplicationConfig = {
       suffix: '.json'
     }),
     provideTranslateService({
-      defaultLanguage: 'en',
-      loader: { provide: TranslateLoader, useClass: TranslateHttpLoader },
+      defaultLanguage: 'en'
     }),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initTranslations,
-      deps: [TranslateService],
-      multi: true,
-    },
+    provideAppInitializer(() => {
+      const translate = inject(TranslateService);
+      return firstValueFrom(
+        translate.use('en').pipe(catchError(() => of(null)))
+      );
+    })
   ]
 };

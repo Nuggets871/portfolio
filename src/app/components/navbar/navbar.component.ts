@@ -1,18 +1,17 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { scrollToSection } from '../../shared/scroll';
 
 @Component({
     selector: 'app-navbar',
     standalone: true,
-    imports: [CommonModule, TranslateModule],
+    imports: [TranslateModule],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnDestroy {
+export class NavbarComponent {
     isMenuOpen = false;
     isScrolled = false;
-    private scrollTimer: any;
 
     @HostListener('window:scroll')
     onWindowScroll() {
@@ -21,13 +20,6 @@ export class NavbarComponent implements OnDestroy {
 
     ngOnInit() {
         this.updateScrolled();
-        this.scrollTimer = setInterval(() => this.updateScrolled(), 150);
-    }
-
-    ngOnDestroy() {
-        if (this.scrollTimer) {
-            clearInterval(this.scrollTimer);
-        }
     }
 
     private updateScrolled() {
@@ -42,11 +34,9 @@ export class NavbarComponent implements OnDestroy {
         this.isMenuOpen = false;
     }
 
-    scrollTo(id: string) {
+    scrollTo(id: string, event?: Event) {
+        event?.preventDefault();
         this.closeMenu();
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToSection(id);
     }
 }

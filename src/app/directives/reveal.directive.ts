@@ -10,6 +10,11 @@ export class RevealDirective implements OnInit, OnDestroy {
     constructor(private el: ElementRef) { }
 
     ngOnInit() {
+        // Progressive enhancement: if the API is unavailable, leave the element visible.
+        if (typeof IntersectionObserver === 'undefined') {
+            return;
+        }
+
         this.el.nativeElement.classList.add('reveal');
 
         this.observer = new IntersectionObserver(

@@ -1,10 +1,10 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-project-gallery',
     standalone: true,
-    imports: [CommonModule],
+    imports: [TranslateModule],
     template: `
     <div class="gallery-container" [class.is-modal]="isModal">
         <!-- Main Image -->
@@ -13,15 +13,17 @@ import { CommonModule } from '@angular/common';
                 <div class="image-frame" [class.has-backdrop]="isModal">
                     @if (isModal) {
                         <img [src]="images[currentIndex]" alt="" class="backdrop-image" aria-hidden="true"
-                             (error)="handleError($event)">
+                             loading="eager" decoding="async" (error)="handleError($event)">
                     }
                     <img [src]="images[currentIndex]" 
                          [alt]="alt" 
                          class="gallery-image"
+                         [attr.loading]="isModal ? 'eager' : 'lazy'"
+                         decoding="async"
                          (error)="handleError($event)">
                 </div>
             } @else {
-                <div class="placeholder-fallback">No image available</div>
+                <div class="placeholder-fallback">{{ 'projects.noImage' | translate }}</div>
             }
 
             <!-- Navigation Arrows (only if multiple images) -->
@@ -219,13 +221,19 @@ import { CommonModule } from '@angular/common';
     }
   `]
 })
-export class ProjectGalleryComponent {
+export class ProjectGalleryComponent implements OnChanges {
     @Input() images: string[] = [];
-    @Input() alt: string = '';
-    @Input() isModal: boolean = false;
-    @Input() fallbackCategory: string = '';
+    @Input() alt = '';
+    @Input() isModal = false;
+    @Input() fallbackCategory = '';
 
     currentIndex = 0;
+
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes['images']) {
+            this.currentIndex = 0;
+        }
+    }
 
     next(event: MouseEvent) {
         event.stopPropagation();
@@ -242,7 +250,15 @@ export class ProjectGalleryComponent {
         this.currentIndex = index;
     }
 
-    handleError(event: any) {
+    handleError(event: Event) {
+        const img = event.target as HTMLImageElement;
+
+        // Avoid an infinite error loop if the fallback itself fails to load.
+        if (img.dataset['fallback'] === 'true') {
+            return;
+        }
+        img.dataset['fallback'] = 'true';
+
         const category = this.fallbackCategory?.toLowerCase() || '';
         let fallback = 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800';
 
@@ -256,6 +272,6 @@ export class ProjectGalleryComponent {
             fallback = 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800';
         }
 
-        event.target.src = fallback;
+        img.src = fallback;
     }
 }

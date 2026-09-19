@@ -1,11 +1,11 @@
 import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { scrollToSection } from '../../shared/scroll';
 
 @Component({
     selector: 'app-hero',
     standalone: true,
-    imports: [CommonModule, TranslateModule],
+    imports: [TranslateModule],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.css'
 })
@@ -22,10 +22,8 @@ export class HeroComponent implements AfterViewInit {
         }, 300);
     }
 
-    scrollTo(id: string) {
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-        }
+    scrollTo(id: string, event?: Event) {
+        event?.preventDefault();
+        scrollToSection(id);
     }
 }

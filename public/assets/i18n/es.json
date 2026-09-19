@@ -16,7 +16,9 @@
         "downloadCv": "Descargar mi CV",
         "contactMe": "Contáctame",
         "xpBadgeNumber": "2+",
-        "xpBadgeLabel": "años XP"
+        "xpBadgeLabel": "años XP",
+        "scroll": "desplazar",
+        "scrollAria": "Desplazar a la sección sobre mí"
     },
     "about": {
         "sectionNumber": "01",
@@ -98,6 +100,13 @@
         "featuredTitle": "Proyectos destacados",
         "allProjectsTitle": "Todos mis proyectos",
         "demoBadge": "Cuenta demo disponible",
+        "archiveTitle": "Portafolios archivados",
+        "archiveRange": "2024 — 2026",
+        "modalDescription": "Descripción",
+        "modalTechnologies": "Tecnologías",
+        "modalLinks": "Enlaces",
+        "closeModal": "Cerrar",
+        "noImage": "No hay imagen disponible",
         "items": [
             {
                 "title": "Plataforma SaaS Ubikap",
