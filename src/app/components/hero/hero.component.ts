@@ -1,24 +1,17 @@
-import { Component, PLATFORM_ID, inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { scrollToSection } from '../../shared/scroll';
 
 @Component({
     selector: 'app-hero',
     standalone: true,
-    imports: [CommonModule, TranslateModule],
+    imports: [TranslateModule],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-    private readonly platformId = inject(PLATFORM_ID);
-
-    scrollTo(id: string) {
-        if (!isPlatformBrowser(this.platformId)) {
-            return;
-        }
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-        }
+    scrollTo(id: string, event?: Event) {
+        event?.preventDefault();
+        scrollToSection(id);
     }
 }

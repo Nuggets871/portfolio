@@ -1,21 +1,21 @@
-import { Component, HostListener, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { scrollToSection } from '../../shared/scroll';
 
 @Component({
     selector: 'app-navbar',
     standalone: true,
-    imports: [CommonModule, TranslateModule, RouterLink, RouterLinkActive],
+    imports: [TranslateModule, RouterLink, RouterLinkActive],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit, OnDestroy {
+export class NavbarComponent implements OnInit {
     private readonly platformId = inject(PLATFORM_ID);
 
     isMenuOpen = false;
     isScrolled = false;
-    private scrollTimer?: ReturnType<typeof setInterval>;
 
     @HostListener('window:scroll')
     onWindowScroll() {
@@ -25,16 +25,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        if (!isPlatformBrowser(this.platformId)) {
-            return;
-        }
-        this.updateScrolled();
-        this.scrollTimer = setInterval(() => this.updateScrolled(), 150);
-    }
-
-    ngOnDestroy() {
-        if (this.scrollTimer) {
-            clearInterval(this.scrollTimer);
+        if (isPlatformBrowser(this.platformId)) {
+            this.updateScrolled();
         }
     }
 
@@ -50,14 +42,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.isMenuOpen = false;
     }
 
-    scrollTo(id: string) {
+    scrollTo(id: string, event?: Event) {
+        event?.preventDefault();
         this.closeMenu();
-        if (!isPlatformBrowser(this.platformId)) {
-            return;
-        }
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToSection(id);
     }
 }

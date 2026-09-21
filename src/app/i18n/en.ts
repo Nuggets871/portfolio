@@ -17,7 +17,9 @@ const translation = {
     "contactMe": "Contact me",
     "xpBadgeNumber": "2+",
     "xpBadgeLabel": "yrs XP",
-    "answer": "Christopher Bondier is a full-stack developer based in Lyon, France, specialized in Angular and Node.js. He is an apprentice at UBIKAP and an engineering student at CPE Lyon, and is looking for an internship abroad."
+    "answer": "Christopher Bondier is a full-stack developer based in Lyon, France, specialized in Angular and Node.js. He is an apprentice at UBIKAP and an engineering student at CPE Lyon, and is looking for an internship abroad.",
+    "scroll": "scroll",
+    "scrollAria": "Scroll to the about section"
   },
   "about": {
     "sectionNumber": "01",
@@ -260,7 +262,14 @@ const translation = {
         ],
         "category": "Data"
       }
-    ]
+    ],
+    "archiveTitle": "Archive Portfolios",
+    "archiveRange": "2024 — 2026",
+    "modalDescription": "Description",
+    "modalTechnologies": "Technologies",
+    "modalLinks": "Links",
+    "closeModal": "Close",
+    "noImage": "No image available"
   },
   "education": {
     "sectionNumber": "05",

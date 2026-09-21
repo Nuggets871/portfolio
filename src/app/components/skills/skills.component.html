@@ -65,7 +65,7 @@
                     <h3 class="skill-title">{{ 'skills.categories.' + cat.key | translate }}</h3>
                 </div>
                 <div class="skill-tags">
-                    @for (skill of ('skills.items.' + cat.key | translate); track skill) {
+                    @for (skill of ('skills.items.' + cat.key | translate); track $index) {
                     <span class="skill-chip">
                         @if (getLogo(skill); as logo) {
                         <img [src]="logo" class="skill-logo" alt="" loading="lazy" />

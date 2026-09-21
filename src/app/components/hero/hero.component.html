@@ -29,13 +29,13 @@
             <p class="hero-answer">{{ 'hero.answer' | translate }}</p>
 
             <div class="hero-actions">
-                <a class="btn-primary" (click)="scrollTo('contact')">
+                <a class="btn-primary" href="#contact" (click)="scrollTo('contact', $event)">
                     {{ 'hero.contactMe' | translate }}
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
-                <a class="btn-outlined" href="assets/file/CV.pdf" target="_blank">
+                <a class="btn-outlined" href="assets/file/CV.pdf" target="_blank" rel="noopener">
                     {{ 'hero.downloadCv' | translate }}
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
@@ -59,9 +59,9 @@
         </div>
     </div>
 
-    <div class="scroll-indicator" (click)="scrollTo('about')">
-        <div class="scroll-line"></div>
-        <span class="scroll-text">scroll</span>
-    </div>
+    <button type="button" class="scroll-indicator" (click)="scrollTo('about')" [attr.aria-label]="'hero.scrollAria' | translate">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">{{ 'hero.scroll' | translate }}</span>
+    </button>
 
 </section>

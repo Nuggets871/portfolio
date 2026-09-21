@@ -57,7 +57,7 @@ export class SeoService {
   apply(language: SupportedLanguage): void {
     const locale = this.toLocale(language);
     const pageUrl = this.toPageUrl(language);
-    const seo = this.translate.instant('seo') as SeoTranslation;
+    const seo = this.resolveSeo(this.translate.instant('seo'));
 
     this.document.documentElement.lang = locale;
     this.title.setTitle(seo.title);
@@ -258,6 +258,23 @@ export class SeoService {
     }
 
     script.textContent = JSON.stringify(structuredData);
+  }
+
+  private resolveSeo(value: unknown): SeoTranslation {
+    const fallback: SeoTranslation = {
+      title: 'Christopher Bondier',
+      description: '',
+      keywords: '',
+      siteName: 'Christopher Bondier Portfolio',
+      jobTitle: 'Full-stack developer',
+      ogLocale: 'en_GB',
+    };
+
+    if (value && typeof value === 'object' && 'title' in value) {
+      return { ...fallback, ...(value as Partial<SeoTranslation>) };
+    }
+
+    return fallback;
   }
 
   private toLocale(language: SupportedLanguage): string {

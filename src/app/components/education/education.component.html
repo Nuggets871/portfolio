@@ -7,7 +7,9 @@
         </div>
 
         <div class="timeline">
-            @for (item of ('education.items' | translate); track item.institution; let i = $index) {
+            @if (('education.items' | translate); as items) {
+            @if (items && items.length > 0 && items !== 'education.items') {
+            @for (item of items; track item.institution; let i = $index) {
             <div class="timeline-item" appReveal [style.transition-delay]="(i * 0.15) + 's'">
                 <div class="timeline-marker">
                     <div class="marker-dot"></div>
@@ -22,6 +24,8 @@
                     }
                 </div>
             </div>
+            }
+            }
             }
         </div>
     </div>

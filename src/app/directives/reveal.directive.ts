@@ -1,19 +1,17 @@
-import { Directive, ElementRef, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Directive, ElementRef, OnInit, OnDestroy } from '@angular/core';
 
 @Directive({
     selector: '[appReveal]',
     standalone: true
 })
 export class RevealDirective implements OnInit, OnDestroy {
-    private readonly el = inject<ElementRef<HTMLElement>>(ElementRef);
-    private readonly platformId = inject(PLATFORM_ID);
-    private observer?: IntersectionObserver;
+    private observer!: IntersectionObserver;
+
+    constructor(private el: ElementRef) { }
 
     ngOnInit() {
-        // On the server (prerender) we skip the animation entirely so the content
-        // stays visible in the generated HTML and remains crawlable.
-        if (!isPlatformBrowser(this.platformId)) {
+        // Progressive enhancement: if the API is unavailable, leave the element visible.
+        if (typeof IntersectionObserver === 'undefined') {
             return;
         }
 
@@ -24,7 +22,7 @@ export class RevealDirective implements OnInit, OnDestroy {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        this.observer?.unobserve(entry.target);
+                        this.observer.unobserve(entry.target);
                     }
                 });
             },
@@ -38,6 +36,8 @@ export class RevealDirective implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.observer?.disconnect();
+        if (this.observer) {
+            this.observer.disconnect();
+        }
     }
 }
