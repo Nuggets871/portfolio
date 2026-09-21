@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { RevealDirective } from '../../directives/reveal.directive';
 import { Subscription } from 'rxjs';
@@ -22,6 +22,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     portfolios: any[] = [];
     otherProjects: any[] = [];
     private langSub?: Subscription;
+    private readonly document = inject(DOCUMENT);
 
     constructor(public translate: TranslateService) { }
 
@@ -78,12 +79,12 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
     openModal(project: any) {
         this.selectedProject = project;
-        document.body.style.overflow = 'hidden';
+        this.document.body.style.overflow = 'hidden';
     }
 
     closeModal() {
         this.selectedProject = null;
-        document.body.style.overflow = '';
+        this.document.body.style.overflow = '';
     }
 
     getProjectImages(project: any): string[] {
@@ -112,7 +113,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     }
 
     scrollTo(id: string) {
-        const element = document.getElementById(id);
+        const element = this.document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }

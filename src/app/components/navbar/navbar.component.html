@@ -1,6 +1,6 @@
 <nav class="navbar" [class.scrolled]="isScrolled" [class.menu-open]="isMenuOpen">
     <div class="nav-inner">
-        <a class="nav-logo" (click)="scrollTo('hero')">
+        <a class="nav-logo" routerLink="/" (click)="closeMenu()">
             <span class="logo-text">CB</span>
             <span class="logo-dot">.</span>
         </a>
@@ -15,7 +15,16 @@
         </div>
 
         <div class="nav-actions">
-            <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen">
+            <div class="nav-lang" role="group" aria-label="Language">
+                <a class="lang-link" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" hreflang="en" (click)="closeMenu()">EN</a>
+                <a class="lang-link" routerLink="/fr" routerLinkActive="active" hreflang="fr"
+                    (click)="closeMenu()">FR</a>
+                <a class="lang-link" routerLink="/es" routerLinkActive="active" hreflang="es"
+                    (click)="closeMenu()">ES</a>
+            </div>
+
+            <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>

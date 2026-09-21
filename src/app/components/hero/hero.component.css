@@ -79,66 +79,65 @@
     z-index: 1;
 }
 
-/* Entrance animations */
+/* Entrance animations (CSS-only so the prerendered HTML stays visible) */
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .hero-greeting,
 .hero-name,
 .hero-title-wrapper,
 .hero-subtitle,
 .hero-stack,
+.hero-answer,
 .hero-actions,
 .hero-right,
 .scroll-indicator {
-    opacity: 0;
-    transform: translate3d(0, 25px, 0);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    animation: heroIn 0.7s ease both;
 }
 
 .hero.loaded .hero-greeting {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 .hero.loaded .hero-name {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .hero.loaded .hero-title-wrapper {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .hero.loaded .hero-subtitle {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 .hero.loaded .hero-stack {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.hero.loaded .hero-answer {
+    animation-delay: 0.55s;
 }
 
 .hero.loaded .hero-actions {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 .hero.loaded .hero-right {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.35s;
+    animation-delay: 0.35s;
 }
 
 .hero.loaded .scroll-indicator {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 
 /* Typography */
@@ -208,6 +207,14 @@
     margin-top: var(--space-md);
     letter-spacing: 0.05em;
     font-weight: 500;
+}
+
+.hero-answer {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-lg);
+    max-width: 560px;
+    line-height: 1.7;
 }
 
 /* Buttons */

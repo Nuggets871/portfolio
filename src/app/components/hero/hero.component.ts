@@ -1,5 +1,5 @@
-import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,20 +9,13 @@ import { TranslateModule } from '@ngx-translate/core';
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.css'
 })
-export class HeroComponent implements AfterViewInit {
-    showContent = false;
-
-    constructor(private cdr: ChangeDetectorRef) { }
-
-    ngAfterViewInit() {
-        // Use a slightly longer delay to ensure the browser has painted the initial state
-        setTimeout(() => {
-            this.showContent = true;
-            this.cdr.detectChanges();
-        }, 300);
-    }
+export class HeroComponent {
+    private readonly platformId = inject(PLATFORM_ID);
 
     scrollTo(id: string) {
+        if (!isPlatformBrowser(this.platformId)) {
+            return;
+        }
         const el = document.getElementById(id);
         if (el) {
             el.scrollIntoView({ behavior: 'smooth' });

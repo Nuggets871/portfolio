@@ -1,15 +1,22 @@
-import { Directive, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
     selector: '[appReveal]',
     standalone: true
 })
 export class RevealDirective implements OnInit, OnDestroy {
-    private observer!: IntersectionObserver;
-
-    constructor(private el: ElementRef) { }
+    private readonly el = inject<ElementRef<HTMLElement>>(ElementRef);
+    private readonly platformId = inject(PLATFORM_ID);
+    private observer?: IntersectionObserver;
 
     ngOnInit() {
+        // On the server (prerender) we skip the animation entirely so the content
+        // stays visible in the generated HTML and remains crawlable.
+        if (!isPlatformBrowser(this.platformId)) {
+            return;
+        }
+
         this.el.nativeElement.classList.add('reveal');
 
         this.observer = new IntersectionObserver(
@@ -17,7 +24,7 @@ export class RevealDirective implements OnInit, OnDestroy {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        this.observer.unobserve(entry.target);
+                        this.observer?.unobserve(entry.target);
                     }
                 });
             },
@@ -31,8 +38,6 @@ export class RevealDirective implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        if (this.observer) {
-            this.observer.disconnect();
-        }
+        this.observer?.disconnect();
     }
 }

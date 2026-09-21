@@ -7,23 +7,30 @@
   <meta name="description" content="Official portfolio of Christopher Bondier, full-stack Angular / Node.js developer, apprentice at UBIKAP and engineering student at CPE Lyon.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Christopher Bondier">
-  <meta name="keywords" content="Christopher Bondier, portfolio, full-stack developer, Angular, Node.js, TypeScript, CPE Lyon, UBIKAP, web developer Lyon">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f0f8ff">
-  <link rel="canonical" href="https://christopher-bondier.com">
+  <link rel="canonical" href="https://christopher-bondier.com/">
+  <link rel="alternate" hreflang="en" href="https://christopher-bondier.com/">
+  <link rel="alternate" hreflang="fr" href="https://christopher-bondier.com/fr/">
+  <link rel="alternate" hreflang="es" href="https://christopher-bondier.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://christopher-bondier.com/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://christopher-bondier.com">
+  <meta property="og:url" content="https://christopher-bondier.com/">
   <meta property="og:site_name" content="Christopher Bondier Portfolio">
   <meta property="og:title" content="Christopher Bondier | Official portfolio | Full-stack Angular Node.js developer">
   <meta property="og:description" content="Official portfolio of Christopher Bondier, full-stack Angular / Node.js developer, apprentice at UBIKAP and engineering student at CPE Lyon.">
-  <meta property="og:image" content="https://christopher-bondier.com/assets/img/me.JPEG">
-  <meta property="og:image:alt" content="Portrait of Christopher Bondier">
+  <meta property="og:image" content="https://christopher-bondier.com/assets/img/og-image.jpg">
+  <meta property="og:image:alt" content="Christopher Bondier — Full-Stack Developer">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Christopher Bondier | Official portfolio | Full-stack Angular Node.js developer">
   <meta name="twitter:description" content="Official portfolio of Christopher Bondier, full-stack Angular / Node.js developer, apprentice at UBIKAP and engineering student at CPE Lyon.">
-  <meta name="twitter:image" content="https://christopher-bondier.com/assets/img/me.JPEG">
+  <meta name="twitter:image" content="https://christopher-bondier.com/assets/img/og-image.jpg">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -51,12 +58,37 @@
           "@id": "https://christopher-bondier.com/#person",
           "name": "Christopher Bondier",
           "url": "https://christopher-bondier.com",
-          "image": "https://christopher-bondier.com/assets/img/me.JPEG",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://christopher-bondier.com/assets/img/me.JPEG",
+            "caption": "Christopher Bondier"
+          },
           "jobTitle": "Full-stack developer",
           "description": "Official portfolio of Christopher Bondier, full-stack Angular / Node.js developer, apprentice at UBIKAP and engineering student at CPE Lyon.",
           "email": "mailto:christopher.bondier@gmail.com",
-          "telephone": "+33615925832",
-          "knowsAbout": ["Angular", "Node.js", "TypeScript", "MySQL", "Web development"],
+          "sameAs": [
+            "https://github.com/Nuggets871",
+            "https://www.linkedin.com/in/christopher-bondier-15884623a/"
+          ],
+          "knowsAbout": [
+            "Angular",
+            "Node.js",
+            "TypeScript",
+            "JavaScript",
+            "MySQL",
+            "PostgreSQL",
+            "NestJS",
+            "Web development"
+          ],
+          "knowsLanguage": ["fr", "en", "es"],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Full-stack developer",
+            "occupationLocation": {
+              "@type": "City",
+              "name": "Lyon"
+            }
+          },
           "worksFor": {
             "@type": "Organization",
             "name": "UBIKAP"
@@ -80,6 +112,22 @@
           "mainEntityOfPage": {
             "@id": "https://christopher-bondier.com/#website"
           }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://christopher-bondier.com/#profilepage",
+          "url": "https://christopher-bondier.com/",
+          "inLanguage": "en-GB",
+          "dateModified": "2026-09-21",
+          "isPartOf": {
+            "@id": "https://christopher-bondier.com/#website"
+          },
+          "about": {
+            "@id": "https://christopher-bondier.com/#person"
+          },
+          "mainEntity": {
+            "@id": "https://christopher-bondier.com/#person"
+          }
         }
       ]
     }
@@ -91,7 +139,7 @@
   <noscript>
     <section>
       <h1>Christopher Bondier</h1>
-      <p>Official portfolio of Christopher Bondier, full-stack Angular / Node.js developer, apprentice at UBIKAP and engineering student at CPE Lyon.</p>
+      <p>Christopher Bondier is a full-stack developer based in Lyon, France, specialized in Angular and Node.js. He is an apprentice at UBIKAP and an engineering student at CPE Lyon.</p>
     </section>
   </noscript>
 </body>

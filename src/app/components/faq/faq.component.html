@@ -1,0 +1,18 @@
+<section id="faq" class="section faq">
+    <div class="faq-inner">
+        <div class="section-header" appReveal>
+            <span class="section-number">{{ 'faq.sectionNumber' | translate }}</span>
+            <h2 class="section-title">{{ 'faq.sectionTitle' | translate }}</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="faq-list">
+            @for (item of ('faq.items' | translate); track item.question) {
+            <article class="faq-item" appReveal>
+                <h3 class="faq-question">{{ item.question }}</h3>
+                <p class="faq-answer">{{ item.answer }}</p>
+            </article>
+            }
+        </div>
+    </div>
+</section>

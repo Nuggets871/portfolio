@@ -1,4 +1,4 @@
-<section id="hero" class="hero" [class.loaded]="showContent">
+<section id="hero" class="hero loaded">
 
     <!-- Scattered stickers (background decoration) -->
     <div class="hero-stickers" aria-hidden="true">
@@ -26,6 +26,7 @@
             </div>
             <p class="hero-subtitle">{{ 'hero.subtitle' | translate }}</p>
             <p class="hero-stack">{{ 'hero.description' | translate }}</p>
+            <p class="hero-answer">{{ 'hero.answer' | translate }}</p>
 
             <div class="hero-actions">
                 <a class="btn-primary" (click)="scrollTo('contact')">

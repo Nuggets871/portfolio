@@ -1,0 +1,25 @@
+# Christopher Bondier
+
+> Christopher Bondier is a full-stack web developer based in Lyon, France, specialized in Angular and Node.js. He is a full-stack development apprentice at UBIKAP and an engineering student at CPE Lyon, currently looking for an internship abroad.
+
+## Profile
+
+- Role: Full-stack developer (Angular, Node.js, TypeScript)
+- Location: Lyon, France
+- Current: apprentice at UBIKAP, engineering student at CPE Lyon
+- Education: CPE Lyon (2025-2028), Bachelor of Technology in Computer Science, IUT Claude Bernard - University Lyon 1 (2022-2025)
+- Languages: French (native), English C1 (TOEIC 950), Spanish
+- Contact: christopher.bondier@gmail.com
+- CV: https://christopher-bondier.com/assets/file/CV.pdf
+
+## Main projects
+
+- [CPE Notes](https://notes.christopher-bondier.com): grade tracking dashboard (Angular, Node.js, Express, Prisma, PostgreSQL, Playwright)
+- [Wizard Toolbox](https://wizard-toolbox.fun): online toolbox - file converter, image/PDF compressor, text utilities (Angular, NestJS, Tailwind CSS, Prisma)
+- [Eduquiz](https://eduquiz.christopher-bondier.com): flashcard revision platform (PHP, JavaScript)
+- [Ubikap](https://www.ubikap.com): professional SaaS platform (Angular, Node.js, Express, MySQL)
+
+## Links
+
+- Portfolio: https://christopher-bondier.com
+- GitHub: https://github.com/Nuggets871

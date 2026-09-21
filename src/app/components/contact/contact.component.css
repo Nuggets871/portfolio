@@ -89,6 +89,13 @@
     color: var(--color-text-muted);
 }
 
+.footer-updated {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+}
+
 .footer-logo {
     font-family: var(--font-serif);
     font-size: 1.25rem;
