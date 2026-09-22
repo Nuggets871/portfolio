@@ -26,7 +26,6 @@ const LOCALE = 'en-GB';
 const IMAGE_URL = `${SITE_URL}/assets/img/me.webp`;
 const OG_IMAGE_URL = `${SITE_URL}/assets/img/og-image.jpg`;
 const JSON_LD_ID = 'structured-data';
-const LAST_UPDATED = '2026-09-21';
 const SOCIAL_PROFILES = [
   'https://github.com/Nuggets871',
   'https://www.linkedin.com/in/christopher-bondier-15884623a/',
@@ -169,7 +168,6 @@ export class SeoService {
         name: seo.title,
         description: seo.description,
         inLanguage: LOCALE,
-        dateModified: LAST_UPDATED,
         isPartOf: {
           '@id': `${SITE_URL}/#website`,
         },
