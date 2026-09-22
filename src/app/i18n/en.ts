@@ -113,7 +113,7 @@ const translation = {
         "category": "Professional / SaaS",
         "featured": true,
         "link": "https://www.ubikap.com",
-        "image": "/assets/img/project/ubikap.png"
+        "image": "/assets/img/project/ubikap.webp"
       },
       {
         "title": "CPE Notes",
@@ -131,9 +131,9 @@ const translation = {
         "featured": true,
         "demo": true,
         "image": [
-          "/assets/img/project/cpe-notes-1.jpg",
-          "/assets/img/project/cpe-notes-2.jpg",
-          "/assets/img/project/cpe-notes-3.jpg"
+          "/assets/img/project/cpe-notes-1.webp",
+          "/assets/img/project/cpe-notes-2.webp",
+          "/assets/img/project/cpe-notes-3.webp"
         ]
       },
       {
@@ -146,7 +146,7 @@ const translation = {
         ],
         "category": "Fullstack",
         "featured": true,
-        "image": "/assets/img/project/erp.png"
+        "image": "/assets/img/project/erp.webp"
       },
       {
         "title": "Eduquiz",
@@ -159,12 +159,12 @@ const translation = {
         "category": "Web",
         "featured": true,
         "image": [
-          "/assets/img/project/eduquiz_1.png",
-          "/assets/img/project/eduquiz_2.png",
-          "/assets/img/project/eduquiz_3.png",
-          "/assets/img/project/eduquiz_4.png",
-          "/assets/img/project/eduquiz_5.png",
-          "/assets/img/project/eduquiz_6.png"
+          "/assets/img/project/eduquiz_1.webp",
+          "/assets/img/project/eduquiz_2.webp",
+          "/assets/img/project/eduquiz_3.webp",
+          "/assets/img/project/eduquiz_4.webp",
+          "/assets/img/project/eduquiz_5.webp",
+          "/assets/img/project/eduquiz_6.webp"
         ]
       },
       {
@@ -181,7 +181,7 @@ const translation = {
         "link": "https://wizard-toolbox.fun",
         "github": "https://github.com/Nuggets871/wizard-toolbox",
         "category": "Fullstack",
-        "image": "/assets/img/project/wizard-toolbox.png"
+        "image": "/assets/img/project/wizard-toolbox.webp"
       },
       {
         "title": "Portfolio 2026",

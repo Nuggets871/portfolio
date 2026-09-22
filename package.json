@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -38,6 +39,7 @@
     "@angular/cli": "21.2.24",
     "@angular/compiler-cli": "21.2.23",
     "@types/node": "^20.17.19",
+    "sharp": "^0.35.4",
     "typescript": "~5.9.2"
   }
 }

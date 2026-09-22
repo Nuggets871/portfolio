@@ -23,7 +23,7 @@ interface ProjectItem {
 const SITE_URL = 'https://christopher-bondier.com';
 const PAGE_URL = `${SITE_URL}/`;
 const LOCALE = 'en-GB';
-const IMAGE_URL = `${SITE_URL}/assets/img/me.JPEG`;
+const IMAGE_URL = `${SITE_URL}/assets/img/me.webp`;
 const OG_IMAGE_URL = `${SITE_URL}/assets/img/og-image.jpg`;
 const JSON_LD_ID = 'structured-data';
 const LAST_UPDATED = '2026-09-21';
