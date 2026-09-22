@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit, PLATFORM_ID, inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { scrollToSection } from '../../shared/scroll';
 
@@ -10,8 +10,9 @@ import { scrollToSection } from '../../shared/scroll';
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
     private readonly platformId = inject(PLATFORM_ID);
+    private readonly document = inject(DOCUMENT);
 
     isMenuOpen = false;
     isScrolled = false;
@@ -23,10 +24,28 @@ export class NavbarComponent implements OnInit {
         }
     }
 
+    @HostListener('window:resize')
+    onWindowResize() {
+        if (isPlatformBrowser(this.platformId) && window.innerWidth > 768 && this.isMenuOpen) {
+            this.closeMenu();
+        }
+    }
+
+    @HostListener('document:keydown.escape')
+    onEscape() {
+        if (this.isMenuOpen) {
+            this.closeMenu();
+        }
+    }
+
     ngOnInit() {
         if (isPlatformBrowser(this.platformId)) {
             this.updateScrolled();
         }
+    }
+
+    ngOnDestroy() {
+        this.document.body.style.overflow = '';
     }
 
     private updateScrolled() {
@@ -35,10 +54,18 @@ export class NavbarComponent implements OnInit {
 
     toggleMenu() {
         this.isMenuOpen = !this.isMenuOpen;
+        this.syncBodyScroll();
     }
 
     closeMenu() {
         this.isMenuOpen = false;
+        this.syncBodyScroll();
+    }
+
+    private syncBodyScroll() {
+        if (isPlatformBrowser(this.platformId)) {
+            this.document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+        }
     }
 
     scrollTo(id: string, event?: Event) {

@@ -5,7 +5,7 @@
             <span class="logo-dot">.</span>
         </a>
 
-        <div class="nav-links" [class.open]="isMenuOpen">
+        <div class="nav-links" id="primary-navigation" [class.open]="isMenuOpen">
             <a class="nav-link" href="#about" (click)="scrollTo('about', $event)">{{ 'nav.about' | translate }}</a>
             <a class="nav-link" href="#skills" (click)="scrollTo('skills', $event)">{{ 'nav.skills' | translate }}</a>
             <a class="nav-link" href="#projects" (click)="scrollTo('projects', $event)">{{ 'nav.projects' | translate }}</a>
@@ -15,7 +15,8 @@
         </div>
 
         <div class="nav-actions">
-            <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Menu">
+            <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Menu"
+                aria-controls="primary-navigation" [attr.aria-expanded]="isMenuOpen">
                 <span></span>
                 <span></span>
                 <span></span>
