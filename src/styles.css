@@ -359,6 +359,49 @@ ol {
   }
 }
 
+/* ===== GLOBAL BUTTONS ===== */
+.btn-primary,
+.btn-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-accent-1);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent-1);
+  box-shadow: 0 4px 16px rgba(33, 158, 188, 0.28);
+}
+
+.btn-primary:hover {
+  background: #1a8aaa;
+  border-color: #1a8aaa;
+  box-shadow: 0 6px 22px rgba(33, 158, 188, 0.42);
+  color: var(--color-white);
+}
+
+.btn-outlined {
+  background: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.btn-outlined:hover {
+  border-color: var(--color-accent-1);
+  color: var(--color-accent-1);
+}
+
 /* ===== GLOBAL TECH TAGS ===== */
 .tech-tag,
 .tag,

@@ -179,7 +179,6 @@ const translation = {
         "link": "https://wizard-toolbox.fun",
         "github": "https://github.com/Nuggets871/wizard-toolbox",
         "category": "Fullstack",
-        "featured": true,
         "image": "/assets/img/project/wizard-toolbox.png"
       },
       {

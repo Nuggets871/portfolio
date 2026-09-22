@@ -108,59 +108,6 @@ app-project-gallery {
     flex-direction: column;
 }
 
-.project-image-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: linear-gradient(135deg, var(--color-accent-bg-1) 0%, var(--color-accent-bg-2) 100%);
-}
-
-.project-image-placeholder[data-category="Portfolio"],
-.project-image-placeholder[data-category="Portafolio"] {
-    background: linear-gradient(135deg, var(--color-accent-1) 0%, var(--color-accent-2) 100%);
-    color: white;
-}
-
-.project-image-placeholder[data-category="Fullstack"] {
-    background: linear-gradient(135deg, #023047 0%, #219ebc 100%);
-    color: white;
-}
-
-.placeholder-browser {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 24px;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    padding: 0 var(--space-sm);
-    gap: 4px;
-    backdrop-filter: blur(4px);
-}
-
-.browser-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.placeholder-text {
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    font-weight: 700;
-    opacity: 0.9;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 var(--space-md);
-}
-
 .project-top {
     display: flex;
     justify-content: space-between;
@@ -323,8 +270,7 @@ app-project-gallery {
     gap: 4px;
 }
 
-.mini-tag,
-.mini-tag-more {
+.mini-tag {
     font-family: var(--font-mono);
     font-size: 0.5rem;
     padding: 0.15rem 0.4rem;
@@ -332,12 +278,6 @@ app-project-gallery {
     border: 1px solid var(--color-border);
     border-radius: 4px;
     color: var(--color-text-muted);
-}
-
-.mini-tag-more {
-    background: var(--color-accent-bg-2);
-    border-color: var(--color-accent-2);
-    color: var(--color-accent-1);
 }
 
 /* Actions Section */
@@ -379,10 +319,7 @@ app-project-gallery {
 /* Modal Styling */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(2, 48, 71, 0.85);
     backdrop-filter: blur(8px);
     z-index: 1000;
@@ -396,8 +333,7 @@ app-project-gallery {
     background: var(--color-bg);
     width: 95%;
     max-width: 1000px;
-    /* Narrower to better fit content */
-    max-height: 95vh;
+    max-height: 92vh;
     border-radius: var(--radius-xl);
     position: relative;
     overflow: hidden;
@@ -406,15 +342,29 @@ app-project-gallery {
     box-shadow: 0 25px 100px -12px rgba(0, 0, 0, 0.6);
 }
 
+/* Snappy open animation instead of the generic reveal (which fades the whole
+   modal for 0.8s and delays reading the content on every open). */
+.modal-enter {
+    animation: modal-enter 0.24s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes modal-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .modal-scroll-area {
     overflow-y: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-/* Custom Scrollbar for Modal */
-.modal-scroll-area {
     scrollbar-width: thin;
     scrollbar-color: var(--color-border-light) transparent;
 }
@@ -439,11 +389,8 @@ app-project-gallery {
 .modal-gallery-hero {
     width: 100%;
     background: linear-gradient(135deg, #0b2a3a 0%, #123e52 50%, #0b2a3a 100%);
-    aspect-ratio: 16 / 10;
-    max-height: 75vh;
-    /* Slightly larger for better visibility */
-    min-height: 450px;
-    /* Ensure a decent size */
+    aspect-ratio: 16 / 9;
+    height: clamp(220px, 42vh, 420px);
     position: relative;
     border-bottom: 2px solid var(--color-border);
     overflow: hidden;
@@ -463,7 +410,23 @@ app-project-gallery {
 }
 
 .modal-header-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
+}
+
+.modal-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    flex-shrink: 0;
+}
+
+.modal-header-actions .btn-primary,
+.modal-header-actions .btn-outlined {
+    white-space: nowrap;
 }
 
 .modal-details-grid {
@@ -488,16 +451,6 @@ app-project-gallery {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-}
-
-.modal-actions-list {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.modal-actions-list .btn-primary,
-.modal-actions-list .btn-outlined {
-    flex: 1;
 }
 
 .modal-close {
@@ -529,97 +482,9 @@ app-project-gallery {
 .modal-title-group {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-xs);
 }
-
-.modal-links-split {
-    margin-top: auto;
-    padding-top: var(--space-xl);
-    border-top: 1px solid var(--color-border);
-    display: flex;
-    gap: var(--space-md);
-}
-
-.modal-links-split .btn-primary,
-.modal-links-split .btn-outlined {
-    flex: 1;
-}
-
-.modal-inner-header {
-    padding: var(--space-2xl) var(--space-2xl) var(--space-lg);
-}
-
-.modal-gallery-container {
-    width: 100%;
-    background: #1e1e1e;
-    /* Neutral dark grey */
-    border-bottom: 1px solid var(--color-border);
-    position: relative;
-    overflow: hidden;
-    padding-top: var(--space-xl);
-}
-
-.modal-gallery-wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 75vh;
-    /* Larger viewport height */
-    min-height: 400px;
-    /* Minimum height to ensure visibility */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-gallery-wrapper app-project-gallery {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.modal-content-body {
-    padding: var(--space-2xl);
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--space-3xl);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.modal-main-column {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-}
-
-.modal-side-meta {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2xl);
-}
-
-.meta-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.modal-links.horizontal {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-}
-
-.modal-links.horizontal .btn-primary,
-.modal-links.horizontal .btn-outlined {
-    width: auto;
-    flex: 1;
-    min-width: 180px;
-}
-
-
 
 .modal-category {
     font-family: var(--font-mono);
@@ -627,7 +492,6 @@ app-project-gallery {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: var(--space-sm);
     display: block;
 }
 
@@ -635,7 +499,6 @@ app-project-gallery {
     font-family: var(--font-serif);
     font-size: 2.5rem;
     color: var(--color-text);
-    margin-bottom: var(--space-lg);
     line-height: 1.1;
 }
 
@@ -643,7 +506,6 @@ app-project-gallery {
     font-size: 1rem;
     color: var(--color-text-secondary);
     line-height: 1.8;
-    margin-bottom: var(--space-2xl);
 }
 
 .modal-subtitle {
@@ -659,29 +521,6 @@ app-project-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
-    margin-bottom: var(--space-3xl);
-}
-
-.modal-links {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-    margin-top: auto;
-}
-
-.modal-links .btn-primary,
-.modal-links .btn-outlined {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    width: 100%;
-}
-
-@media (max-width: 900px) {
-    .modal-links {
-        flex-direction: row;
-    }
 }
 
 /* Portfolio Bundle ("Rangé ensemble") */
@@ -800,12 +639,17 @@ app-project-gallery {
     .modal-content {
         max-width: 100%;
         height: 100%;
+        max-height: 100%;
         border-radius: 0;
     }
 
     .modal-gallery-hero {
-        height: 50vh;
-        min-height: 300px;
+        height: 40vh;
+        min-height: 260px;
+    }
+
+    .modal-header-section {
+        flex-direction: column;
     }
 
     .modal-details-grid {
@@ -819,8 +663,14 @@ app-project-gallery {
         margin: 0 auto;
     }
 
-    .modal-actions-list {
-        flex-direction: column;
+    .modal-header-actions {
+        width: 100%;
+    }
+
+    .modal-header-actions .btn-primary,
+    .modal-header-actions .btn-outlined {
+        flex: 1;
+        justify-content: center;
     }
 }
 
@@ -829,22 +679,15 @@ app-project-gallery {
         font-size: 1.75rem;
     }
 
+    .modal-info-container {
+        padding: var(--space-lg);
+    }
+
+    .modal-header-actions {
+        flex-direction: column;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
-    .portfolio-item {
-        gap: var(--space-md);
-        padding: var(--space-md);
-    }
-
-    .portfolio-year {
-        font-size: 1rem;
-        min-width: 45px;
-    }
-}
-
-/* Featured project specific tweaks to ensure visibility */
-.featured-card {
-    border-top: 4px solid var(--color-accent-1) !important;
 }

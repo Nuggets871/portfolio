@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, HostListener, ViewChild, ElementRef, inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, OnDestroy, AfterViewInit, HostListener, ViewChild, ElementRef, PLATFORM_ID, inject, signal, computed } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
@@ -16,19 +16,31 @@ import { Project } from '../../shared/models';
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.css'
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
     @ViewChild('modalContent') modalContent?: ElementRef<HTMLElement>;
+    @ViewChild('featuredGrid') featuredGrid?: ElementRef<HTMLElement>;
 
     showAll = false;
     selectedProject: Project | null = null;
 
-    featuredProjects: Project[] = [];
+    featuredProjects = signal<Project[]>([]);
     portfolios: Project[] = [];
     otherProjects: Project[] = [];
+
+    private readonly columns = signal(4);
+    private resizeObserver?: ResizeObserver;
+
+    // On a 3-column layout the 4th featured card would wrap alone onto a
+    // second row, so only show 3 there. Every other layout keeps all of them.
+    readonly visibleFeaturedProjects = computed(() => {
+        const items = this.featuredProjects();
+        return this.columns() === 3 && items.length > 3 ? items.slice(0, 3) : items;
+    });
 
     private langSub?: Subscription;
     private lastFocused: HTMLElement | null = null;
     private readonly document = inject(DOCUMENT);
+    private readonly platformId = inject(PLATFORM_ID);
 
     constructor(public translate: TranslateService) { }
 
@@ -36,11 +48,37 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         this.loadProjects();
     }
 
+    ngAfterViewInit() {
+        if (!isPlatformBrowser(this.platformId)) return;
+
+        const el = this.featuredGrid?.nativeElement;
+        if (!el) return;
+
+        requestAnimationFrame(() => this.updateColumns());
+
+        if (typeof ResizeObserver !== 'undefined') {
+            this.resizeObserver = new ResizeObserver(() => this.updateColumns());
+            this.resizeObserver.observe(el);
+        }
+    }
+
     ngOnDestroy() {
         if (this.langSub) {
             this.langSub.unsubscribe();
         }
+        this.resizeObserver?.disconnect();
         this.document.body.style.overflow = '';
+    }
+
+    private updateColumns() {
+        const el = this.featuredGrid?.nativeElement;
+        if (!el) return;
+
+        const tracks = getComputedStyle(el).gridTemplateColumns;
+        const count = tracks && tracks !== 'none'
+            ? tracks.split(/\s+/).filter(Boolean).length
+            : 1;
+        this.columns.set(count);
     }
 
     @HostListener('document:keydown.escape')
@@ -48,6 +86,42 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         if (this.selectedProject) {
             this.closeModal();
         }
+    }
+
+    @HostListener('document:keydown.tab', ['$event'])
+    @HostListener('document:keydown.shift.tab', ['$event'])
+    onTab(event: Event) {
+        const keyEvent = event as KeyboardEvent;
+        const container = this.modalContent?.nativeElement;
+        if (!this.selectedProject || !container) {
+            return;
+        }
+
+        const focusable = Array.from(
+            container.querySelectorAll<HTMLElement>(
+                'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            )
+        ).filter((el) => el.offsetParent !== null);
+
+        event.preventDefault();
+
+        if (focusable.length === 0) {
+            container.focus();
+            return;
+        }
+
+        const active = this.document.activeElement as HTMLElement | null;
+        const currentIndex = active ? focusable.indexOf(active) : -1;
+        const lastIndex = focusable.length - 1;
+
+        let nextIndex: number;
+        if (keyEvent.shiftKey) {
+            nextIndex = currentIndex <= 0 ? lastIndex : currentIndex - 1;
+        } else {
+            nextIndex = currentIndex === -1 || currentIndex === lastIndex ? 0 : currentIndex + 1;
+        }
+
+        focusable[nextIndex].focus();
     }
 
     loadProjects() {
@@ -59,11 +133,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
                 const isFeatured = (p: Project) =>
                     p.featured === true || String(p.featured).toLowerCase() === 'true';
 
-                this.featuredProjects = items.filter(isFeatured);
+                this.featuredProjects.set(items.filter(isFeatured));
                 this.portfolios = items.filter((p) => p.group === 'portfolios');
                 this.otherProjects = items.filter(
                     (p) =>
-                        !this.featuredProjects.some((fp) => fp.title === p.title) &&
+                        !this.featuredProjects().some((fp) => fp.title === p.title) &&
                         !this.portfolios.some((pp) => pp.title === p.title)
                 );
             }
