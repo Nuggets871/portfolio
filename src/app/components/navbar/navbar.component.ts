@@ -1,4 +1,4 @@
-import { Component, HostListener, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { scrollToSection } from '../../shared/scroll';
@@ -8,7 +8,8 @@ import { scrollToSection } from '../../shared/scroll';
     standalone: true,
     imports: [TranslateModule],
     templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.css'
+    styleUrl: './navbar.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent implements OnInit, OnDestroy {
     private readonly platformId = inject(PLATFORM_ID);

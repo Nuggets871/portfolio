@@ -61,7 +61,7 @@
         <div class="all-projects-wrapper" appReveal>
             <h3 class="projects-subtitle">{{ 'projects.allProjectsTitle' | translate }}</h3>
             <div class="projects-grid secondary">
-                @for (project of otherProjects; track project.title + $index; let i = $index) {
+                @for (project of otherProjects(); track project.title + $index; let i = $index) {
                 <div class="project-card-mini" (click)="openModal(project)">
                     <div class="mini-header">
                         <div class="mini-top-row">
@@ -98,14 +98,14 @@
             </div>
 
             <!-- Portfolios Grouping ("Rangé ensemble") at the very end -->
-            @if (portfolios.length > 0) {
+            @if (portfolios().length > 0) {
             <div class="portfolio-bundle" appReveal>
                 <div class="bundle-header">
                     <h4 class="bundle-title">{{ 'projects.archiveTitle' | translate }}</h4>
                     <p class="bundle-desc">{{ 'projects.archiveRange' | translate }}</p>
                 </div>
                 <div class="bundle-items">
-                    @for (p of portfolios; track p.title) {
+                    @for (p of portfolios(); track p.title) {
                     <button type="button" class="bundle-item" (click)="openModal(p)">
                         <span class="bundle-item-year">{{ p.title.replace('Portfolio ', '') }}</span>
                         <span class="bundle-item-link">{{ p.link?.replace('https://', '') }}</span>

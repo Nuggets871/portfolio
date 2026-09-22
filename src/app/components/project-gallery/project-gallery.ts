@@ -1,10 +1,11 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-project-gallery',
     standalone: true,
     imports: [TranslateModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     template: `
     <div class="gallery-container" [class.is-modal]="isModal">
         <!-- Main Image -->

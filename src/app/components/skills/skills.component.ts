@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { RevealDirective } from '../../directives/reveal.directive';
 import { techLogo } from '../../shared/tech-logos';
@@ -12,7 +12,8 @@ interface SkillCategory {
     standalone: true,
     imports: [TranslateModule, RevealDirective],
     templateUrl: './skills.component.html',
-    styleUrl: './skills.component.css'
+    styleUrl: './skills.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkillsComponent {
     categories: SkillCategory[] = [

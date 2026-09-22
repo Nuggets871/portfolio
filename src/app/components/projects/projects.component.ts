@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, HostListener, ViewChild, ElementRef, PLATFORM_ID, inject, signal, computed } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, HostListener, ViewChild, ElementRef, PLATFORM_ID, ChangeDetectionStrategy, inject, signal, computed } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -14,7 +14,8 @@ import { Project } from '../../shared/models';
     standalone: true,
     imports: [TranslateModule, RevealDirective, ProjectGalleryComponent],
     templateUrl: './projects.component.html',
-    styleUrl: './projects.component.css'
+    styleUrl: './projects.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
     @ViewChild('modalContent') modalContent?: ElementRef<HTMLElement>;
@@ -24,8 +25,8 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
     selectedProject: Project | null = null;
 
     featuredProjects = signal<Project[]>([]);
-    portfolios: Project[] = [];
-    otherProjects: Project[] = [];
+    portfolios = signal<Project[]>([]);
+    otherProjects = signal<Project[]>([]);
 
     private readonly columns = signal(4);
     private resizeObserver?: ResizeObserver;
@@ -133,12 +134,17 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
                 const isFeatured = (p: Project) =>
                     p.featured === true || String(p.featured).toLowerCase() === 'true';
 
-                this.featuredProjects.set(items.filter(isFeatured));
-                this.portfolios = items.filter((p) => p.group === 'portfolios');
-                this.otherProjects = items.filter(
-                    (p) =>
-                        !this.featuredProjects().some((fp) => fp.title === p.title) &&
-                        !this.portfolios.some((pp) => pp.title === p.title)
+                const featured = items.filter(isFeatured);
+                const portfolios = items.filter((p) => p.group === 'portfolios');
+
+                this.featuredProjects.set(featured);
+                this.portfolios.set(portfolios);
+                this.otherProjects.set(
+                    items.filter(
+                        (p) =>
+                            !featured.some((fp) => fp.title === p.title) &&
+                            !portfolios.some((pp) => pp.title === p.title)
+                    )
                 );
             }
         });

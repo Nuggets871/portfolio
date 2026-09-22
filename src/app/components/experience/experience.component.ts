@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { RevealDirective } from '../../directives/reveal.directive';
 
@@ -7,6 +7,7 @@ import { RevealDirective } from '../../directives/reveal.directive';
     standalone: true,
     imports: [TranslateModule, RevealDirective],
     templateUrl: './experience.component.html',
-    styleUrl: './experience.component.css'
+    styleUrl: './experience.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceComponent { }

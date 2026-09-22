@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { scrollToSection } from '../../shared/scroll';
 
@@ -7,7 +7,8 @@ import { scrollToSection } from '../../shared/scroll';
     standalone: true,
     imports: [TranslateModule],
     templateUrl: './hero.component.html',
-    styleUrl: './hero.component.css'
+    styleUrl: './hero.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroComponent {
     scrollTo(id: string, event?: Event) {
