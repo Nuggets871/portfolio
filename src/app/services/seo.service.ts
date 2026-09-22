@@ -3,8 +3,6 @@ import { Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 
-type SupportedLanguage = 'fr' | 'en' | 'es';
-
 interface SeoTranslation {
   title: string;
   description: string;
@@ -23,6 +21,8 @@ interface ProjectItem {
 }
 
 const SITE_URL = 'https://christopher-bondier.com';
+const PAGE_URL = `${SITE_URL}/`;
+const LOCALE = 'en-GB';
 const IMAGE_URL = `${SITE_URL}/assets/img/me.JPEG`;
 const OG_IMAGE_URL = `${SITE_URL}/assets/img/og-image.jpg`;
 const JSON_LD_ID = 'structured-data';
@@ -49,12 +49,11 @@ export class SeoService {
   private readonly title = inject(Title);
   private readonly translate = inject(TranslateService);
 
-  apply(language: SupportedLanguage): void {
-    const locale = this.toLocale(language);
-    const pageUrl = this.toPageUrl(language);
+  apply(): void {
+    const pageUrl = PAGE_URL;
     const seo = this.resolveSeo(this.translate.instant('seo'));
 
-    this.document.documentElement.lang = locale;
+    this.document.documentElement.lang = LOCALE;
     this.title.setTitle(seo.title);
 
     this.updateNameTag('description', seo.description);
@@ -78,18 +77,7 @@ export class SeoService {
     this.updatePropertyTag('og:locale', seo.ogLocale);
 
     this.updateCanonicalLink(pageUrl);
-    this.updateStructuredData(language, seo, pageUrl);
-  }
-
-  private toPageUrl(language: SupportedLanguage): string {
-    switch (language) {
-      case 'fr':
-        return `${SITE_URL}/fr/`;
-      case 'es':
-        return `${SITE_URL}/es/`;
-      default:
-        return `${SITE_URL}/`;
-    }
+    this.updateStructuredData(seo, pageUrl);
   }
 
   private updateNameTag(name: string, content: string): void {
@@ -113,7 +101,6 @@ export class SeoService {
   }
 
   private updateStructuredData(
-    language: SupportedLanguage,
     seo: SeoTranslation,
     pageUrl: string,
   ): void {
@@ -125,7 +112,7 @@ export class SeoService {
         '@id': `${SITE_URL}/#website`,
         url: SITE_URL,
         name: seo.siteName,
-        inLanguage: this.toLocale(language),
+        inLanguage: LOCALE,
       },
       {
         '@type': 'Person',
@@ -142,7 +129,7 @@ export class SeoService {
         email: 'mailto:christopher.bondier@gmail.com',
         sameAs: SOCIAL_PROFILES,
         knowsAbout: KNOWS_ABOUT,
-        knowsLanguage: ['fr', 'en', 'es'],
+        knowsLanguage: ['fr', 'en'],
         hasOccupation: {
           '@type': 'Occupation',
           name: seo.jobTitle,
@@ -181,7 +168,7 @@ export class SeoService {
         url: pageUrl,
         name: seo.title,
         description: seo.description,
-        inLanguage: this.toLocale(language),
+        inLanguage: LOCALE,
         dateModified: LAST_UPDATED,
         isPartOf: {
           '@id': `${SITE_URL}/#website`,
@@ -253,16 +240,5 @@ export class SeoService {
     }
 
     return fallback;
-  }
-
-  private toLocale(language: SupportedLanguage): string {
-    switch (language) {
-      case 'en':
-        return 'en-GB';
-      case 'es':
-        return 'es-ES';
-      default:
-        return 'fr-FR';
-    }
   }
 }

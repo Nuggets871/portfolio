@@ -186,11 +186,10 @@ const translation = {
       },
       {
         "title": "Portfolio 2026",
-        "description": "This portfolio, which I keep updating for my internship search abroad while studying engineering. I spent time on the design and the animations, and it's available in three languages. It's also a playground for trying out things I use in class or at work.",
+        "description": "This portfolio, which I keep updating for my internship search abroad while studying engineering. I spent time on the design and the animations. It's also a playground for trying out things I use in class or at work.",
         "tech": [
           "Angular",
-          "GSAP",
-          "i18n"
+          "GSAP"
         ],
         "link": "https://christopher-bondier.com",
         "category": "Portfolio",

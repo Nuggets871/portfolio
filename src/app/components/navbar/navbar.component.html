@@ -15,15 +15,6 @@
         </div>
 
         <div class="nav-actions">
-            <div class="nav-lang" role="group" aria-label="Language">
-                <a class="lang-link" routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" hreflang="en" (click)="closeMenu()">EN</a>
-                <a class="lang-link" routerLink="/fr" routerLinkActive="active" hreflang="fr"
-                    (click)="closeMenu()">FR</a>
-                <a class="lang-link" routerLink="/es" routerLinkActive="active" hreflang="es"
-                    (click)="closeMenu()">ES</a>
-            </div>
-
             <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Menu">
                 <span></span>
                 <span></span>

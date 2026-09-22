@@ -30,7 +30,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideTranslateService({
-      fallbackLang: 'en',
+      lang: 'en',
       loader: { provide: TranslateLoader, useClass: TranslateBundledLoader },
       parser: provideTranslateParser(ValuePreservingParser),
     }),

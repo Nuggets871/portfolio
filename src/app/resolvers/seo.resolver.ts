@@ -5,20 +5,13 @@ import { map } from 'rxjs';
 
 import { SeoService } from '../services/seo.service';
 
-type SupportedLanguage = 'fr' | 'en' | 'es';
-
-function resolveLanguage(value: unknown): SupportedLanguage {
-  return value === 'fr' || value === 'es' ? value : 'en';
-}
-
-export const languageResolver: ResolveFn<boolean> = (route) => {
-  const language = resolveLanguage(route.data['lang']);
+export const seoResolver: ResolveFn<boolean> = () => {
   const translate = inject(TranslateService);
   const seo = inject(SeoService);
 
-  return translate.use(language).pipe(
+  return translate.use('en').pipe(
     map(() => {
-      seo.apply(language);
+      seo.apply();
       return true;
     }),
   );

@@ -1,13 +1,12 @@
 import { Component, HostListener, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { scrollToSection } from '../../shared/scroll';
 
 @Component({
     selector: 'app-navbar',
     standalone: true,
-    imports: [TranslateModule, RouterLink, RouterLinkActive],
+    imports: [TranslateModule],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'
 })
