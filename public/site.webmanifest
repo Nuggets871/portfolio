@@ -1,12 +1,12 @@
 {
   "name": "Christopher Bondier Portfolio",
   "short_name": "C Bondier",
-  "description": "Portfolio officiel de Christopher Bondier, developpeur full-stack Angular et Node.js.",
+  "description": "Official portfolio of Christopher Bondier, full-stack Angular and Node.js developer.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f6efe5",
-  "theme_color": "#f6efe5",
+  "background_color": "#f0f8ff",
+  "theme_color": "#f0f8ff",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
