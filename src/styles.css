@@ -343,6 +343,16 @@ ol {
   .section-header {
     flex-direction: column;
     gap: var(--space-sm);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Keep the section content above the decorative stickers on small screens */
+  .about-inner,
+  .skills-inner,
+  .contact-inner {
+    position: relative;
+    z-index: 1;
   }
 
   .section-line {
@@ -356,6 +366,28 @@ ol {
     bottom: 50%;
     /* Position it higher to be on the right of the title/grid */
     width: 60px;
+  }
+
+  /* Keep the top stickers clear of the stacked section titles */
+  .sticker-about-1 {
+    top: 1%;
+    right: 3%;
+    width: 58px;
+  }
+
+  .sticker-about-bee {
+    top: auto;
+    bottom: 3%;
+    left: auto;
+    right: 5%;
+    width: 46px;
+  }
+
+  .sticker-skills-1 {
+    top: 1%;
+    left: auto;
+    right: 4%;
+    width: 58px;
   }
 }
 
