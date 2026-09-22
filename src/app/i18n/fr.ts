@@ -345,28 +345,6 @@ const translation = {
     "location": "Localisation",
     "website": "Site web"
   },
-  "faq": {
-    "sectionNumber": "06",
-    "sectionTitle": "Questions fréquentes",
-    "items": [
-      {
-        "question": "Qui est Christopher Bondier ?",
-        "answer": "Christopher Bondier est un développeur web full-stack basé à Lyon. Il conçoit des applications web avec Angular, Node.js et TypeScript, travaille en alternance chez UBIKAP et étudie l'informatique et les réseaux à CPE Lyon."
-      },
-      {
-        "question": "Quelles technologies maîtrise Christopher Bondier ?",
-        "answer": "Il travaille principalement avec Angular, Node.js, TypeScript, Express, NestJS, MySQL et PostgreSQL, ainsi qu'avec Git, Docker et Prisma. Il a aussi de l'expérience avec React, Vue.js, PHP/Symfony, Java et Python."
-      },
-      {
-        "question": "Christopher Bondier est-il disponible pour un stage à l'étranger ?",
-        "answer": "Oui. Christopher Bondier étudie l'ingénierie à CPE Lyon et recherche un stage à l'étranger dans le cadre de son cursus. Le meilleur moyen de le contacter est l'email christopher.bondier@gmail.com."
-      },
-      {
-        "question": "Où travaille et étudie Christopher Bondier ?",
-        "answer": "Il travaille en alternance comme développeur full-stack chez UBIKAP, éditeur de logiciel, et étudie à CPE Lyon. Il est diplômé d'un BUT Informatique de l'IUT Claude Bernard, Université Lyon 1."
-      }
-    ]
-  },
   "notFound": {
     "title": "Page introuvable",
     "text": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",

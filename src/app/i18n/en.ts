@@ -345,28 +345,6 @@ const translation = {
     "location": "Location",
     "website": "Website"
   },
-  "faq": {
-    "sectionNumber": "06",
-    "sectionTitle": "Frequently asked questions",
-    "items": [
-      {
-        "question": "Who is Christopher Bondier?",
-        "answer": "Christopher Bondier is a full-stack web developer from Lyon, France. He builds web applications with Angular, Node.js and TypeScript, works as an apprentice at UBIKAP, and studies computer science and networks engineering at CPE Lyon."
-      },
-      {
-        "question": "What technologies does Christopher Bondier use?",
-        "answer": "He mainly works with Angular, Node.js, TypeScript, Express, NestJS, MySQL and PostgreSQL, along with Git, Docker and Prisma. He also has experience with React, Vue.js, PHP/Symfony, Java and Python."
-      },
-      {
-        "question": "Is Christopher Bondier available for an internship abroad?",
-        "answer": "Yes. Christopher Bondier is studying engineering at CPE Lyon and is looking for an internship abroad as part of his curriculum. The best way to reach him is by email at christopher.bondier@gmail.com."
-      },
-      {
-        "question": "Where does Christopher Bondier work and study?",
-        "answer": "He works as a full-stack developer apprentice at UBIKAP, a software company, and studies at CPE Lyon in France. He previously earned a Bachelor of Technology in Computer Science at IUT Claude Bernard, University Lyon 1."
-      }
-    ]
-  },
   "notFound": {
     "title": "Page not found",
     "text": "Sorry, the page you are looking for does not exist or has moved.",

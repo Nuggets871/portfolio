@@ -22,11 +22,6 @@ interface ProjectItem {
   tech?: string[];
 }
 
-interface FaqItem {
-  question: string;
-  answer: string;
-}
-
 const SITE_URL = 'https://christopher-bondier.com';
 const IMAGE_URL = `${SITE_URL}/assets/img/me.JPEG`;
 const OG_IMAGE_URL = `${SITE_URL}/assets/img/og-image.jpg`;
@@ -123,7 +118,6 @@ export class SeoService {
     pageUrl: string,
   ): void {
     const projects = this.translate.instant('projects.items') as ProjectItem[];
-    const faq = this.translate.instant('faq.items') as FaqItem[];
 
     const graph: unknown[] = [
       {
@@ -224,22 +218,6 @@ export class SeoService {
               },
             },
           })),
-      });
-    }
-
-    if (Array.isArray(faq) && faq.length > 0) {
-      graph.push({
-        '@type': 'FAQPage',
-        '@id': `${pageUrl}#faq`,
-        inLanguage: this.toLocale(language),
-        mainEntity: faq.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
       });
     }
 
