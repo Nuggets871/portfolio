@@ -31,15 +31,11 @@
   /* Deep Space Blue — dark accent */
   --color-accent-4: #ffb703;
   /* Amber Flame     — warm contrast */
-  --color-accent-5: #fb8500;
-  /* Tiger Orange    — bold pop */
 
   /* Soft tinted backgrounds */
   --color-accent-bg-1: rgba(33, 158, 188, 0.08);
   --color-accent-bg-2: rgba(142, 202, 230, 0.12);
   --color-accent-bg-3: rgba(2, 48, 71, 0.06);
-  --color-accent-bg-4: rgba(255, 183, 3, 0.10);
-  --color-accent-bg-5: rgba(251, 133, 0, 0.10);
 
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -55,7 +51,6 @@
   --space-2xl: 3rem;
   --space-3xl: 4rem;
   --space-4xl: 6rem;
-  --space-5xl: 8rem;
 
   /* Section padding */
   --section-padding: clamp(4rem, 10vh, 8rem) clamp(1.5rem, 5vw, 6rem);

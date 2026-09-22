@@ -9,7 +9,6 @@ const translation = {
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "name": "Christopher Bondier",
     "title": "Full-Stack Developer",
     "subtitle": "Full-stack development apprentice · Engineering student",
     "description": "Angular · Node.js · MySQL",
@@ -265,7 +264,6 @@ const translation = {
     "archiveRange": "2024 — 2026",
     "modalDescription": "Description",
     "modalTechnologies": "Technologies",
-    "modalLinks": "Links",
     "closeModal": "Close",
     "noImage": "No image available"
   },
