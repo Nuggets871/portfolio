@@ -159,6 +159,24 @@ app-project-gallery {
     letter-spacing: -0.01em;
 }
 
+.project-title .card-open,
+.mini-title .card-open {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.project-title .card-open:hover,
+.mini-title .card-open:hover {
+    color: var(--color-accent-1);
+}
+
 .project-desc {
     font-size: 0.875rem;
     color: var(--color-text-secondary);
@@ -575,6 +593,10 @@ app-project-gallery {
 
 .bundle-item {
     flex: 1;
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    text-align: left;
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     padding: var(--space-md) var(--space-lg);
