@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-RUN node scripts/generate-sitemap.mjs && npx ng build --configuration production
+RUN node scripts/generate-sitemap.mjs && node scripts/build-favicon-ico.mjs && npx ng build --configuration production
 
 FROM nginx:alpine
 COPY --from=build /app/dist/portfolio/browser /usr/share/nginx/html
